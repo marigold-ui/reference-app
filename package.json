@@ -12,6 +12,8 @@
     "format": "prettier --write \"**/*\""
   },
   "dependencies": {
+    "@marigold/components": "^7.5.4",
+    "@marigold/theme-core": "^26.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
