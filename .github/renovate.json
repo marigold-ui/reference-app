@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "config:base",
+    ":semanticCommitTypeAll(chore)",
+    ":rebaseStalePrs"
+  ],
+  "schedule": ["before 3am on the first day of the month"],
+  "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "3 days"
+    },
+    {
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint"
+    },
+    {
+      "matchPackagePatterns": ["jest", "testing-library", "swc"],
+      "groupName": "testing"
+    },
+    {
+      "matchPackagePatterns": ["postcss", "tailwind"],
+      "groupName": "tailwind"
+    }
+  ],
+  "timezone": "Europe/Berlin"
+}
