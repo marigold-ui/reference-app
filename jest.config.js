@@ -37,7 +37,7 @@ module.exports = {
     '!**/dist/**',
     '!**/node_modules/**',
     '!**/*.config.ts',
-    '!**/main.tsx'
+    '!**/index.tsx'
   ],
 
   clearMocks: true,
