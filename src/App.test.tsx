@@ -4,5 +4,5 @@ import App from './App';
 test('initial site', () => {
   render(<App />);
 
-  expect(screen.getByText('Hello World!')).toBeInTheDocument();
+  expect(screen.getByText('Stubborn Attachments')).toBeInTheDocument();
 });
