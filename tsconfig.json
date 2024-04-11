@@ -18,6 +18,8 @@
     "noFallthroughCasesInSwitch": true,
     "types": ["@testing-library/jest-dom"]
   },
-  "include": ["src"],
+  "include": ["src",
+    "types/mdx.d.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
