@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@marigold/components':
     specifier: ^7.5.4
-    version: 7.5.4(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0)
+    version: 7.6.0(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0)
   '@marigold/theme-core':
     specifier: ^26.1.4
     version: 26.1.5(@types/react@18.2.75)(postcss@8.4.38)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)
@@ -2153,41 +2153,6 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@marigold/components@7.5.4(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-AWv9w/YxIRwUcuiogrol7wosaxQ7GL/JBhLR1FbkasCnuw4TxmlJ10/aNA6vHGghKVaUBvP/RFzyJJBiv5b6FQ==}
-    peerDependencies:
-      react: 17.x || 18.x
-      react-dom: 17.x || 18.x
-    dependencies:
-      '@internationalized/date': 3.5.2
-      '@marigold/icons': 1.2.44(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0)
-      '@marigold/system': 7.5.4(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0)
-      '@marigold/types': 1.1.0(@types/react@18.2.75)
-      '@react-aria/accordion': 3.0.0-alpha.27(react-dom@18.2.0)(react@18.2.0)
-      '@react-aria/button': 3.9.3(react@18.2.0)
-      '@react-aria/calendar': 3.5.6(react-dom@18.2.0)(react@18.2.0)
-      '@react-aria/focus': 3.16.2(react@18.2.0)
-      '@react-aria/i18n': 3.10.2(react@18.2.0)
-      '@react-aria/interactions': 3.21.1(react@18.2.0)
-      '@react-aria/overlays': 3.21.1(react-dom@18.2.0)(react@18.2.0)
-      '@react-aria/selection': 3.17.5(react-dom@18.2.0)(react@18.2.0)
-      '@react-aria/ssr': 3.9.2(react@18.2.0)
-      '@react-aria/table': 3.13.5(react-dom@18.2.0)(react@18.2.0)
-      '@react-aria/utils': 3.23.2(react@18.2.0)
-      '@react-aria/visually-hidden': 3.8.10(react@18.2.0)
-      '@react-stately/collections': 3.10.5(react@18.2.0)
-      '@react-stately/data': 3.11.2(react@18.2.0)
-      '@react-stately/table': 3.11.6(react@18.2.0)
-      '@react-stately/tree': 3.7.6(react@18.2.0)
-      '@react-types/shared': 3.22.1(react@18.2.0)
-      '@react-types/table': 3.9.3(react@18.2.0)
-      react: 18.2.0
-      react-aria-components: 1.1.1(react-dom@18.2.0)(react@18.2.0)
-      react-dom: 18.2.0(react@18.2.0)
-    transitivePeerDependencies:
-      - '@types/react'
-    dev: false
-
   /@marigold/components@7.6.0(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-AWtY/pODbzZFfVVJB3xcf9mAYL+RXvoXo6ViAWaKDd55Est+Us1ndVD25N9JvKRvHHcMf+I/FhzYZoESw/7Gmw==}
     peerDependencies:
@@ -2256,18 +2221,6 @@ packages:
       - supports-color
     dev: true
 
-  /@marigold/icons@1.2.44(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-6ctxUbWXclbMjNHyFito5th6SKf8GXswRmACx2l+yZ2BkQQ9jVqDsg5PHzNM9g9b7w+4/0Lu0sM7wvTqQ6os7g==}
-    peerDependencies:
-      react: 17.x || 18.x
-    dependencies:
-      '@marigold/system': 7.5.4(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-    dev: false
-
   /@marigold/icons@1.2.45(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-1F/0LN0U28iVAZuL9umk9eltKy2jh2R1juq4AVLDIY2K8sKwlaT6mUeCQ8uOD+Hz9vdjoTQDtvqC0Dgm60sgYw==}
     peerDependencies:
@@ -2287,24 +2240,6 @@ packages:
     dependencies:
       prettier: 3.2.5
     dev: true
-
-  /@marigold/system@7.5.4(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-40BQeK5lNzt9VNsMlElfq1djbsgmE98zs8Cd2jTzA3WbsVUYgWp/km4WiCulfaY1xokfDNoo8Lw1r4b4ix2Mig==}
-    peerDependencies:
-      react: 16.x || 17.x || 18.x
-      react-dom: 16.x || 17.x || 18.x
-    dependencies:
-      '@marigold/types': 1.1.0(@types/react@18.2.75)
-      '@react-aria/i18n': 3.10.2(react@18.2.0)
-      class-variance-authority: 0.7.0
-      deepmerge: 4.3.1
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-fast-compare: 3.2.2
-      tailwind-merge: 2.2.1
-    transitivePeerDependencies:
-      - '@types/react'
-    dev: false
 
   /@marigold/system@7.6.0(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-TfC9mUzdvQ/vCNnefVBvMWVJc46Oi3Wf1ravKef3cVQQZvn5p4QRkPiLd3JKVxlFLURfq/MqO/iUbBsCEqehwQ==}
