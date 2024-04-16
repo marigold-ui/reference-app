@@ -1,10 +1,27 @@
-import React from 'react';
+import {StrictMode} from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import './index.css';
+import {routeTree} from './routeTree.gen';
+import {createRouter, RouterProvider} from '@tanstack/react-router';
+import {MarigoldProvider} from '@marigold/components';
+import theme from '@marigold/theme-core';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const router = createRouter({ routeTree })
+
+declare module '@tanstack/react-router' {
+    interface Register {
+        router: typeof router
+    }
+}
+
+const rootElement = document.getElementById('app')!
+
+if (!rootElement.innerHTML) {
+   ReactDOM.createRoot(rootElement).render(
+        <StrictMode>
+            <MarigoldProvider theme={theme}>
+                <RouterProvider router={router} />
+            </MarigoldProvider>
+        </StrictMode>
+   )
+}
