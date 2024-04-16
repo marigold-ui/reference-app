@@ -1,10 +1,15 @@
-function App() {
+import '@code-hike/mdx/styles';
+import './css/global.css';
+import './css/custom-ch.css';
+import Example from './components/Example/example.mdx';
 
+function App() {
   return (
-    <>
-      <h1>Reference App</h1>
-      <h1 className="text-3xl font-bold underline">Hello World!</h1>
-    </>
+    <article>
+      <div>
+        <Example />
+      </div>
+    </article>
   );
 }
 
