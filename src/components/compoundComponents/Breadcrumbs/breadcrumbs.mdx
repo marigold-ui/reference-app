@@ -1,4 +1,4 @@
-import BreadcrumbsExample from './index';
+import BreadcrumbsExample from './BreadcrumbsExample';
 
 <CH.Scrollycoding>
 
@@ -77,7 +77,7 @@ import BreadcrumbsExample from './index';
 
     As final step we need to connect these components
 
-    ```tsx Breadcrumbs.tsx focus=28
+    ```tsx Breadcrumbs.tsx focus=33
     // from ./Breadcrumbs.tsx
     ```
 
@@ -93,15 +93,15 @@ import BreadcrumbsExample from './index';
 
 
     ```tsx BreadcrumbsExample.tsx
-    // from ./index.tsx
+    // from ./BreadcrumbsExample.tsx
     ```
 
     ---
 
     Note that we only need to import the `Breadcrumbs` component.
 
-    ```tsx BreadcrumbsExample.tsx focus=1,6,19
-    // from ./index.tsx
+    ```tsx BreadcrumbsExample.tsx focus=1,6,12
+    // from ./BreadcrumbsExample.tsx
     ```
 
     ---
@@ -109,7 +109,7 @@ import BreadcrumbsExample from './index';
     Because we connect `Crumb` to `Breadcrumbs` we can access it as property.
 
     ```tsx BreadcrumbsExample.tsx focus=7:18
-    // from ./index.tsx
+    // from ./BreadcrumbsExample.tsx
     ```
 
 </CH.Scrollycoding>
