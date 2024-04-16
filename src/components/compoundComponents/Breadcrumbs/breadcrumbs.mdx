@@ -1,0 +1,117 @@
+import BreadcrumbsExample from './index';
+
+<CH.Scrollycoding>
+
+    # Building a compound component
+
+    <CH.Preview frameless>
+
+        <BreadcrumbsExample />
+
+    </CH.Preview>
+
+    ```tsx BreadcrumbsExample.tsx
+
+        import React from 'react';
+
+        import Breadcrumbs from './Breadcrumbs';
+
+        function App() {
+            // TODO: Replace this:
+            return (
+                <nav aria-label="Breadcrumbs">
+                    <ol>
+                        <li>
+                            <a href="/">Electronics</a>
+                        </li>
+                        <li>
+                            <a href="/cellphones">Cell Phones</a>
+                        </li>
+                        <li>
+                            <a href="/cellphones/cases" aria-current="page">
+                                Cases
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+            );
+        }
+
+        export default App;
+
+    ```
+
+    E-commerce websites often have “breadcrumbs” to help the user navigate to parent/grand-parent pages. For example:
+
+    `Electronics / Cell Phones / Cases`
+
+    Let's imagine we have the following code for these breadcrumbs (see BreadcrumbsExample.tsx).
+
+    How we can built now a compound component?
+
+    Looking at the markup, it seems like we'll need two components:
+
+    * A Breadcrumbs parent wrapper to contain the group
+
+    * A Crumb component for each link in the group
+
+    ---
+
+    Copy the chunk for the parent wrapper (Breadcrumbs) and made it generic.
+
+    ```tsx Breadcrumbs.tsx focus=4:10
+    // from ./Breadcrumbs.tsx
+    ```
+
+    ---
+
+    Copy the chunk for each link in the group (Crumb) and made it generic.
+
+    ```tsx Breadcrumbs.tsx focus=12:23
+    // from ./Breadcrumbs.tsx
+    ```
+
+    ---
+
+    ## Connect the components
+
+    As final step we need to connect these components
+
+    ```tsx Breadcrumbs.tsx focus=28
+    // from ./Breadcrumbs.tsx
+    ```
+
+    One of the weird things about JS is that functions can have properties.
+    It's weird, but functions are like objects in this way. We can "hang" data on them, like clothes hung on a clothesline.
+
+    ---
+
+    ## Update BreadcrumbsExample.tsx
+
+    Finally we can use this compound component in our BreadcrumbsExample.tsx.
+
+
+
+    ```tsx BreadcrumbsExample.tsx
+    // from ./index.tsx
+    ```
+
+    ---
+
+    Note that we only need to import the `Breadcrumbs` component.
+
+    ```tsx BreadcrumbsExample.tsx focus=1,6,19
+    // from ./index.tsx
+    ```
+
+    ---
+
+    Because we connect `Crumb` to `Breadcrumbs` we can access it as property.
+
+    ```tsx BreadcrumbsExample.tsx focus=7:18
+    // from ./index.tsx
+    ```
+
+</CH.Scrollycoding>
+
+<div style={{ height: 300 }} />

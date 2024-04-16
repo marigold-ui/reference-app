@@ -1,0 +1,34 @@
+import BreadcrumbDoc from './Breadcrumbs/breadcrumbs.mdx';
+
+# Compound components in React
+
+A compound component is one of the advanced patterns of React. They help developers build more expressive and flexible APIs to share state and logic within components.
+Compound components can be said to be a pattern that encloses the state and the behavior of a group of components but still gives the rendering control of its variable parts back to the external user.
+
+## When should you make use of compound components?
+
+You should make use of compound components when you want to:
+
+- Solve issues related to building reusable components
+
+- Development of highly cohesive components with minimal coupling
+
+- Better ways to share logic between components
+
+## HTML example
+
+A similiar example in HTML are the `<selected>` and `<option>` tags:
+
+    ```html select.html
+        <select>
+            <option value="pizza">Pizza</option>
+            <option value="sushi">Sushi</option>
+            <option value="soup">Soup</option>
+        </select>
+    ```
+
+The select tag works together with the option tag which is used for a drop-down menu to select items in HTML. Here the `<select>` manages the state of the UI, then the `<option>` elements are configured on how the `<select>` should work.
+
+---
+
+<BreadcrumbDoc />

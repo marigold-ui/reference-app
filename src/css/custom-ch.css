@@ -21,13 +21,6 @@ body {
   background-color: var(--sail-color-gray-50);
 }
 
-.ch-scrollycoding-step-content:first-child,
-.ch-scrollycoding-step-content:last-child {
-  background-color: unset !important;
-  border-color: transparent !important;
-  box-shadow: none;
-}
-
 .ch-code-multiline-mark {
   background: #1a2652 !important;
 }
@@ -46,6 +39,7 @@ body {
 .ch-scrollycoding-preview {
   box-shadow: inset 0 -1px var(--sail-color-line-divider-dark);
   border-radius: 0;
+  background-color: var(--sail-color-gray-100);
 }
 
 .ch-frame-buttons {
