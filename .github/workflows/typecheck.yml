@@ -23,7 +23,8 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
-
+      - name: Build to generate routes
+        run: pnpm build
       # Action
       - name: Typecheck
         run: pnpm typecheck
