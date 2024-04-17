@@ -28,13 +28,14 @@ export default defineConfig(async () => {
       setupFiles: './tests/setup.js',
       coverage: {
         exclude: [
-          '**/{*.d.ts,index.ts}',
+          '**/{*.d.ts,index.ts,*.gen.ts}',
           '**/.cache/**',
           '**/build/**',
           '**/dist/**',
           '**/node_modules/**',
           '**/*.config.js',
           '**/index.tsx',
+          '**/src/routes/**'
         ],
       },
     },
