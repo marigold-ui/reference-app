@@ -35,7 +35,7 @@ export default defineConfig(async () => {
           '**/node_modules/**',
           '**/*.config.js',
           '**/index.tsx',
-          '**/src/routes/**'
+          '**/src/routes/**',
         ],
       },
     },

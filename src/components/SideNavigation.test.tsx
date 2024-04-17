@@ -1,7 +1,11 @@
 import {act, render, screen} from '@testing-library/react';
 import { SideNavigation } from './SideNavigation';
-import {createRootRoute, createRouter, RouterProvider} from '@tanstack/react-router';
-import {expect} from 'vitest';
+import {
+  createRootRoute,
+  createRouter,
+  RouterProvider,
+} from '@tanstack/react-router';
+import { expect } from 'vitest';
 
 
 test('renders navigation links', async () => {
@@ -9,11 +13,15 @@ test('renders navigation links', async () => {
         component: () => <SideNavigation />,
     });
 
-    const router = createRouter({
-        routeTree: rootRoute
-    });
+  const router = createRouter({
+    routeTree: rootRoute,
+  });
 
-    await act(() => render(<RouterProvider router={router} />));
+  render(<RouterProvider router={router} />);
+
+  await act(async () => {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  });
 
     const links = screen.getAllByRole('link');
 

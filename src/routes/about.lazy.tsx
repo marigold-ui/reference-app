@@ -7,5 +7,5 @@ export const Route = createLazyFileRoute('/about')({
 
 //TODO: just an example can be removed
 function About() {
-  return <Example />
+  return <Example />;
 }
