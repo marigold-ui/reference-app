@@ -2,8 +2,6 @@ import BreadcrumbsExample from './BreadcrumbsExample';
 
 <CH.Scrollycoding>
 
-    # Building a compound component
-
     <CH.Preview frameless>
 
         <BreadcrumbsExample />
@@ -41,10 +39,6 @@ import BreadcrumbsExample from './BreadcrumbsExample';
 
     ```
 
-    E-commerce websites often have “breadcrumbs” to help the user navigate to parent/grand-parent pages. For example:
-
-    `Electronics / Cell Phones / Cases`
-
     Let's imagine we have the following code for these breadcrumbs (see BreadcrumbsExample.tsx).
 
     How we can built now a compound component?
@@ -59,7 +53,7 @@ import BreadcrumbsExample from './BreadcrumbsExample';
 
     Copy the chunk for the parent wrapper (Breadcrumbs) and made it generic.
 
-    ```tsx Breadcrumbs.tsx focus=4:10
+    ```tsx Breadcrumbs.tsx focus=3:9
     // from ./Breadcrumbs.tsx
     ```
 
@@ -67,7 +61,7 @@ import BreadcrumbsExample from './BreadcrumbsExample';
 
     Copy the chunk for each link in the group (Crumb) and made it generic.
 
-    ```tsx Breadcrumbs.tsx focus=12:23
+    ```tsx Breadcrumbs.tsx focus=11:31
     // from ./Breadcrumbs.tsx
     ```
 
@@ -75,14 +69,14 @@ import BreadcrumbsExample from './BreadcrumbsExample';
 
     ## Connect the components
 
-    As final step we need to connect these components
+    As final step we need to connect these components.
 
     ```tsx Breadcrumbs.tsx focus=33
     // from ./Breadcrumbs.tsx
     ```
 
-    One of the weird things about JS is that functions can have properties.
-    It's weird, but functions are like objects in this way. We can "hang" data on them, like clothes hung on a clothesline.
+    You can call it weird or awesome, but JS functions can have properties.
+    Functions are like objects in this way. We can "hang" data on them, like clothes hung on a clothesline.
 
     ---
 
@@ -106,9 +100,9 @@ import BreadcrumbsExample from './BreadcrumbsExample';
 
     ---
 
-    Because we connect `Crumb` to `Breadcrumbs` we can access it as property.
+    Because we connect `Crumb` to `Breadcrumbs` we can access it as a property.
 
-    ```tsx BreadcrumbsExample.tsx focus=7:18
+    ```tsx BreadcrumbsExample.tsx focus=6:12
     // from ./BreadcrumbsExample.tsx
     ```
 
