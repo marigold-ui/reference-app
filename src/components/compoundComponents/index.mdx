@@ -1,19 +1,21 @@
 import BreadcrumbDoc from './Breadcrumbs/breadcrumbs.mdx';
+import TabsDoc from './Tabs/tabs.mdx';
 
 # Compound components in React
 
-A compound component is one of the advanced patterns of React. They help developers build more expressive and flexible APIs to share state and logic within components.
-Compound components can be said to be a pattern that encloses the state and the behavior of a group of components but still gives the rendering control of its variable parts back to the external user.
+React compound component is a powerful pattern that allows you to create reusable and flexible components by encapsulating related child components within a parent component. The idea behind compound components is to provide a clean and intuitive API for users to interact with your component while keeping the implementation details hidden.
 
-## When should you make use of compound components?
+Think of compound components as a Lego set. Each individual Lego block within the set may have its own shape, colour, and purpose, but when you combine them together in a specific way, you can build something much more complex and exciting.
 
-You should make use of compound components when you want to:
+We build a suite of reusable components and place them wherever we want based on our convenience. If you don’t want a specific part, you just remove it without adding any logic. This brings in a lot of flexibility from a devs perspective and scaling the component now becomes much easier.
 
-- Solve issues related to building reusable components
+This design approach leads to the following benefits:
 
-- Development of highly cohesive components with minimal coupling
+- It is easy to customize child components. We no longer have to expose customization props through the parent component, each child component may be individually customized.
 
-- Better ways to share logic between components
+- When using a react compound component, it is easy to understand what’s the internal composition of the parent component set.
+
+- A well-designed React compound component should have very little state management required.
 
 ## HTML example
 
@@ -29,8 +31,7 @@ A similiar example in HTML are the `<selected>` and `<option>` tags:
 
 The select tag works together with the option tag which is used for a drop-down menu to select items in HTML. Here the `<select>` manages the state of the UI, then the `<option>` elements are configured on how the `<select>` should work.
 
-
-## Building a compound component
+## Example 1: Building a compound component
 
 E-commerce websites often have “breadcrumbs” to help the user navigate to parent/grand-parent pages. For example:
 
@@ -39,3 +40,9 @@ E-commerce websites often have “breadcrumbs” to help the user navigate to pa
 ---
 
 <BreadcrumbDoc />
+
+## Example 2: Compound component with Context
+
+By leveraging React context, we can provide the necessary states and functions to child components without exposing them through props, resulting in a cleaner and more maintainable codebase.
+
+<TabsDoc />
