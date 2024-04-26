@@ -14,6 +14,7 @@ exports[`Breadcrumbs are correctly rendered 1`] = `
         aria-current={false}
         className="text-decoration-none hover:text-decoration:revert ml-3 hover:underline"
         href="/"
+        onClick={[Function]}
       >
         Electronics
       </a>
@@ -25,6 +26,7 @@ exports[`Breadcrumbs are correctly rendered 1`] = `
         aria-current={false}
         className="text-decoration-none hover:text-decoration:revert ml-3 hover:underline"
         href="/cellphones"
+        onClick={[Function]}
       >
         Cell Phones
       </a>
@@ -36,6 +38,7 @@ exports[`Breadcrumbs are correctly rendered 1`] = `
         aria-current="page"
         className="text-decoration-none hover:text-decoration:revert ml-3 hover:underline"
         href="/cellphones/cases"
+        onClick={[Function]}
       >
         Cases
       </a>
