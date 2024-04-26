@@ -12,7 +12,7 @@ import TabsExample from './TabsExample';
     // from ./Tabs.tsx
     ````
 
-    If we want to pass props to different components and avoid prop drilling, we will need to set up a React context object for providing states managed at the parent level to all children components.
+    If we want to pass props to different components and avoid prop drilling, we will need to set up a [React context](https://react.dev/reference/react/hooks#context-hooks) object for providing states managed at the parent level to all children components.
 
     ---
 
@@ -29,7 +29,7 @@ import TabsExample from './TabsExample';
     ````
 
     Then let’s add the tab component. This is the button that’ll help you to switch between sections.
-    On clicking this button, it triggers the changeTab from the context changing the activeTab state. Any other component that’s accessing this state will be re-rendered.
+    On clicking this button, it triggers the `changeTab` from the context changing the `activeTab state. Any other component that’s accessing this state will be re-rendered.
 
     ---
 
