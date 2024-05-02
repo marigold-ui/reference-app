@@ -2,6 +2,7 @@ name: Builds
 
 on:
   pull_request:
+  merge_group:
     branches: [main]
     paths-ignore:
       - '.changeset/**'
