@@ -13,7 +13,7 @@
     "test": "vitest run --config vite.config.ts",
     "test:ci": "vitest run --config vite.config.ts --coverage"
   },
-  "packageManager": "pnpm@9.0.5",
+  "packageManager": "pnpm@9.0.6",
   "dependencies": {
     "@code-hike/mdx": "^0.9.0",
     "@marigold/components": "^7.6.0",
