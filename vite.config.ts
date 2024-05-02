@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { remarkCodeHike } from '@code-hike/mdx';
+import { TanStackRouterVite } from '@tanstack/router-vite-plugin';
 
 // @ts-ignore
 export default defineConfig(async () => {
@@ -19,6 +20,7 @@ export default defineConfig(async () => {
         }),
       },
       react(),
+      TanStackRouterVite(),
     ],
     test: {
       globals: true,
@@ -26,13 +28,14 @@ export default defineConfig(async () => {
       setupFiles: './tests/setup.js',
       coverage: {
         exclude: [
-          '**/{*.d.ts,index.ts}',
+          '**/{*.d.ts,index.ts,*.gen.ts}',
           '**/.cache/**',
           '**/build/**',
           '**/dist/**',
           '**/node_modules/**',
           '**/*.config.js',
           '**/index.tsx',
+          '**/src/routes/**',
         ],
       },
     },
