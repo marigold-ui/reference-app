@@ -1,5 +1,4 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
-import Example from '../components/Example/Example';
 
 export const Route = createLazyFileRoute('/about')({
   component: About,
@@ -7,5 +6,5 @@ export const Route = createLazyFileRoute('/about')({
 
 //TODO: just an example can be removed
 function About() {
-  return <Example />;
+  return <>All about this site</>;
 }

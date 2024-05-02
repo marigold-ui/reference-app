@@ -5,5 +5,7 @@ import App from './App';
 test('initial site', () => {
   render(<App />);
 
-  expect(screen.getByText('Prebuilt Checkout page')).toBeInTheDocument();
+  expect(
+    screen.getByText('Compound components in React')
+  ).toBeInTheDocument();
 });

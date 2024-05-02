@@ -1,0 +1,111 @@
+import BreadcrumbsExample from './BreadcrumbsExample';
+
+<CH.Scrollycoding>
+
+    <CH.Preview frameless>
+
+        <BreadcrumbsExample />
+
+    </CH.Preview>
+
+    ```tsx BreadcrumbsExample.tsx
+
+        import React from 'react';
+
+        import Breadcrumbs from './Breadcrumbs';
+
+        function App() {
+            // TODO: Replace this:
+            return (
+                <nav aria-label="Breadcrumbs">
+                    <ol>
+                        <li>
+                            <a href="/">Electronics</a>
+                        </li>
+                        <li>
+                            <a href="/cellphones">Cell Phones</a>
+                        </li>
+                        <li>
+                            <a href="/cellphones/cases" aria-current="page">
+                                Cases
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+            );
+        }
+
+        export default App;
+
+    ```
+
+    Let's imagine we have the following code for these breadcrumbs (see BreadcrumbsExample.tsx).
+
+    How we can built now a compound component?
+
+    Looking at the markup, it seems like we'll need two components:
+
+    * A Breadcrumbs parent wrapper to contain the group
+
+    * A Crumb component for each link in the group
+
+    ---
+
+    Copy the chunk for the parent wrapper (Breadcrumbs) and made it generic.
+
+    ```tsx Breadcrumbs.tsx focus=3:9
+    // from ./Breadcrumbs.tsx
+    ```
+
+    ---
+
+    Copy the chunk for each link in the group (Crumb) and made it generic.
+
+    ```tsx Breadcrumbs.tsx focus=11:31
+    // from ./Breadcrumbs.tsx
+    ```
+
+    ---
+
+    ## Connect the components
+
+    As final step we need to connect these components.
+
+    ```tsx Breadcrumbs.tsx focus=33
+    // from ./Breadcrumbs.tsx
+    ```
+
+    You can call it weird or awesome, but JS functions can have properties.
+    Functions are like objects in this way. We can "hang" data on them, like clothes hung on a clothesline.
+
+    ---
+
+    ## Update BreadcrumbsExample.tsx
+
+    Finally we can use this compound component in our BreadcrumbsExample.tsx.
+
+
+
+    ```tsx BreadcrumbsExample.tsx
+    // from ./BreadcrumbsExample.tsx
+    ```
+
+    ---
+
+    Note that we only need to import the `Breadcrumbs` component.
+
+    ```tsx BreadcrumbsExample.tsx focus=1,6,12
+    // from ./BreadcrumbsExample.tsx
+    ```
+
+    ---
+
+    Because we connect `Crumb` to `Breadcrumbs` we can access it as a property.
+
+    ```tsx BreadcrumbsExample.tsx focus=6:12
+    // from ./BreadcrumbsExample.tsx
+    ```
+
+</CH.Scrollycoding>
+
+<div style={{ height: 150 }} />
