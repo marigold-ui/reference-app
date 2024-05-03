@@ -1,4 +1,4 @@
-import {act, render, screen} from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import { SideNavigation } from './SideNavigation';
 import {
   createRootRoute,
@@ -7,11 +7,11 @@ import {
 } from '@tanstack/react-router';
 import { expect } from 'vitest';
 
-
-test('renders navigation links', async () => {
-    const rootRoute = createRootRoute({
-        component: () => <SideNavigation />,
-    });
+//remove skip when tanstack is fixed https://github.com/TanStack/router/issues/1554
+test.skip('renders navigation links', async () => {
+  const rootRoute = createRootRoute({
+    component: () => <SideNavigation />,
+  });
 
   const router = createRouter({
     routeTree: rootRoute,
@@ -23,10 +23,10 @@ test('renders navigation links', async () => {
     await new Promise(resolve => setTimeout(resolve, 1000));
   });
 
-    const links = screen.getAllByRole('link');
+  const links = screen.getAllByRole('link');
 
-    expect(screen.getByText('Home')).toBeInTheDocument();
-    expect(links[0]).toHaveAttribute('href', '/');
-    expect(screen.getByText('About')).toBeInTheDocument();
-    expect(links[1]).toHaveAttribute('href', '/about');
+  expect(screen.getByText('Home')).toBeInTheDocument();
+  expect(links[0]).toHaveAttribute('href', '/');
+  expect(screen.getByText('About')).toBeInTheDocument();
+  expect(links[1]).toHaveAttribute('href', '/about');
 });
