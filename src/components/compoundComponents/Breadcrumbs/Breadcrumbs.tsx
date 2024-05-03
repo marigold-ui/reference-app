@@ -23,7 +23,7 @@ function Crumb({
         href={href}
         aria-current={isCurrent && 'page'}
         className="text-decoration-none hover:text-decoration:revert ml-3 hover:underline"
-        onClick={(e) => e.preventDefault()}
+        onClick={e => e.preventDefault()}
       >
         {children}
       </a>
