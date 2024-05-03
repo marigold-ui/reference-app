@@ -21,6 +21,17 @@
     {
       "matchPackagePatterns": ["postcss", "tailwind"],
       "groupName": "tailwind"
+    },
+    {
+      "matchPackagePatterns": [
+        "@marigold/components",
+        "@marigold/system",
+        "@marigold/theme-core",
+        "@marigold/icons",
+        "@marigold/eslint-config",
+        "@marigold/prettier-config"
+      ],
+      "groupName": "marigold"
     }
   ],
   "timezone": "Europe/Berlin"
