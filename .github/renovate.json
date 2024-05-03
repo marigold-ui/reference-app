@@ -2,7 +2,8 @@
   "extends": [
     "config:base",
     ":semanticCommitTypeAll(chore)",
-    ":rebaseStalePrs"
+    ":rebaseStalePrs",
+    ":automergeStableNonMajor"
   ],
   "schedule": ["before 3am on the first day of the month"],
   "packageRules": [
@@ -25,13 +26,7 @@
     {
       "matchPackagePatterns": ["marigold"],
       "groupName": "marigold"
-    },
-    {
-      "description": "Automerge non-major updates",
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true
     }
   ],
-  "platformAutomerge": true,
   "timezone": "Europe/Berlin"
 }
