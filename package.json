@@ -19,7 +19,7 @@
     "@marigold/components": "^7.7.0",
     "@marigold/theme-core": "^26.1.6",
     "@mdx-js/rollup": "^3.0.1",
-    "@react-aria/menu": "3.13.1",
+    "@react-aria/menu": "3.14.0",
     "@react-stately/menu": "3.6.1",
     "@tanstack/react-router": "1.28.1",
     "react": "^18.3.1",
