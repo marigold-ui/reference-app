@@ -33,5 +33,6 @@
       "automerge": true
     }
   ],
+  "platformAutomerge": true,
   "timezone": "Europe/Berlin"
 }
