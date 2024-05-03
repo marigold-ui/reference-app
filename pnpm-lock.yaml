@@ -24,8 +24,8 @@ importers:
         specifier: 3.13.1
         version: 3.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-stately/menu':
-        specifier: 3.6.1
-        version: 3.6.1(react@18.3.1)
+        specifier: 3.7.0
+        version: 3.7.0(react@18.3.1)
       '@tanstack/react-router':
         specifier: 1.28.1
         version: 1.28.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1531,11 +1531,6 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
 
-  '@react-stately/menu@3.6.1':
-    resolution: {integrity: sha512-3v0vkTm/kInuuG8jG7jbxXDBnMQcoDZKWvYsBQq7+POt0LmijbLdbdZPBoz9TkZ3eo/OoP194LLHOaFTQyHhlw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-
   '@react-stately/menu@3.7.0':
     resolution: {integrity: sha512-8UJhvKEF+zaHXrwv0YhFr73OSEprzIs6xRNoV6F/omd4twy1ngPZrL1X8HNzaXsf5BrHuib2tbh81e/Z95D3nA==}
     peerDependencies:
@@ -2617,7 +2612,7 @@ packages:
     engines: {node: '>= 6'}
 
   concat-map@0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   confbox@0.1.7:
     resolution: {integrity: sha512-uJcB/FKZtBMCJpK8MQji6bJHgu1tixKPxRLeGkNzBoOZzpnZUJm0jm2/sBDWcuBx1dYgxV4JU+g5hmNxCyAmdA==}
@@ -6346,7 +6341,7 @@ snapshots:
       '@react-aria/selection': 3.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/collections': 3.10.6(react@18.3.1)
-      '@react-stately/menu': 3.6.1(react@18.3.1)
+      '@react-stately/menu': 3.7.0(react@18.3.1)
       '@react-stately/tree': 3.8.0(react@18.3.1)
       '@react-types/button': 3.9.3(react@18.3.1)
       '@react-types/menu': 3.9.8(react@18.3.1)
@@ -6655,7 +6650,7 @@ snapshots:
       '@react-aria/focus': 3.16.2(react@18.3.1)
       '@react-aria/i18n': 3.10.2(react@18.3.1)
       '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-types/shared': 3.22.1(react@18.3.1)
+      '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
 
@@ -6806,14 +6801,6 @@ snapshots:
       '@swc/helpers': 0.5.11
       react: 18.3.1
 
-  '@react-stately/menu@3.6.1(react@18.3.1)':
-    dependencies:
-      '@react-stately/overlays': 3.6.6(react@18.3.1)
-      '@react-types/menu': 3.9.8(react@18.3.1)
-      '@react-types/shared': 3.23.0(react@18.3.1)
-      '@swc/helpers': 0.5.11
-      react: 18.3.1
-
   '@react-stately/menu@3.7.0(react@18.3.1)':
     dependencies:
       '@react-stately/overlays': 3.6.6(react@18.3.1)
@@ -6960,7 +6947,7 @@ snapshots:
 
   '@react-types/accordion@3.0.0-alpha.19(react@18.3.1)':
     dependencies:
-      '@react-types/shared': 3.22.1(react@18.3.1)
+      '@react-types/shared': 3.23.0(react@18.3.1)
       react: 18.3.1
 
   '@react-types/breadcrumbs@3.7.4(react@18.3.1)':
@@ -9953,7 +9940,7 @@ snapshots:
       '@react-aria/menu': 3.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/toolbar': 3.0.0-beta.3(react@18.3.1)
       '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-stately/menu': 3.6.1(react@18.3.1)
+      '@react-stately/menu': 3.7.0(react@18.3.1)
       '@react-stately/table': 3.11.6(react@18.3.1)
       '@react-stately/utils': 3.10.0(react@18.3.1)
       '@react-types/form': 3.7.3(react@18.3.1)
