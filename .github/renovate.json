@@ -26,6 +26,7 @@
     {
       "matchPackagePatterns": ["marigold"],
       "groupName": "marigold"
+    },
     }
   ],
   "timezone": "Europe/Berlin"
