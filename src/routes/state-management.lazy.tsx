@@ -4,7 +4,6 @@ import { createLazyFileRoute } from '@tanstack/react-router';
 import { useQuery } from '@tanstack/react-query'
 import { Card, Image, Inline, SearchField, Select, Stack, Text } from '@marigold/components';
 import { useState } from 'react';
-import { useDebounce } from '../hooks/useDebounce';
 
 export const Route = createLazyFileRoute('/state-management')({
   component: Example
@@ -37,12 +36,9 @@ function Example() {
     return users;
   };
 
-
-  const debouncedFilters = useDebounce(filters, 1000);
-
   const { data: movies, isError, isLoading, error } = useQuery<Array<MovieI>>({
-    queryKey: ['users', debouncedFilters],
-    queryFn: async () => await fetchData("https://6630d183c92f351c03db2e12.mockapi.io/movies", debouncedFilters),
+    queryKey: ['users', filters],
+    queryFn: async () => await fetchData("https://6630d183c92f351c03db2e12.mockapi.io/movies", filters),
   });
 
   if (isError) {
