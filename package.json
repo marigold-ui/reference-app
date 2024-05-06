@@ -31,7 +31,7 @@
     "@marigold/prettier-config": "^0.3.1",
     "@tanstack/router-devtools": "^1.31.9",
     "@tanstack/router-vite-plugin": "^1.26.21",
-    "@testing-library/jest-dom": "6.4.2",
+    "@testing-library/jest-dom": "6.4.5",
     "@testing-library/react": "^15.0.6",
     "@types/jest": "^29.5.12",
     "@types/react": "^18.3.1",
