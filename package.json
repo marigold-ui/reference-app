@@ -21,7 +21,7 @@
     "@mdx-js/rollup": "^3.0.1",
     "@react-aria/menu": "3.13.1",
     "@react-stately/menu": "3.6.1",
-    "@tanstack/react-router": "1.28.1",
+    "@tanstack/react-router": "1.31.20",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.3.0"
