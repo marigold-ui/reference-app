@@ -7,8 +7,7 @@ import {
 } from '@tanstack/react-router';
 import { expect } from 'vitest';
 
-//remove skip when tanstack is fixed https://github.com/TanStack/router/issues/1554
-test.skip('renders navigation links', async () => {
+test('renders navigation links', async () => {
   const rootRoute = createRootRoute({
     component: () => <SideNavigation />,
   });
