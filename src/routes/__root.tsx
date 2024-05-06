@@ -1,6 +1,6 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
 import React, { Suspense } from 'react';
-// import { SideNavigation } from '../components/SideNavigation';
+import { SideNavigation } from '../components/SideNavigation';
 
 const TanStackRouterDevtools =
   process.env.NODE_ENV === 'production'
@@ -14,7 +14,7 @@ const TanStackRouterDevtools =
 export const Route = createRootRoute({
   component: () => (
     <>
-      {/* <SideNavigation /> */}
+      <SideNavigation />
       <div className="bg-gray-50">
         <Outlet />
         <Suspense>
