@@ -39,6 +39,7 @@ function Example() {
   const { data: movies, isError, isLoading, error } = useQuery<Array<MovieI>>({
     queryKey: ['users', filters],
     queryFn: async () => await fetchData("https://6630d183c92f351c03db2e12.mockapi.io/movies", filters),
+
   });
 
   if (isError) {
@@ -48,7 +49,7 @@ function Example() {
 
   return (
     <>
-      <Stack space={3}>
+      <Stack space={4}>
         <Inline space={4}>
           <SearchField value={filters?.title} onChange={(value) => setFilters(prev => ({ ...prev, title: value }))} label="search" width={'1/2'} />
           <Select label="Category" placeholder="Select your character" width={'1/5'}
@@ -64,15 +65,18 @@ function Example() {
             <Select.Option id={"Fantasy"}>Fantasy</Select.Option>
           </Select>
         </Inline>
+
         {isLoading && <span>Loading...</span>}
-        <Inline space={4} >
+        <Inline space={4}>
           {
-            movies?.map((movie) =>
-              <Card variant='hovering' key={movie.href}>
-                <Text fontSize='xl' weight='bold'>{movie.title}</Text>
-                <Image fit="contain" src={movie.thumbnail} alt={movie.title} />
-              </Card>
-            )
+            // check if search returns nothing(movies='not found')
+            typeof movies === "string" ? <Text fontSize='xl' color='text-error'>{movies}</Text> :
+              movies?.map((movie) =>
+                <Card variant='hovering' key={movie.href}>
+                  <Text fontSize='xl' weight='bold'>{movie.title}</Text>
+                  <Image src={movie.thumbnail} alt={movie.title} width={300} height={300} />
+                </Card>
+              )
           }
         </Inline>
       </Stack>
