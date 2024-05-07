@@ -16,13 +16,13 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <Header />
-          <SideNavigation />
-          <div className="bg-gray-50">
-            <Outlet />
-            <Suspense>
-              <TanStackRouterDevtools />
-            </Suspense>
-          </div>
+      <SideNavigation />
+      <div className="bg-gray-50">
+        <Outlet />
+        <Suspense>
+          <TanStackRouterDevtools />
+        </Suspense>
+      </div>
     </>
   ),
 });

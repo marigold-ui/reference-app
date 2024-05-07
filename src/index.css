@@ -5,7 +5,7 @@
     --page-header-height: 56px;
     --xx: 4px;
 
-    --page-side-nav-absolute-width: 208px;
+    --page-side-nav-absolute-width: 240px;
 
     --page-side-nav-width: calc(
         var(--page-side-nav-absolute-width) + var(--page-padding)
