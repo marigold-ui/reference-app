@@ -2,6 +2,8 @@
     --page-padding: 0.75rem;
     --page-padding-md: 2rem;
     --page-padding-xl: 3rem;
+    --page-header-height: 56px;
+    --xx: 4px;
 
     --page-side-nav-absolute-width: 208px;
 
@@ -15,6 +17,18 @@
 
     --page-side-nav-width-xl: calc(
             var(--page-side-nav-absolute-width) + var(--page-padding-xl)
+    );
+
+    --page-side-nav-padding: calc(
+            var(--page-padding) - var(--xx)
+    );
+
+    --page-side-nav-padding-md: calc(
+            var(--page-padding-md) - var(--xx)
+    );
+
+    --page-side-nav-padding-xl: calc(
+            var(--page-padding-xl) - var(--xx)
     );
 }
 
@@ -58,7 +72,7 @@ strong {
 
 h1 {
     font-size: 2em;
-    margin: 0.67em 0;
+    margin: 0;
 }
 
 mark {
@@ -75,6 +89,7 @@ html {
     font-weight: 400;
     font-size: 12px;
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 code,

@@ -4,7 +4,7 @@ import CompoundComponentsApp from './components/compoundComponents/index.mdx';
 
 function App() {
   return (
-    <article className='pl-[--page-side-nav-width] md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]'>
+    <article className='pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]'>
       <div>
         <CompoundComponentsApp />
       </div>
