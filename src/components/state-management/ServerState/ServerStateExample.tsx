@@ -2,7 +2,7 @@ import { Card, Image, Inline, SearchField, Select, Stack, Text } from "@marigold
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
-interface MovieI {
+interface IMovie {
     href: string;
     year: number;
     title: string;
@@ -21,13 +21,12 @@ function ServerStateExample() {
 
     const fetchData = async (url: string, queryParams: Record<string, string>) => {
         const queryString = new URLSearchParams(queryParams).toString();
-        const apiURL = url + (queryString ? `?${queryString}` : '');
+        const apiURL = `${url}${(queryString ? `?${queryString}` : '')}`;
         const data = await fetch(apiURL);
-        const users = await data.json();
-        return users;
+        return await data.json();
     };
 
-    const { data: movies, isError, isLoading, error } = useQuery<Array<MovieI>>({
+    const { data: movies, isError, isLoading, error } = useQuery<Array<IMovie>>({
         queryKey: ['users', filters],
         queryFn: async () => await fetchData("https://6630d183c92f351c03db2e12.mockapi.io/movies", filters),
 
