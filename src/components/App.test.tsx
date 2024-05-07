@@ -5,5 +5,7 @@ import App from './App';
 test('initial site', () => {
   render(<App />);
 
-  expect(screen.getByText('WIP: Welcome to the Reference App!')).toBeInTheDocument();
+  expect(
+    screen.getByText('WIP: Welcome to the Reference App!')
+  ).toBeInTheDocument();
 });

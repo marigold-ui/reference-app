@@ -26,17 +26,19 @@ export const SideNavigation = () => {
       <div className="h-full overflow-y-auto bg-gray-50 py-4">
         <ul className="list-none space-y-2 border-l border-gray-600 p-0 ">
           {navItems.map((item: NavItem) => (
-              <li key={item.linkTo}>
-                <Link
-                    to={item.linkTo}
-                    className="group flex items-center rounded-lg p-2 text-xl text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-500 dark:hover:text-white [&.active]:font-bold"
-                >
-                  <span className="ms-[--page-side-nav-padding] md:ms-[--page-side-nav-padding-md] xl:ms-[--page-side-nav-padding-xl]">{item.name}</span>
-                </Link>
-              </li>
+            <li key={item.linkTo}>
+              <Link
+                to={item.linkTo}
+                className="group flex items-center rounded-lg p-2 text-xl text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-500 dark:hover:text-white [&.active]:font-bold"
+              >
+                <span className="ms-[--page-side-nav-padding] md:ms-[--page-side-nav-padding-md] xl:ms-[--page-side-nav-padding-xl]">
+                  {item.name}
+                </span>
+              </Link>
+            </li>
           ))}
         </ul>
       </div>
     </aside>
-);
+  );
 };
