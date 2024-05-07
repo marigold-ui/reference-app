@@ -1,9 +1,9 @@
-import { expect, test } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { expect } from 'vitest';
+import { render } from '@testing-library/react';
 import App from './App';
 
-test('initial site', () => {
-  render(<App />);
+test('renders <App /> correctly', () => {
+  const { container } = render(<App />);
 
-  expect(screen.getByText('WIP: Welcome to the Reference App!')).toBeInTheDocument();
+  expect(container).toMatchSnapshot();
 });

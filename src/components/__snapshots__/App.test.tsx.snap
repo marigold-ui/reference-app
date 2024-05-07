@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders <App /> correctly 1`] = `
+<div>
+  <article
+    class="pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]"
+  >
+    WIP: Welcome to the Reference App!
+  </article>
+</div>
+`;

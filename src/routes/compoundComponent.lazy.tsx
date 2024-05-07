@@ -6,5 +6,5 @@ export const Route = createLazyFileRoute('/compoundComponent')({
 });
 
 function CompoundComponent() {
-  return <CompoundApp />
+  return <CompoundApp />;
 }
