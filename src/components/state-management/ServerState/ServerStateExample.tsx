@@ -12,7 +12,7 @@ interface MovieI {
     thumbnail_height: number;
     extract: string;
 }
-export const StateManagement = () => {
+function ServerStateExample() {
 
     const [filters, setFilters] = useState<{ title: string, category: string }>({
         title: "",
@@ -76,3 +76,4 @@ export const StateManagement = () => {
 }
 
 
+export default ServerStateExample;
