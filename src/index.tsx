@@ -4,7 +4,6 @@ import './index.css';
 import { routeTree } from './routeTree.gen';
 import { createRouter, RouterProvider } from '@tanstack/react-router';
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { MarigoldProvider } from '@marigold/components';
 import theme from '@marigold/theme-core';
 
@@ -26,7 +25,6 @@ if (!rootElement.innerHTML) {
       <QueryClientProvider client={queryClient}>
         <MarigoldProvider theme={theme}>
           <RouterProvider router={router} />
-          <ReactQueryDevtools />
         </MarigoldProvider>
       </QueryClientProvider>
     </StrictMode>

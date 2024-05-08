@@ -1,6 +1,7 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
 import React, { Suspense } from 'react';
 import { SideNavigation } from '../components/SideNavigation';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const TanStackRouterDevtools =
   process.env.NODE_ENV === 'production'
@@ -19,6 +20,7 @@ export const Route = createRootRoute({
         <Outlet />
         <Suspense>
           <TanStackRouterDevtools />
+          <ReactQueryDevtools />
         </Suspense>
       </div>
     </>
