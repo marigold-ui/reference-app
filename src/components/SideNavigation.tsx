@@ -15,6 +15,10 @@ export const SideNavigation = () => {
       linkTo: '/about',
       name: 'About',
     },
+    {
+      linkTo: '/state-management',
+      name: 'state-management',
+    },
   ];
 
   return (
