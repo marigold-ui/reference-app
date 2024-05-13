@@ -1,0 +1,2081 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders <StateManagementApp /> correctly 1`] = `
+<div>
+  <div
+    class="font-body text-text-base bg-bg-surface text-[13px] leading-normal"
+  >
+    <article
+      class="pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]"
+    >
+      <div>
+        <h2>
+          State Management in React
+        </h2>
+        
+
+        <style>
+          [data-ch-theme="dark-plus"] {  --ch-t-colorScheme: dark;--ch-t-foreground: #D4D4D4;--ch-t-background: #1E1E1E;--ch-t-lighter-inlineBackground: #1e1e1ee6;--ch-t-editor-background: #1E1E1E;--ch-t-editor-foreground: #D4D4D4;--ch-t-editor-rangeHighlightBackground: #ffffff0b;--ch-t-editor-infoForeground: #3794FF;--ch-t-editor-selectionBackground: #264F78;--ch-t-focusBorder: #007FD4;--ch-t-tab-activeBackground: #1E1E1E;--ch-t-tab-activeForeground: #ffffff;--ch-t-tab-inactiveBackground: #2D2D2D;--ch-t-tab-inactiveForeground: #ffffff80;--ch-t-tab-border: #252526;--ch-t-tab-activeBorder: #1E1E1E;--ch-t-editorGroup-border: #444444;--ch-t-editorGroupHeader-tabsBackground: #252526;--ch-t-editorLineNumber-foreground: #858585;--ch-t-input-background: #3C3C3C;--ch-t-input-foreground: #D4D4D4;--ch-t-icon-foreground: #C5C5C5;--ch-t-sideBar-background: #252526;--ch-t-sideBar-foreground: #D4D4D4;--ch-t-sideBar-border: #252526;--ch-t-list-activeSelectionBackground: #094771;--ch-t-list-activeSelectionForeground: #fffffe;--ch-t-list-hoverBackground: #2A2D2E; }
+        </style>
+        
+
+        
+
+        <div>
+          <section
+            class="ch-scrollycoding ch-scrollycoding-with-preview "
+            data-ch-theme="dark-plus"
+          >
+            <div
+              class="ch-scrollycoding-content"
+            >
+              <div
+                class="ch-scrollycoding-step-content"
+                data-selected="true"
+              />
+            </div>
+            <div
+              class="ch-scrollycoding-sticker"
+            >
+              <div
+                class="ch-codegroup not-prose "
+                data-ch-theme="dark-plus"
+              >
+                <div
+                  class="ch-editor-frame"
+                >
+                  <div
+                    class="ch-frame-title-bar"
+                  >
+                    <div
+                      class="ch-frame-buttons"
+                    >
+                      <div
+                        class="ch-frame-button ch-frame-button-left"
+                      />
+                      <div
+                        class="ch-frame-button-space"
+                      />
+                      <div
+                        class="ch-frame-button ch-frame-button-middle"
+                      />
+                      <div
+                        class="ch-frame-button-space"
+                      />
+                      <div
+                        class="ch-frame-button ch-frame-button-right"
+                      />
+                    </div>
+                    <div
+                      class="ch-editor-tab"
+                      data-active="true"
+                      data-ch-tab="north"
+                      title="ServerStateExample.tsx"
+                    >
+                      <div>
+                        <span
+                          style="opacity: 0.5;"
+                        />
+                        ServerStateExample.tsx
+                      </div>
+                    </div>
+                    <div
+                      style="flex: 1; min-width: 0.8em;"
+                    />
+                    <button
+                      class="ch-editor-button"
+                      title="Copy code"
+                      type="button"
+                    >
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6px"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div
+                    data-ch-panel="north"
+                    style="flex-grow: 1; overflow: hidden;"
+                  >
+                    <div
+                      class="ch-code-wrapper "
+                      data-ch-measured="false"
+                      style="height: 100%;"
+                    >
+                      <code
+                        class="ch-code-scroll-parent"
+                      >
+                        <br />
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                              import {
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                Card,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                Image,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                Inline,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                SearchField,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                Select,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                Stack,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                Text,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                              } from '@marigold/components';
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                              import { useQuery } from '@tanstack/react-query';
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                              import { useState } from 'react';
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span />
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                              interface IMovie {
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                href: string;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                year: number;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                title: string;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                category: string;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                thumbnail: string;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                thumbnail_width: number;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                thumbnail_height: number;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                extract: string;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                              }
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                              function ServerStateExample() {
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                const [filters, setFilters] = useState&lt;{ title: string; category: string }&gt;({
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  title: '',
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  category: '',
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                });
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span />
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                const fetchData = async (
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  url: string,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  queryParams: Record&lt;string, string&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                ) =&gt; {
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  const queryString = new URLSearchParams(queryParams).toString();
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  const apiURL = \`\${url}\${queryString ? \`?\${queryString}\` : ''}\`;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  const data = await fetch(apiURL);
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  return await data.json();
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                };
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span />
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                const {
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  data: movies,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  isError,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  isLoading,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  error,
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                } = useQuery&lt;Array&lt;IMovie&gt;&gt;({
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  queryKey: ['users', filters],
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  queryFn: async () =&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                    await fetchData(
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                      'https://6630d183c92f351c03db2e12.mockapi.io/movies',
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                      filters
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                    ),
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                });
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span />
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                if (isError) {
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  return &lt;span&gt;Error: {error.message}&lt;/span&gt;;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                }
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span />
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                return (
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  &lt;&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                    &lt;Stack space={4}&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                      &lt;Inline space={4}&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                        &lt;SearchField
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          value={filters?.title}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          onChange={value =&gt; setFilters(prev =&gt; ({ ...prev, title: value }))}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          label="search"
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          width={'1/2'}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                        /&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                        &lt;Select
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          label="Category"
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          placeholder="Select your character"
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          width={'1/5'}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          onChange={key =&gt; {
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                            setFilters(prev =&gt; ({ ...prev, category: key as string }));
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          }}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          selectedKey={filters.category}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                        &gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          &lt;Select.Option id={''}&gt;all&lt;/Select.Option&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          &lt;Select.Option id={'Drama'}&gt;Drama&lt;/Select.Option&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          &lt;Select.Option id={'Silent'}&gt;Silent&lt;/Select.Option&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          &lt;Select.Option id={'Comedy'}&gt;Comedy&lt;/Select.Option&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          &lt;Select.Option id={'Western'}&gt;Western&lt;/Select.Option&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          &lt;Select.Option id={'Historical'}&gt;Historical&lt;/Select.Option&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          &lt;Select.Option id={'Fantasy'}&gt;Fantasy&lt;/Select.Option&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                        &lt;/Select&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                      &lt;/Inline&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span />
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                      {isLoading && &lt;span&gt;Loading...&lt;/span&gt;}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                      &lt;Inline space={4}&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                        {
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          // check if search returns nothing(movies='not found')
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          typeof movies === 'string' ? (
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                            &lt;Text fontSize="xl" color="text-error"&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                              {movies}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                            &lt;/Text&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          ) : (
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                            movies?.map(movie =&gt; (
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                              &lt;Card variant="hovering" key={movie.href}&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                                &lt;Text fontSize="xl" weight="bold"&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                                  {movie.title}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                                &lt;/Text&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                                &lt;Image
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                                  src={movie.thumbnail}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                                  alt={movie.title}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                                  width={300}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                                  height={300}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                                /&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                              &lt;/Card&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                            ))
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                          )
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                        }
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                      &lt;/Inline&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                    &lt;/Stack&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                  &lt;/&gt;
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                                );
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                              }
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span />
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="ch-code-line-number"
+                          >
+                            _
+                            116
+                          </span>
+                          <div
+                            style="display: inline-block; margin-left: 16px;"
+                          >
+                            <span>
+                              export default ServerStateExample;
+                            </span>
+                          </div>
+                        </div>
+                        <br />
+                      </code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ch-preview ch-scrollycoding-preview"
+                data-ch-theme="dark-plus"
+              >
+                <div
+                  class="flex flex-col gap-4"
+                >
+                  <div
+                    class="flex flex-wrap gap-4"
+                  >
+                    <div
+                      class="group/field w-1/2 grid grid-cols-[min-content_1fr] grid-rows-[min-content_min-content] gap-x-2 gap-y-0.5"
+                      data-empty="true"
+                      data-rac=""
+                    >
+                      <label
+                        class="leading-6 row-span-2 justify-end group-error/field:text-text-error group-required/field:font-bold flex w-[var(--labelWidth)]"
+                        for="react-aria-:r0:"
+                        id="react-aria-:r1:"
+                      >
+                        search
+                        <svg
+                          class="flex-none fill-current text-[--color] hidden"
+                          height="16px"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                          width="16px"
+                        >
+                          <path
+                            d="M10.8 3.84003H13.2V9.85259L18.1543 7.01815L19.3461 9.10132L14.3584 11.9549L19.3371 14.7999L18.1463 16.8836L13.2 14.0572V20.16H10.8V13.9907L5.76116 16.8735L4.56935 14.7903L9.5232 11.9561L4.56 9.12003L5.75073 7.03624L10.8 9.92154V3.84003Z"
+                          />
+                        </svg>
+                      </label>
+                      <div
+                        class="group/input relative flex items-center"
+                        data-action=""
+                        data-icon=""
+                      >
+                        <svg
+                          class="pointer-events-none absolute left-1 size-4"
+                          fill="currentColor"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.1865 14.5142H15.3057L14.9936 14.2131C16.0862 12.9421 16.744 11.292 16.744 9.497C16.744 5.49443 13.4996 2.25 9.497 2.25C5.49443 2.25 2.25 5.49443 2.25 9.497C2.25 13.4996 5.49443 16.744 9.497 16.744C11.292 16.744 12.9421 16.0862 14.2131 14.9936L14.5142 15.3057V16.1865L20.0888 21.75L21.75 20.0888L16.1865 14.5142ZM9.49701 14.5142C6.72085 14.5142 4.47986 12.2732 4.47986 9.49701C4.47986 6.72085 6.72085 4.47986 9.49701 4.47986C12.2732 4.47986 14.5142 6.72085 14.5142 9.49701C14.5142 12.2732 12.2732 14.5142 9.49701 14.5142Z"
+                          />
+                        </svg>
+                        <input
+                          aria-describedby="react-aria-:r3:"
+                          aria-labelledby="react-aria-:r1:"
+                          class="w-full flex-1 disabled:cursor-not-allowed [&[type=file]]:border-none [&[type=file]]:p-0 [&[type=color]]:ml-0 [&[type=color]]:border-none [&[type=color]]:bg-transparent [&[type=color]]:p-0 border rounded-sm border-border-inverted bg-white h-component px-1 disabled:bg-bg-inverted-disabled disabled:border-border-base-disabled disabled:text-text-base-disabled data-[invalid]:border-border-error [&[type=file]]:leading-[16px] leading-[22px] focus:outline-outline-focus -outline-offset-1 focus:outline focus:outline-2 read-only:border-transparent read-only:bg-transparent group-data-[icon]/input:pl-5 group-data-[action]/input:pr-8 placeholder:text-text-inverted-disabled [&::-webkit-search-cancel-button]:hidden"
+                          data-rac=""
+                          id="react-aria-:r0:"
+                          title=""
+                          type="search"
+                          value=""
+                        />
+                        <button
+                          aria-label="Clear search"
+                          class="absolute right-0 h-component group-data-[empty=true]/field:hidden"
+                          data-rac=""
+                          tabindex="-1"
+                          type="button"
+                        >
+                          <svg
+                            fill="currentColor"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                      <div
+                        class="group-error/field:text-text-error group-[invalid=true]/field:text-text-error"
+                      >
+                        <span
+                          class="peer-first/error:hidden"
+                          id="react-aria-:r3:"
+                          slot="description"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="group/field w-1/5 grid grid-cols-[min-content_1fr] grid-rows-[min-content_min-content] gap-x-2 gap-y-0.5"
+                      data-rac=""
+                    >
+                      <span
+                        class="leading-6 row-span-2 justify-end group-error/field:text-text-error group-required/field:font-bold flex w-[var(--labelWidth)]"
+                        id="react-aria-:r8:"
+                      >
+                        Category
+                        <svg
+                          class="flex-none fill-current text-[--color] hidden"
+                          height="16px"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                          width="16px"
+                        >
+                          <path
+                            d="M10.8 3.84003H13.2V9.85259L18.1543 7.01815L19.3461 9.10132L14.3584 11.9549L19.3371 14.7999L18.1463 16.8836L13.2 14.0572V20.16H10.8V13.9907L5.76116 16.8735L4.56935 14.7903L9.5232 11.9561L4.56 9.12003L5.75073 7.03624L10.8 9.92154V3.84003Z"
+                          />
+                        </svg>
+                      </span>
+                      <button
+                        aria-describedby="react-aria-:ra:"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="react-aria-:rc: react-aria-:r8:"
+                        class="flex w-full items-center justify-between gap-1 overflow-hidden border rounded-sm border-border-inverted bg-white h-component px-1 [&>[data-placeholder=true]]:text-text-inverted-disabled"
+                        data-rac=""
+                        id="react-aria-:r7:"
+                        type="button"
+                      >
+                        <span
+                          class="react-aria-SelectValue"
+                          data-rac=""
+                          id="react-aria-:rc:"
+                        >
+                          all
+                        </span>
+                        <svg
+                          class="flex-none fill-current text-[--color] size-4"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                        >
+                          <path
+                            d="M5.97563 7.125L12 13.1363L18.0244 7.125L19.875 8.97563L12 16.8506L4.125 8.97563L5.97563 7.125Z"
+                          />
+                        </svg>
+                      </button>
+                      <div
+                        class="group-error/field:text-text-error group-[invalid=true]/field:text-text-error"
+                      >
+                        <span
+                          class="peer-first/error:hidden"
+                          id="react-aria-:ra:"
+                          slot="description"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      data-a11y-ignore="aria-hidden-focus"
+                      data-react-aria-prevent-focus="true"
+                      data-testid="hidden-select-container"
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        style="font-size: 16px;"
+                        tabindex="-1"
+                        type="text"
+                      />
+                      <label>
+                        <select
+                          tabindex="-1"
+                          title=""
+                        >
+                          <option />
+                          <option
+                            value=""
+                          >
+                            all
+                          </option>
+                          <option
+                            value="Drama"
+                          >
+                            Drama
+                          </option>
+                          <option
+                            value="Silent"
+                          >
+                            Silent
+                          </option>
+                          <option
+                            value="Comedy"
+                          >
+                            Comedy
+                          </option>
+                          <option
+                            value="Western"
+                          >
+                            Western
+                          </option>
+                          <option
+                            value="Historical"
+                          >
+                            Historical
+                          </option>
+                          <option
+                            value="Fantasy"
+                          >
+                            Fantasy
+                          </option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <span>
+                    Loading...
+                  </span>
+                  <div
+                    class="flex flex-wrap gap-4"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+
+        <p>
+          Write some description here
+        </p>
+        
+
+        <div
+          style="height: 300px;"
+        />
+      </div>
+    </article>
+  </div>
+</div>
+`;
