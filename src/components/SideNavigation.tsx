@@ -15,6 +15,10 @@ export const SideNavigation = () => {
       linkTo: '/compoundComponent',
       name: 'Compound Component',
     },
+    {
+      linkTo: '/state-management',
+      name: 'state-management',
+    },
   ];
 
   return (
