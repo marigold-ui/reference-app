@@ -1,3 +1,5 @@
+import '@code-hike/mdx/styles';
+import '../../css/custom-ch.css';
 import StateManagementContent from './index.mdx';
 
 function StateManagementApp() {
