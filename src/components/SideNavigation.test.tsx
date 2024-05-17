@@ -24,8 +24,8 @@ test('renders navigation links', async () => {
 
   const links = screen.getAllByRole('link');
 
-  expect(screen.getByText('Home')).toBeInTheDocument();
+  expect(screen.getByText('Welcome')).toBeInTheDocument();
   expect(links[0]).toHaveAttribute('href', '/');
-  expect(screen.getByText('About')).toBeInTheDocument();
-  expect(links[1]).toHaveAttribute('href', '/about');
+  expect(screen.getByText('Compound Component')).toBeInTheDocument();
+  expect(links[1]).toHaveAttribute('href', '/compoundComponent');
 });
