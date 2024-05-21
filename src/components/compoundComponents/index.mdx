@@ -1,5 +1,6 @@
 import BreadcrumbDoc from './Breadcrumbs/breadcrumbs.mdx';
 import TabsDoc from './Tabs/tabs.mdx';
+import { Link } from '@tanstack/react-router';
 
 # Compound components in React
 
@@ -33,6 +34,8 @@ The select tag works together with the option tag which is used for a drop-down 
 
 ## Example 1: Building a compound component
 
+<Link to="/compoundComponent/preview/BreadcrumbsExample" >Live Breadcrumb Example App</Link>
+
 E-commerce websites often have “breadcrumbs” to help the user navigate to parent/grand-parent pages. For example:
 
     `Electronics / Cell Phones / Cases`
@@ -44,5 +47,7 @@ E-commerce websites often have “breadcrumbs” to help the user navigate to pa
 ## Example 2: Compound component with Context
 
 By leveraging React context, we can provide the necessary states and functions to child components without exposing them through props, resulting in a cleaner and more maintainable codebase.
+
+<Link to="/compoundComponent/preview/TabsExample">Live Tabs Example App</Link>
 
 <TabsDoc />
