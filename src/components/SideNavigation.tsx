@@ -13,7 +13,7 @@ export const SideNavigation = () => {
     },
     {
       linkTo: '/compoundComponent',
-      name: 'Compound Component',
+      name: 'Compound component',
     },
     {
       linkTo: '/state-management',
