@@ -19,10 +19,6 @@ export const SideNavigation = () => {
       linkTo: '/state-management',
       name: 'state-management',
     },
-    {
-      linkTo: '/state-management',
-      name: 'state-management',
-    },
   ];
 
   return (
