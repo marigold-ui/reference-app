@@ -1,3 +1,117 @@
+:root {
+  --page-padding: 0.75rem;
+  --page-padding-md: 2rem;
+  --page-padding-xl: 3rem;
+  --page-header-height: 56px;
+  --xx: 4px;
+
+  --page-side-nav-absolute-width: 240px;
+
+  --page-side-nav-width: calc(
+    var(--page-side-nav-absolute-width) + var(--page-padding)
+  );
+
+  --page-side-nav-width-md: calc(
+    var(--page-side-nav-absolute-width) + var(--page-padding-md)
+  );
+
+  --page-side-nav-width-xl: calc(
+    var(--page-side-nav-absolute-width) + var(--page-padding-xl)
+  );
+
+  --page-side-nav-padding: calc(var(--page-padding) - var(--xx));
+
+  --page-side-nav-padding-md: calc(var(--page-padding-md) - var(--xx));
+
+  --page-side-nav-padding-xl: calc(var(--page-padding-xl) - var(--xx));
+}
+
+article {
+  padding: 0 7px;
+}
+
+article > div {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(26, 31, 54);
+}
+
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h4 a {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+p {
+  line-height: 26px;
+  color: rgb(60, 66, 87);
+  font-size: 16px;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-size: 12px;
+  font-family: monospace;
+}
+
+body,
+button,
+html,
+input {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  @apply text-blue-500 text-base;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  @apply text-gray-900;
+  text-decoration: none;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

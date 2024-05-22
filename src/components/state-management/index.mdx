@@ -1,7 +1,16 @@
-import ServerStateDoc from "./ServerState/server-state.mdx"
+import ServerStateDoc from './ServerState/server-state.mdx';
 
+# State Management in React
+## What is State Management ? 
 
-## State Management in React
+**"State" is any data that describes the current behavior of an application.** This could include values like "a list of objects fetched from the server", "which item is currently selected", "name of the currently logged-in user", and "is this modal open?".
+
+**State** allows you to create interactive and dynamic user interfaces. By managing the state of component, you  can update the UI in response to user interactions, API calls, or other events.
+
+Here are different types for state management that will be covered in our example: 
+
+- **Local State:**: Data we manage in one or another component e.g handling inputs data in from.
+- **Server State :** Data are fetched from the server via an API and cached on the client, there are a couple of great libraries that make data fetching in React a breeze such as: ***React Query***.
 
 
 <ServerStateDoc />
