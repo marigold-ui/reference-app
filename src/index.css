@@ -5,7 +5,7 @@
   --page-header-height: 56px;
   --xx: 4px;
 
-  --page-side-nav-absolute-width: 240px;
+  --page-side-nav-absolute-width: 280px;
 
   --page-side-nav-width: calc(
     var(--page-side-nav-absolute-width) + var(--page-padding)
@@ -138,8 +138,6 @@ h4 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
-
-
 
 @tailwind base;
 @tailwind components;
