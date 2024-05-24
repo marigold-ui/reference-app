@@ -26,6 +26,10 @@
   --page-side-nav-padding-xl: calc(var(--page-padding-xl) - var(--xx));
 }
 
+.article-content {
+  @apply pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]
+}
+
 article {
   padding: 0 7px;
 }
