@@ -26,6 +26,6 @@ test('renders navigation links', async () => {
 
   expect(screen.getByText('Welcome')).toBeInTheDocument();
   expect(links[0]).toHaveAttribute('href', '/');
-  expect(screen.getByText('Compound Component')).toBeInTheDocument();
+  expect(screen.getByText('Compound component')).toBeInTheDocument();
   expect(links[1]).toHaveAttribute('href', '/compoundComponent');
 });
