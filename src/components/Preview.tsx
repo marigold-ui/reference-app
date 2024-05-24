@@ -2,7 +2,6 @@ import BreadcrumbsExample from './compoundComponents/Breadcrumbs/BreadcrumbsExam
 import TabsExample from './compoundComponents/Tabs/TabsExample';
 import ServerStateExample from './state-management/ServerState/ServerStateExample';
 import {Route} from '../routes/$component.preview.$example';
-import BackButton from './BackButton';
 
 const components =  {
     BreadcrumbsExample,
@@ -16,7 +15,6 @@ const Preview = () => {
 
     return (
         <article className="article-content">
-            <BackButton />
             <PreviewComponent/>
         </article>
     )
