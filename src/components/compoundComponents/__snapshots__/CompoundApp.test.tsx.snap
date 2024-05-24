@@ -77,6 +77,11 @@ exports[`renders <CompoundApp /> correctly 1`] = `
       </ul>
       
 
+      <div
+        class="h-5"
+      />
+      
+
       <h2>
         HTML example
       </h2>
@@ -273,9 +278,26 @@ exports[`renders <CompoundApp /> correctly 1`] = `
       </p>
       
 
+      <div
+        class="h-5"
+      />
+      
+
       <h2>
         Example 1: Building a compound component
       </h2>
+      
+
+      <div
+        class="pb-2"
+      >
+        <a
+          href="/compoundComponent/preview/BreadcrumbsExample"
+          target="_blank"
+        >
+          View demo
+        </a>
+      </div>
       
 
       <p>
@@ -298,11 +320,9 @@ exports[`renders <CompoundApp /> correctly 1`] = `
       </style>
       
 
-      
-
       <div>
         <section
-          class="ch-scrollycoding ch-scrollycoding-with-preview "
+          class="ch-scrollycoding  "
           data-ch-theme="dark-plus"
         >
           <div
@@ -365,9 +385,6 @@ exports[`renders <CompoundApp /> correctly 1`] = `
             <div
               class="ch-scrollycoding-step-content"
             >
-              <h2>
-                Connect the components
-              </h2>
               <p>
                 As final step we need to connect these components.
               </p>
@@ -379,9 +396,6 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
             <div
               class="ch-scrollycoding-step-content"
             >
-              <h2>
-                Update BreadcrumbsExample.tsx
-              </h2>
               <p>
                 Finally we can use this compound component in our BreadcrumbsExample.tsx.
               </p>
@@ -897,65 +911,31 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                 </div>
               </div>
             </div>
-            <div
-              class="ch-preview ch-scrollycoding-preview"
-              data-ch-theme="dark-plus"
-            >
-              <nav
-                aria-label="Breadcrumbs"
-              >
-                <ol
-                  class="m-0 list-none p-0"
-                >
-                  <li
-                    class="mr-3 inline before:content-['/'] before:first-of-type:content-['']"
-                  >
-                    <a
-                      aria-current="false"
-                      class="text-decoration-none hover:text-decoration:revert ml-3 hover:underline"
-                      href="/"
-                    >
-                      Electronics
-                    </a>
-                  </li>
-                  <li
-                    class="mr-3 inline before:content-['/'] before:first-of-type:content-['']"
-                  >
-                    <a
-                      aria-current="false"
-                      class="text-decoration-none hover:text-decoration:revert ml-3 hover:underline"
-                      href="/cellphones"
-                    >
-                      Cell Phones
-                    </a>
-                  </li>
-                  <li
-                    class="mr-3 inline before:content-['/'] before:first-of-type:content-['']"
-                  >
-                    <a
-                      aria-current="page"
-                      class="text-decoration-none hover:text-decoration:revert ml-3 hover:underline"
-                      href="/cellphones/cases"
-                    >
-                      Cases
-                    </a>
-                  </li>
-                </ol>
-              </nav>
-            </div>
           </div>
         </section>
       </div>
       
 
       <div
-        style="height: 150px;"
+        style="height: 100px;"
       />
       
 
       <h2>
         Example 2: Compound component with Context
       </h2>
+      
+
+      <div
+        class="pb-2"
+      >
+        <a
+          href="/compoundComponent/preview/TabsExample"
+          target="_blank"
+        >
+          View demo
+        </a>
+      </div>
       
 
       <p>
@@ -968,11 +948,9 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
       </style>
       
 
-      
-
       <div>
         <section
-          class="ch-scrollycoding ch-scrollycoding-with-preview "
+          class="ch-scrollycoding  "
           data-ch-theme="dark-plus"
         >
           <div
@@ -1403,39 +1381,6 @@ On clicking this button, it triggers the
                       <br />
                     </code>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="ch-preview ch-scrollycoding-preview"
-              data-ch-theme="dark-plus"
-            >
-              <div
-                class="w-[600px] rounded shadow-xl"
-              >
-                <div
-                  class="flex"
-                >
-                  <div
-                    class="py-2 transition tracking-wide text-center w-full cursor-pointer px-2 font-black bg-sky-700 text-gray-100"
-                  >
-                    Mouse Settings
-                  </div>
-                  <div
-                    class="py-2 transition tracking-wide text-center w-full bg-gray-200 cursor-pointer px-2 font-black text-gray-600"
-                  >
-                    Keyboard Settings
-                  </div>
-                  <div
-                    class="py-2 transition tracking-wide text-center w-full bg-gray-200 cursor-pointer px-2 font-black text-gray-600"
-                  >
-                    Gamepad Settings
-                  </div>
-                </div>
-                <div
-                  class="text-md flex items-center justify-center bg-gray-400 p-10 font-bold tracking-wide text-black"
-                >
-                  Adjust the sensitivity, acceleration, and button assignments for your mouse.
                 </div>
               </div>
             </div>
