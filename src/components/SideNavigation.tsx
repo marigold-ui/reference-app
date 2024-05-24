@@ -33,7 +33,7 @@ export const SideNavigation = () => {
             <li key={item.linkTo}>
               <Link
                 to={item.linkTo}
-                className="group flex items-center rounded-lg p-2 text-xl text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-500 dark:hover:text-white [&.active]:font-bold"
+                className="text-md group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-500 dark:hover:text-white [&.active]:font-bold"
               >
                 <span className="ms-[--page-side-nav-padding] md:ms-[--page-side-nav-padding-md] xl:ms-[--page-side-nav-padding-xl]">
                   {item.name}
