@@ -5,7 +5,93 @@ exports[`renders <App /> correctly 1`] = `
   <article
     class="article-content"
   >
-    WIP: Welcome to the Reference App!
+    <div>
+      <h1>
+        Welcome to the Reference-App
+      </h1>
+      
+
+      <p>
+        The Reference-App is a resource designed to provide you with practical examples of various coding patterns and practices.
+It serves as a reference point for you to understand, learn, and implement these patterns in your own projects.
+      </p>
+      
+
+      <div
+        class="h-5"
+      />
+      
+
+      <h2>
+        How to Use the Reference-App?
+      </h2>
+      
+
+      <p>
+        Using the Reference-App is straightforward. Each pattern or practice is presented with a detailed explanation and code examples.
+You can copy these code examples directly into your own projects. To do this, simply click the copy button in the code snippet.
+Clicking this button will copy the code to your clipboard, ready to be pasted into your own code editor.
+      </p>
+      
+
+      <div
+        class="h-5"
+      />
+      
+
+      <h2>
+        Why these patterns?
+      </h2>
+      
+
+      <p>
+        The patterns are selected from our survey we made. So in future we will try to add all of them.
+      </p>
+      
+
+      <img
+        alt="Survey"
+        src="patterns.png"
+      />
+      
+
+      <p>
+        So that the app feels more familiar to you, you can propose good examples from your code we can use, or you think
+some of your code could be a good candidate to transform into a specific pattern please let us 
+        <a
+          href="https://www.marigold-ui.io/introduction/get-in-touch?theme=b2b#introduction-to-marigold"
+        >
+          know
+        </a>
+        .
+      </p>
+      
+
+      <div
+        class="h-5"
+      />
+      
+
+      <h2>
+        Feedback
+      </h2>
+      
+
+      <p>
+        Constructive feedback, ideas and suggestions for improvement are welcome.
+      </p>
+      
+
+      <p>
+        Please use one of our 
+        <a
+          href="https://www.marigold-ui.io/introduction/get-in-touch?theme=b2b"
+        >
+          channels
+        </a>
+         to contact us.
+      </p>
+    </div>
   </article>
 </div>
 `;
