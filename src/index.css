@@ -101,12 +101,20 @@ html {
   line-height: 1.5;
 }
 
-code,
+
 kbd,
 pre,
 samp {
   font-size: 12px;
   font-family: monospace;
+}
+
+code {
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: bold;
+  font-style: italic;
+  @apply bg-accent-200 rounded p-1;
 }
 
 body,
