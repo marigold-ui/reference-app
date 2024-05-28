@@ -12,8 +12,20 @@ exports[`renders <App /> correctly 1`] = `
       
 
       <p>
-        The Reference-App is a resource designed to provide you with practical examples of various coding patterns and practices.
+        The Reference-App is a resource designed to provide you with practical examples of various coding patterns and practices, mainly in 
+        <b>
+          ReactJS
+        </b>
+        .
+Patterns are a way of organizing code in a way that makes it easier to understand, maintain, and extend. They are a set of best practices that have been proven to work well in a variety of situations.
+In the end, patterns are like blueprints that can solve recurring problems and challenges.
 It serves as a reference point for you to understand, learn, and implement these patterns in your own projects.
+      </p>
+      
+
+      <p>
+        The main purpose of this app is to provide an overview of the most common patterns and practices in ReactJS using simple examples.
+Specific issues or challenges, such as managing state, handling forms will be addressed. These are also shown in conjunction with the Marigold design system in appropriate places.
       </p>
       
 
@@ -40,7 +52,7 @@ Clicking this button will copy the code to your clipboard, ready to be pasted in
       
 
       <h2>
-        Why these patterns?
+        Which patterns will be addressed?
       </h2>
       
 
@@ -56,8 +68,8 @@ Clicking this button will copy the code to your clipboard, ready to be pasted in
       
 
       <p>
-        So that the app feels more familiar to you, you can propose good examples from your code we can use, or you think
-some of your code could be a good candidate to transform into a specific pattern please let us 
+        If you have suggestions for patterns that should be added to the Reference App, or if you think some of your own code could
+be transformed into a useful pattern here, please let us 
         <a
           href="https://www.marigold-ui.io/introduction/get-in-touch?theme=b2b#introduction-to-marigold"
         >
