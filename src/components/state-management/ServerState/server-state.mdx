@@ -11,6 +11,17 @@ import ServerStateExample from './ServerStateExample';
 
     ---
 
+    ```tsx ServerStateExample.tsx focus=63,71:73
+    // from ./ServerStateExample.tsx
+    ````
+    #### Handle User Input: SearchField & Select
+
+    We use the `SearchField` component to allow the user to input a search query. The `onChange` handler updates the local state with the new search term, which triggers a re-fetch of the data.
+
+    The `Select` component allows the user to choose a category. The `onChange` handler updates the local state with the selected category, which also triggers a re-fetch of the data.
+
+    ---
+
     ```tsx ServerStateExample.tsx focus=29:37
     // from ./ServerStateExample.tsx
     ````
@@ -42,16 +53,6 @@ import ServerStateExample from './ServerStateExample';
 
     ---
 
-    ```tsx ServerStateExample.tsx focus=63,71:73
-    // from ./ServerStateExample.tsx
-    ````
-    #### Handle User Input: SearchField & Select
-
-    We use the `SearchField` component to allow the user to input a search query. The `onChange` handler updates the local state with the new search term, which triggers a re-fetch of the data.
-
-    The `Select` component allows the user to choose a category. The `onChange` handler updates the local state with the selected category, which also triggers a re-fetch of the data.
-
-    ---
 
 
 
