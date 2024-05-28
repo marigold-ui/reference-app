@@ -115,6 +115,49 @@ exports[`renders <StateManagementApp /> correctly 1`] = `
               class="ch-scrollycoding-step-content"
             >
               <h4>
+                Handle User Input: SearchField & Select
+              </h4>
+              <p>
+                We use the 
+                <code>
+                  SearchField
+                </code>
+                 component to allow the user to input a search query. The 
+                <code>
+                  onChange
+                </code>
+                 handler updates the local state with the new search term, which triggers a re-fetch of the data.
+              </p>
+              <p>
+                The 
+                <code>
+                  Select
+                </code>
+                 component allows the user to choose a category. The 
+                <code>
+                  onChange
+                </code>
+                 handler updates the local state with the selected category, which also triggers a re-fetch of the data.
+              </p>
+            </div>
+            <div
+              class="ch-scrollycoding-step-content"
+            >
+              <h4>
+                Fetch date from server
+              </h4>
+              <p>
+                The 
+                <code>
+                  fetchData
+                </code>
+                 function builds the API URL with query parameters and fetches data from the server.
+              </p>
+            </div>
+            <div
+              class="ch-scrollycoding-step-content"
+            >
+              <h4>
                 Use React Query to Manage Server State
               </h4>
               <p>
@@ -140,35 +183,6 @@ exports[`renders <StateManagementApp /> correctly 1`] = `
               </h4>
               <p>
                 If an error occurs during data fetching, we display an error message.
-              </p>
-            </div>
-            <div
-              class="ch-scrollycoding-step-content"
-            >
-              <h4>
-                Handle User Input: SearchField & Select
-              </h4>
-              <p>
-                We use the 
-                <code>
-                  SearchField
-                </code>
-                 component to allow the user to input a search query. The 
-                <code>
-                  onChange
-                </code>
-                 handler updates the local state with the new search term, which triggers a re-fetch of the data.
-              </p>
-              <p>
-                The 
-                <code>
-                  Select
-                </code>
-                 component allows the user to choose a category. The 
-                <code>
-                  onChange
-                </code>
-                 handler updates the local state with the selected category, which also triggers a re-fetch of the data.
               </p>
             </div>
             <div
