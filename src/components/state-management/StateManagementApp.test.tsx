@@ -1,19 +1,21 @@
 import { expect } from 'vitest';
-import { render } from '@testing-library/react';
+import {act, render} from '@testing-library/react';
 import StateManagementApp from './StateManagementApp';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MarigoldProvider } from '@marigold/components';
-import theme from '@marigold/theme-core';
+import {createRootRoute, createRouter, RouterProvider} from '@tanstack/react-router';
 
-test('renders <StateManagementApp /> correctly', () => {
-  const queryClient = new QueryClient();
-  const { container } = render(
-    <MarigoldProvider theme={theme}>
-      <QueryClientProvider client={queryClient}>
-        <StateManagementApp />
-      </QueryClientProvider>
-    </MarigoldProvider>
-  );
+test('renders <StateManagementApp /> correctly', async () => {
+    const rootRoute = createRootRoute({
+        component: () => <StateManagementApp />,
+    });
+
+    const router = createRouter({
+        routeTree: rootRoute,
+    });
+    const { container } = render(<RouterProvider router={router} />);
+
+    await act(async () => {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+    });
 
   expect(container).toMatchSnapshot();
 });

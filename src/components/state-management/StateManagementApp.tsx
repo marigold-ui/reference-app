@@ -5,7 +5,9 @@ import StateManagementContent from './index.mdx';
 function StateManagementApp() {
   return (
     <article className="pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]">
-      <StateManagementContent />
+        <div>
+            <StateManagementContent />
+        </div>
     </article>
   );
 }
