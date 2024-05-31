@@ -1,21 +1,19 @@
 import { Link } from '@tanstack/react-router';
 import { ExternalLink } from '@marigold/icons';
-import { Button } from '@marigold/components';
+import {ReactNode} from 'react';
 
 const DemoLink = ({
   destination,
-  text = 'View demo',
+  children,
 }: {
   destination: string;
-  text?: string;
+  children: ReactNode;
 }) => {
   return (
     <div className="w-fit">
-      <Link target="_blank" to={destination} search="">
-        <Button className="flex-1 cursor-pointer rounded-md bg-white p-4 font-black text-gray-800 hover:bg-gray-300">
-          {text}
-          <ExternalLink size={20} />
-        </Button>
+      <Link target="_blank" to={destination} search="" className="flex-1 cursor-pointer rounded-md border-2 border-solid bg-white p-2 align-baseline font-black text-gray-800 hover:bg-gray-300">
+          {children}
+          <ExternalLink size={20}  className="ml-1.5 align-top" />
       </Link>
     </div>
   );

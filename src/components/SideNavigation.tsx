@@ -1,48 +1,77 @@
 import { Link } from '@tanstack/react-router';
 
-type NavItem = {
+type Item = {
   linkTo: string;
   name: string;
+};
+
+type NavItem = {
+  group: string;
+  items: Item[];
 };
 
 export const SideNavigation = () => {
   const navItems: NavItem[] = [
     {
-      linkTo: '/',
-      name: 'Welcome',
+      group: '',
+      items: [
+        {
+          linkTo: '/',
+          name: 'Welcome',
+        },
+      ],
     },
     {
-      linkTo: '/compoundComponent',
-      name: 'Compound Component',
-    },
-    {
-      linkTo: '/state-management',
-      name: 'state-management',
+      group: 'Patterns',
+      items: [
+        {
+          linkTo: '/compoundComponent',
+          name: 'Compound Component',
+        },
+        {
+          linkTo: '/state-management',
+          name: 'state-management',
+        },
+      ],
     },
   ];
 
   return (
-    <aside
-      id="default-sidebar"
-      className="fixed left-0 top-[--page-header-height] z-40 h-screen w-[--page-side-nav-absolute-width] -translate-x-full border-y-0 border-l-0 border-r border-solid border-gray-200 transition-transform sm:translate-x-0"
-      aria-label="Sidebar"
-    >
-      <div className="h-full overflow-y-auto bg-gray-50 py-4">
-        <ul className="list-none space-y-2 border-l border-gray-600 p-0 ">
-          {navItems.map((item: NavItem) => (
-            <li key={item.linkTo}>
-              <Link
-                to={item.linkTo}
-                className="text-md group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-500 dark:hover:text-white [&.active]:font-bold"
-              >
-                <span className="ms-[--page-side-nav-padding] md:ms-[--page-side-nav-padding-md] xl:ms-[--page-side-nav-padding-xl]">
-                  {item.name}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </aside>
+      <nav
+          id="default-sidebar"
+          className="fixed left-0 top-[--page-header-height] z-40 h-screen w-[--page-side-nav-absolute-width] -translate-x-full border-y-0 border-l-0 border-r border-solid border-gray-200 transition-transform sm:translate-x-0"
+          aria-label="Sidebar"
+      >
+        <div className="h-full overflow-y-auto bg-gray-50 py-4">
+            {navItems.map((items: NavItem) => {
+              return (
+                  <>
+                        <div className="mr-12 ms-[--page-side-nav-padding] md:ms-[--page-side-nav-padding-md] xl:ms-[--page-side-nav-padding-xl]">
+                    {items.group &&
+                      <span className="block pt-5 text-sm font-semibold text-gray-700">
+                      {items.group}
+                    </span>
+
+                    }
+                    {items.items.map((item: Item) => {
+                      return (
+                          <div className="border-secondary-300 ml-0.5 flex flex-col border-l">
+                            <Link
+                                to={item.linkTo}
+                                className="flex items-center border-0 border-l border-solid border-border-inverted py-2 text-sm font-medium text-gray-700 [&.active]:border-border-brand [&.active]:font-bold [&.active]:text-brand-600"
+                            >
+                        <span className="ms-[--page-side-nav-padding] md:ms-[--page-side-nav-padding-md] xl:ms-[--page-side-nav-padding-xl]">
+                          {item.name}
+                        </span>
+                            </Link>
+                          </div>
+                      );
+                    })}
+                        </div>
+                  </>
+              );
+            })}
+        </div>
+      </nav>
   );
 };
