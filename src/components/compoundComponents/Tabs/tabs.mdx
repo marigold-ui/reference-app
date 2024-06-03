@@ -12,7 +12,7 @@
     // from ./Tabs.tsx
     ````
 
-    This component is essentially a wrapper that exposes the active tab state and the function that allows you to change the active tab. The context provider acts as the wrapper. So now all the children inside this container can access the activeTab and the setter function using the useContext hook.
+    This component is essentially a wrapper that exposes the active tab state and the function that allow us to change the active tab. The context provider acts as the wrapper. So now all the children inside this container can access the activeTab and the setter function using the useContext hook.
 
     ---
 
@@ -20,8 +20,8 @@
     // from ./Tab.tsx
     ````
 
-    Then let’s add the tab component. This is the button that’ll help you to switch between sections.
-    On clicking this button, it triggers the `changeTab` function from the context changing the `activeTab` state. Any other component that’s accessing this state will be re-rendered.
+    Then let’s add the tab component. This is the button that’ll help us to switch between sections.
+    On clicking this button, it triggers the `changeTab` from the context changing the `activeTab state. Any other component that’s accessing this state will be re-rendered.
 
     ---
 
@@ -37,7 +37,7 @@
     // from ./Tabs.tsx
     ````
 
-    Now default export the tabs component and attach the other sub-components to this component.
+    Now we can default export the tabs component and attach the other sub-components to this component.
 
     ---
 
@@ -46,6 +46,6 @@
     ````
     Inside the TabsExample file, let’s import all our tab components and use them as we please.
 
-    Note: You can add any other elements you want like the `div`. You can also use a completely different arrangement of the elements.
+    Note: We can add any other elements we want like the `div`. We can also use a completely different arrangement of the elements.
 
 </CH.Scrollycoding>
