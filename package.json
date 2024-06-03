@@ -11,12 +11,14 @@
     "format": "prettier --write \"**/*\"",
     "typecheck": "tsc --noEmit",
     "test": "vitest run --config vite.config.ts",
+    "test:watch": "vitest watch --config vite.config.ts",
     "test:ci": "vitest run --config vite.config.ts --coverage"
   },
   "packageManager": "pnpm@9.1.0",
   "dependencies": {
     "@code-hike/mdx": "^0.9.0",
     "@marigold/components": "^7.7.1",
+    "@marigold/icons": "^1.2.49",
     "@marigold/theme-core": "^26.1.7",
     "@mdx-js/rollup": "^3.0.1",
     "@tanstack/react-query": "^5.35.1",

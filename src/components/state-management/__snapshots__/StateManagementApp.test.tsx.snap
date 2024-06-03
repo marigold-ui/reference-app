@@ -2,12 +2,10 @@
 
 exports[`renders <StateManagementApp /> correctly 1`] = `
 <div>
-  <div
-    class="font-body text-text-base bg-bg-surface text-[13px] leading-normal"
+  <article
+    class="pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]"
   >
-    <article
-      class="pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]"
-    >
+    <div>
       <h1>
         State Management in React
       </h1>
@@ -43,24 +41,36 @@ exports[`renders <StateManagementApp /> correctly 1`] = `
         
 
         <li>
-          <strong>
-            Local State:
-          </strong>
-          : Data we manage in one or another component e.g handling inputs data in from.
+          
+
+          <p>
+            <strong>
+              Local State:
+            </strong>
+             Data we manage in one or another component e.g handling inputs data in from.
+          </p>
+          
+
         </li>
         
 
         <li>
-          <strong>
-            Server State :
-          </strong>
-           Data are fetched from the server via an API and cached on the client, there are a couple of great libraries that make data fetching in React a breeze such as: 
-          <em>
+          
+
+          <p>
             <strong>
-              React Query
+              Server State:
             </strong>
-          </em>
-          .
+             Data are fetched from the server via an API and cached on the client, there are a couple of great libraries that make data fetching in React a breeze such as: 
+            <em>
+              <strong>
+                React Query
+              </strong>
+            </em>
+            .
+          </p>
+          
+
         </li>
         
 
@@ -68,17 +78,32 @@ exports[`renders <StateManagementApp /> correctly 1`] = `
       
 
       <h3>
-        Let's break down the state management code example (
+        Let's break down the state management code example:
+      </h3>
+      
+
+      <div
+        class="w-fit"
+      >
         <a
-          class="text-text-link hover:underline hover:visited:cursor-pointer aria-disabled:cursor-not-allowed"
-          data-rac=""
-          href="state-management/example"
+          class="flex-1 cursor-pointer rounded-md border-2 border-solid bg-white p-2 align-baseline font-black text-gray-800 hover:bg-gray-300"
+          href="/state-management/preview/ServerStateExample"
           target="_blank"
         >
-          view demo
+          View Demo
+          <svg
+            class="flex-none fill-current text-[--color] ml-1.5 align-top"
+            height="20px"
+            viewBox="0 0 24 24"
+            width="20px"
+          >
+            <path
+              d="M18.5625 18.5625H5.4375V5.4375H12V3.5625H5.4375C4.39687 3.5625 3.5625 4.40625 3.5625 5.4375V18.5625C3.5625 19.5938 4.39687 20.4375 5.4375 20.4375H18.5625C19.5938 20.4375 20.4375 19.5938 20.4375 18.5625V12H18.5625V18.5625ZM13.8648 3.5625V5.44042H17.2356L8.00565 14.6704L9.32959 15.9943L18.5596 6.76436V10.1352H20.4375V3.5625H13.8648Z"
+              stroke="currentColor"
+            />
+          </svg>
         </a>
-        ):
-      </h3>
+      </div>
       
 
       <style>
@@ -2023,7 +2048,7 @@ exports[`renders <StateManagementApp /> correctly 1`] = `
       <div
         style="height: 300px;"
       />
-    </article>
-  </div>
+    </div>
+  </article>
 </div>
 `;

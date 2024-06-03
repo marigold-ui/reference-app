@@ -1,12 +1,4 @@
-import BreadcrumbsExample from './BreadcrumbsExample';
-
 <CH.Scrollycoding>
-
-    <CH.Preview frameless>
-
-        <BreadcrumbsExample />
-
-    </CH.Preview>
 
     ```tsx BreadcrumbsExample.tsx
 
@@ -44,13 +36,13 @@ import BreadcrumbsExample from './BreadcrumbsExample';
 
     Looking at the markup, it seems like we'll need two components:
 
-    * A Breadcrumbs parent wrapper to contain the group
+    * A `Breadcrumbs` parent wrapper to contain the group
 
-    * A Crumb component for each link in the group
+    * A `Crumb` component for each link in the group
 
     ---
 
-    Copy the chunk for the parent wrapper (Breadcrumbs) and made it generic.
+    Copy the chunk for the parent wrapper (`Breadcrumbs`) and made it generic.
 
     ```tsx Breadcrumbs.tsx focus=3:9
     // from ./Breadcrumbs.tsx
@@ -58,7 +50,7 @@ import BreadcrumbsExample from './BreadcrumbsExample';
 
     ---
 
-    Copy the chunk for each link in the group (Crumb) and made it generic.
+    Copy the chunk for each link in the group (`Crumb`) and made it generic.
 
     ```tsx Breadcrumbs.tsx focus=11:31
     // from ./Breadcrumbs.tsx
@@ -78,8 +70,6 @@ import BreadcrumbsExample from './BreadcrumbsExample';
     ---
 
     Finally we can use this compound component in our BreadcrumbsExample.tsx.
-
-
 
     ```tsx BreadcrumbsExample.tsx
     // from ./BreadcrumbsExample.tsx
@@ -102,5 +92,3 @@ import BreadcrumbsExample from './BreadcrumbsExample';
     ```
 
 </CH.Scrollycoding>
-
-<div style={{ height: 150 }} />

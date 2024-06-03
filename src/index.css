@@ -1,11 +1,10 @@
 :root {
   --page-padding: 0.75rem;
   --page-padding-md: 2rem;
-  --page-padding-xl: 3rem;
+  --page-padding-xl: 2.5rem;
   --page-header-height: 56px;
   --xx: 4px;
-
-  --page-side-nav-absolute-width: 240px;
+  --page-side-nav-absolute-width: 280px;
 
   --page-side-nav-width: calc(
     var(--page-side-nav-absolute-width) + var(--page-padding)
@@ -24,6 +23,10 @@
   --page-side-nav-padding-md: calc(var(--page-padding-md) - var(--xx));
 
   --page-side-nav-padding-xl: calc(var(--page-padding-xl) - var(--xx));
+}
+
+.article-content {
+  @apply pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]
 }
 
 article {
@@ -47,9 +50,26 @@ h4 {
   font-weight: 600;
 }
 
+h1 {
+  font-size: 34px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 23px;
+}
+
+h4 {
+  font-size: 19px;
+}
+
 h4 a {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 19px;
 }
 
 p {
@@ -63,11 +83,6 @@ strong {
   font-weight: bold;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0;
-}
-
 mark {
   background: #ff0;
   color: #000;
@@ -79,18 +94,27 @@ mark {
 
 body,
 html {
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 1rem;
   font-family: Arial, sans-serif;
   margin: 0;
+  line-height: 1.5;
 }
 
-code,
+
 kbd,
 pre,
 samp {
   font-size: 12px;
   font-family: monospace;
+}
+
+code {
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: bold;
+  font-style: italic;
+  @apply bg-accent-200 rounded p-1;
 }
 
 body,
@@ -110,6 +134,16 @@ a {
 a:hover {
   @apply text-gray-900;
   text-decoration: none;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 @tailwind base;
