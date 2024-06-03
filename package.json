@@ -11,6 +11,7 @@
     "format": "prettier --write \"**/*\"",
     "typecheck": "tsc --noEmit",
     "test": "vitest run --config vite.config.ts",
+    "test:watch": "vitest watch --config vite.config.ts",
     "test:ci": "vitest run --config vite.config.ts --coverage"
   },
   "packageManager": "pnpm@9.1.0",
