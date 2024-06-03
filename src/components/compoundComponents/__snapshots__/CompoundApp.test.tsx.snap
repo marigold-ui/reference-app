@@ -327,6 +327,32 @@ where related child components are encapsulated within a parent component to cre
       </div>
       
 
+      <div
+        class="w-fit"
+      >
+        <a
+          class="flex-1 cursor-pointer rounded-md border-2 border-solid bg-white p-2 align-baseline font-black text-gray-800 hover:bg-gray-300"
+          href="/compoundComponent/preview/BreadcrumbsExample"
+          target="_blank"
+        >
+          <p>
+            View Demo
+          </p>
+          <svg
+            class="flex-none fill-current text-[--color] ml-1.5 align-top"
+            height="20px"
+            viewBox="0 0 24 24"
+            width="20px"
+          >
+            <path
+              d="M18.5625 18.5625H5.4375V5.4375H12V3.5625H5.4375C4.39687 3.5625 3.5625 4.40625 3.5625 5.4375V18.5625C3.5625 19.5938 4.39687 20.4375 5.4375 20.4375H18.5625C19.5938 20.4375 20.4375 19.5938 20.4375 18.5625V12H18.5625V18.5625ZM13.8648 3.5625V5.44042H17.2356L8.00565 14.6704L9.32959 15.9943L18.5596 6.76436V10.1352H20.4375V3.5625H13.8648Z"
+              stroke="currentColor"
+            />
+          </svg>
+        </a>
+      </div>
+      
+
       <p>
         E-commerce websites often have “breadcrumbs” to help the user navigate to parent/grand-parent pages. For example:
       </p>
@@ -980,6 +1006,32 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
       </div>
       
 
+      <div
+        class="w-fit"
+      >
+        <a
+          class="flex-1 cursor-pointer rounded-md border-2 border-solid bg-white p-2 align-baseline font-black text-gray-800 hover:bg-gray-300"
+          href="/compoundComponent/preview/TabsExample"
+          target="_blank"
+        >
+          <p>
+            View Demo
+          </p>
+          <svg
+            class="flex-none fill-current text-[--color] ml-1.5 align-top"
+            height="20px"
+            viewBox="0 0 24 24"
+            width="20px"
+          >
+            <path
+              d="M18.5625 18.5625H5.4375V5.4375H12V3.5625H5.4375C4.39687 3.5625 3.5625 4.40625 3.5625 5.4375V18.5625C3.5625 19.5938 4.39687 20.4375 5.4375 20.4375H18.5625C19.5938 20.4375 20.4375 19.5938 20.4375 18.5625V12H18.5625V18.5625ZM13.8648 3.5625V5.44042H17.2356L8.00565 14.6704L9.32959 15.9943L18.5596 6.76436V10.1352H20.4375V3.5625H13.8648Z"
+              stroke="currentColor"
+            />
+          </svg>
+        </a>
+      </div>
+      
+
       <p>
         By leveraging React context, we can provide the necessary states and functions to child components without exposing them through props, resulting in a cleaner and more maintainable codebase.
       </p>
@@ -1429,6 +1481,11 @@ On clicking this button, it triggers the
           </div>
         </section>
       </div>
+      
+
+      <div
+        style="height: 300px;"
+      />
     </div>
   </article>
 </div>

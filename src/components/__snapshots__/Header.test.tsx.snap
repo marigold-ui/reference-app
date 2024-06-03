@@ -31,7 +31,7 @@ exports[`renders <Header /> correctly 1`] = `
         <div
           class="hidden pl-2 text-lg font-bold uppercase text-[#46505a] lg:block"
         >
-          Reference App
+          React Reference App
         </div>
       </a>
     </div>

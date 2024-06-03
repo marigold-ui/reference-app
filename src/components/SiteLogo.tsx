@@ -8,7 +8,7 @@ export const SiteLogo = () => (
   >
     <Logo className="size-6" />
     <div className="hidden pl-2 text-lg font-bold uppercase text-[#46505a] lg:block">
-      Reference App
+      React Reference App
     </div>
   </Link>
 );

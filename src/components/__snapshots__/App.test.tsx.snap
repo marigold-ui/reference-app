@@ -5,7 +5,132 @@ exports[`renders <App /> correctly 1`] = `
   <article
     class="article-content"
   >
-    WIP: Welcome to the Reference App!
+    <h1>
+      Welcome to the React Reference App
+    </h1>
+    
+
+    <p>
+      The React Reference App is a resource designed to provide you with practical examples of various coding patterns and practices, mainly in 
+      <b>
+        ReactJS
+      </b>
+      .
+It serves as a reference point for you to understand, learn, and implement these patterns in your own projects.
+    </p>
+    
+
+    <p>
+      Patterns are a way of organizing code in a way that makes it easier to understand, maintain, and extend. They are a set of best practices that have been proven to work well in a variety of situations.
+In the end, patterns are like blueprints that can solve recurring problems and challenges.
+    </p>
+    
+
+    <p>
+      The main purpose of this app is to provide an overview of the most common patterns and practices in ReactJS using simple examples.
+Specific issues or challenges, such as managing state, handling forms will be addressed. These are also shown in conjunction with the 
+      <b>
+        Marigold Design System
+      </b>
+       in appropriate places.
+    </p>
+    
+
+    <div
+      class="h-5"
+    />
+    
+
+    <h2>
+      How to use the React Reference App?
+    </h2>
+    
+
+    <p>
+      Using the React Reference App is straightforward. Each pattern or practice is presented with a detailed explanation and code examples.
+You can copy these code examples directly into your own projects. To do this, simply click the copy button (
+      <button
+        class="ch-editor-button"
+        style="vertical-align: bottom; margin-right: 0px;"
+        title="Copy code"
+        type="button"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.6px"
+          />
+        </svg>
+      </button>
+      ) in the code snippet.
+Clicking this button will copy the code to your clipboard, ready to be pasted into your own code editor.
+    </p>
+    
+
+    <div
+      class="h-5"
+    />
+    
+
+    <h2>
+      Which patterns will be addressed?
+    </h2>
+    
+
+    <p>
+      The patterns are selected from our survey we made. So in future we will try to add all of them.
+    </p>
+    
+
+    <img
+      alt="Survey"
+      src="patterns.png"
+    />
+    
+
+    <p>
+      If you have suggestions for patterns that should be added to the React Reference App, or if you think some of your own code could
+be transformed into a useful pattern here, please let us 
+      <a
+        href="https://www.marigold-ui.io/introduction/get-in-touch?theme=b2b#introduction-to-marigold"
+      >
+        know
+      </a>
+      .
+    </p>
+    
+
+    <div
+      class="h-5"
+    />
+    
+
+    <h2>
+      Feedback
+    </h2>
+    
+
+    <p>
+      Constructive feedback, ideas and suggestions for improvement are welcome.
+    </p>
+    
+
+    <p>
+      Please use one of our 
+      <a
+        href="https://www.marigold-ui.io/introduction/get-in-touch?theme=b2b"
+      >
+        channels
+      </a>
+       to contact us.
+    </p>
   </article>
 </div>
 `;
