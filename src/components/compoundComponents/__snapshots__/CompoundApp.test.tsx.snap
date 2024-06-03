@@ -87,11 +87,6 @@ where related child components are encapsulated within a parent component to cre
       </ul>
       
 
-      <div
-        class="h-5"
-      />
-      
-
       <h2>
         Use-Cases and Examples
       </h2>
@@ -340,7 +335,9 @@ where related child components are encapsulated within a parent component to cre
           href="/compoundComponent/preview/BreadcrumbsExample"
           target="_blank"
         >
-          View Demo
+          <p>
+            View Demo
+          </p>
           <svg
             class="flex-none fill-current text-[--color] ml-1.5 align-top"
             height="20px"
@@ -1017,7 +1014,9 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
           href="/compoundComponent/preview/TabsExample"
           target="_blank"
         >
-          View Demo
+          <p>
+            View Demo
+          </p>
           <svg
             class="flex-none fill-current text-[--color] ml-1.5 align-top"
             height="20px"
@@ -1081,11 +1080,7 @@ On clicking this button, it triggers the
                 <code>
                   changeTab
                 </code>
-                 function from the context changing the 
-                <code>
-                  activeTab
-                </code>
-                 state. Any other component that’s accessing this state will be re-rendered.
+                 from the context changing the \`activeTab state. Any other component that’s accessing this state will be re-rendered.
               </p>
             </div>
             <div
@@ -1486,6 +1481,11 @@ On clicking this button, it triggers the
           </div>
         </section>
       </div>
+      
+
+      <div
+        style="height: 300px;"
+      />
     </div>
   </article>
 </div>
