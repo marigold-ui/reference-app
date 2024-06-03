@@ -19,22 +19,23 @@ exports[`renders <CompoundApp /> correctly 1`] = `
       
 
       <p>
-        React compound component is a powerful pattern that allows you to create reusable and flexible components by encapsulating related child components within a parent component. The idea behind compound components is to provide a clean and intuitive API for users to interact with your component while keeping the implementation details hidden.
+        This document provides an explanation and examples of using compound components in React. Compound components are a design pattern
+where related child components are encapsulated within a parent component to create a reusable and flexible component suite.
       </p>
       
 
       <p>
-        Think of compound components as a Lego set. Each individual Lego block within the set may have its own shape, colour, and purpose, but when you combine them together in a specific way, you can build something much more complex and exciting.
+        This pattern enhances customization and simplifies the internal composition of components.
       </p>
       
 
-      <p>
-        We build a suite of reusable components and place them wherever we want based on our convenience. If you don’t want a specific part, you just remove it without adding any logic. This brings in a lot of flexibility from a devs perspective and scaling the component now becomes much easier.
-      </p>
+      <h2>
+        Importance of the Pattern
+      </h2>
       
 
       <p>
-        This design approach leads to the following benefits:
+        Compound components are important for several reasons:
       </p>
       
 
@@ -45,7 +46,10 @@ exports[`renders <CompoundApp /> correctly 1`] = `
           
 
           <p>
-            It is easy to customize child components. We no longer have to expose customization props through the parent component, each child component may be individually customized.
+            <strong>
+              Encapsulation and Reusability:
+            </strong>
+             They allow encapsulating related components, making the parent component more reusable and modular.
           </p>
           
 
@@ -56,7 +60,10 @@ exports[`renders <CompoundApp /> correctly 1`] = `
           
 
           <p>
-            When using a react compound component, it is easy to understand what’s the internal composition of the parent component set.
+            <strong>
+              Customizability:
+            </strong>
+             Each child component can be individually customized without exposing numerous customization props through the parent component.
           </p>
           
 
@@ -67,7 +74,10 @@ exports[`renders <CompoundApp /> correctly 1`] = `
           
 
           <p>
-            A well-designed React compound component should have very little state management required.
+            <strong>
+              Simplicity in State Management:
+            </strong>
+             A well-designed compound component should require minimal state management, making the component easier to understand and maintain.
           </p>
           
 
@@ -83,8 +93,21 @@ exports[`renders <CompoundApp /> correctly 1`] = `
       
 
       <h2>
-        HTML example
+        Use-Cases and Examples
       </h2>
+      
+
+      <h3>
+        Example 1: 
+        <code>
+          &lt;select&gt;
+        </code>
+         and 
+        <code>
+          &lt;option&gt;
+        </code>
+         in HTML
+      </h3>
       
 
       <p>
@@ -278,14 +301,35 @@ exports[`renders <CompoundApp /> correctly 1`] = `
       </p>
       
 
-      <div
-        class="h-5"
-      />
+      <h3>
+        Example 2: Building a compound component
+      </h3>
       
 
-      <h2>
-        Example 1: Building a compound component
-      </h2>
+      <div
+        class="w-fit"
+      >
+        <a
+          class="flex-1 cursor-pointer rounded-md border-2 border-solid bg-white p-2 align-baseline font-black text-gray-800 hover:bg-gray-300"
+          href="/compoundComponent/preview/BreadcrumbsExample"
+          target="_blank"
+        >
+          <p>
+            View Demo
+          </p>
+          <svg
+            class="flex-none fill-current text-[--color] ml-1.5 align-top"
+            height="20px"
+            viewBox="0 0 24 24"
+            width="20px"
+          >
+            <path
+              d="M18.5625 18.5625H5.4375V5.4375H12V3.5625H5.4375C4.39687 3.5625 3.5625 4.40625 3.5625 5.4375V18.5625C3.5625 19.5938 4.39687 20.4375 5.4375 20.4375H18.5625C19.5938 20.4375 20.4375 19.5938 20.4375 18.5625V12H18.5625V18.5625ZM13.8648 3.5625V5.44042H17.2356L8.00565 14.6704L9.32959 15.9943L18.5596 6.76436V10.1352H20.4375V3.5625H13.8648Z"
+              stroke="currentColor"
+            />
+          </svg>
+        </a>
+      </div>
       
 
       <div
@@ -417,7 +461,7 @@ exports[`renders <CompoundApp /> correctly 1`] = `
                 As final step we need to connect these components.
               </p>
               <p>
-                You can call it weird or awesome, but JS functions can have properties.
+                We can call it weird or awesome, but JS functions can have properties.
 Functions are like objects in this way. We can "hang" data on them, like clothes hung on a clothesline.
               </p>
             </div>
@@ -541,7 +585,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -554,7 +598,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -569,7 +613,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -582,7 +626,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -597,7 +641,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -610,7 +654,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -625,22 +669,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
-                        </span>
-                        <div
-                          style="display: inline-block; margin-left: 16px;"
-                        >
-                          <span>
-                                    // TODO: Replace this:
-                          </span>
-                        </div>
-                      </div>
-                      <div>
-                        <span
-                          class="ch-code-line-number"
-                        >
-                          _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -655,7 +684,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -670,7 +699,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -685,7 +714,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -700,7 +729,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -715,7 +744,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -730,7 +759,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -745,7 +774,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -760,7 +789,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -775,7 +804,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -790,7 +819,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -805,7 +834,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -820,7 +849,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -835,7 +864,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -850,7 +879,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -865,7 +894,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -880,7 +909,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -895,7 +924,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -910,7 +939,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -923,7 +952,7 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
                           class="ch-code-line-number"
                         >
                           _
-                          27
+                          26
                         </span>
                         <div
                           style="display: inline-block; margin-left: 16px;"
@@ -949,9 +978,35 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
       />
       
 
-      <h2>
-        Example 2: Compound component with Context
-      </h2>
+      <h3>
+        Example 3: Compound component with Context
+      </h3>
+      
+
+      <div
+        class="w-fit"
+      >
+        <a
+          class="flex-1 cursor-pointer rounded-md border-2 border-solid bg-white p-2 align-baseline font-black text-gray-800 hover:bg-gray-300"
+          href="/compoundComponent/preview/TabsExample"
+          target="_blank"
+        >
+          <p>
+            View Demo
+          </p>
+          <svg
+            class="flex-none fill-current text-[--color] ml-1.5 align-top"
+            height="20px"
+            viewBox="0 0 24 24"
+            width="20px"
+          >
+            <path
+              d="M18.5625 18.5625H5.4375V5.4375H12V3.5625H5.4375C4.39687 3.5625 3.5625 4.40625 3.5625 5.4375V18.5625C3.5625 19.5938 4.39687 20.4375 5.4375 20.4375H18.5625C19.5938 20.4375 20.4375 19.5938 20.4375 18.5625V12H18.5625V18.5625ZM13.8648 3.5625V5.44042H17.2356L8.00565 14.6704L9.32959 15.9943L18.5596 6.76436V10.1352H20.4375V3.5625H13.8648Z"
+              stroke="currentColor"
+            />
+          </svg>
+        </a>
+      </div>
       
 
       <div
@@ -1014,14 +1069,14 @@ Functions are like objects in this way. We can "hang" data on them, like clothes
               class="ch-scrollycoding-step-content"
             >
               <p>
-                This component is essentially a wrapper that exposes the active tab state and the function that allows you to change the active tab. The context provider acts as the wrapper. So now all the children inside this container can access the activeTab and the setter function using the useContext hook.
+                This component is essentially a wrapper that exposes the active tab state and the function that allow us to change the active tab. The context provider acts as the wrapper. So now all the children inside this container can access the activeTab and the setter function using the useContext hook.
               </p>
             </div>
             <div
               class="ch-scrollycoding-step-content"
             >
               <p>
-                Then let’s add the tab component. This is the button that’ll help you to switch between sections.
+                Then let’s add the tab component. This is the button that’ll help us to switch between sections.
 On clicking this button, it triggers the 
                 <code>
                   changeTab
@@ -1044,7 +1099,7 @@ On clicking this button, it triggers the
               class="ch-scrollycoding-step-content"
             >
               <p>
-                Now default export the tabs component and attach the other sub-components to this component.
+                Now we can default export the tabs component and attach the other sub-components to this component.
               </p>
             </div>
             <div
@@ -1054,11 +1109,11 @@ On clicking this button, it triggers the
                 Inside the TabsExample file, let’s import all our tab components and use them as we please.
               </p>
               <p>
-                Note: You can add any other elements you want like the 
+                Note: We can add any other elements we want like the 
                 <code>
                   div
                 </code>
-                . You can also use a completely different arrangement of the elements.
+                . We can also use a completely different arrangement of the elements.
               </p>
             </div>
           </div>
@@ -1431,11 +1486,6 @@ On clicking this button, it triggers the
           </div>
         </section>
       </div>
-      
-
-      <div
-        style="height: 300px;"
-      />
     </div>
   </article>
 </div>

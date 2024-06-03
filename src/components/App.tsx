@@ -5,9 +5,7 @@ import WelcomeContent from './index.mdx';
 function App() {
   return (
     <article className="article-content">
-        <div>
-            <WelcomeContent />
-        </div>
+      WIP: Welcome to the Reference App!
     </article>
   );
 }
