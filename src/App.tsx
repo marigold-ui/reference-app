@@ -1,9 +1,9 @@
 import { StrictMode } from 'react';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import { createRouter, RouterProvider } from '@tanstack/react-router';
 
 import { MarigoldProvider } from '@marigold/components';
 import theme from '@marigold/theme-core';
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-import { createRouter, RouterProvider } from '@tanstack/react-router';
 
 import { routeTree } from './routeTree.gen';
 
