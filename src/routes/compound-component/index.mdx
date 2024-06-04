@@ -1,0 +1,61 @@
+import DemoLink from '@/components/DemoLink';
+
+import BreadcrumbDoc from './breadcrumbs.mdx';
+import TabsDoc from './tabs.mdx';
+
+# Compound components in React
+
+This document provides an explanation and examples of using compound components in React. Compound components are a design pattern
+where related child components are encapsulated within a parent component to create a reusable and flexible component suite.
+
+This pattern enhances customization and simplifies the internal composition of components.
+
+## Importance of the Pattern
+
+Compound components are important for several reasons:
+
+- **Encapsulation and Reusability:** They allow encapsulating related components, making the parent component more reusable and modular.
+
+- **Customizability:** Each child component can be individually customized without exposing numerous customization props through the parent component.
+
+- **Simplicity in State Management:** A well-designed compound component should require minimal state management, making the component easier to understand and maintain.
+
+## Use-Cases and Examples
+
+### Example 1: `<select>` and `<option>` in HTML
+
+A similiar example in HTML are the `<select>` and `<option>` tags:
+
+    ```html select.html
+        <select>
+            <option value="pizza">Pizza</option>
+            <option value="sushi">Sushi</option>
+            <option value="soup">Soup</option>
+        </select>
+    ```
+
+The select tag works together with the option tag which is used for a drop-down menu to select items in HTML. Here the `<select>` manages the state of the UI, then the `<option>` elements are configured on how the `<select>` should work.
+
+### Example 2: Building a compound component
+
+<DemoLink destination="/compound-component/preview/breadcrumbs">
+  View Demo
+</DemoLink>
+
+E-commerce websites often have “breadcrumbs” to help the user navigate to parent/grand-parent pages. For example:
+
+    `Electronics / Cell Phones / Cases`
+
+---
+
+<BreadcrumbDoc />
+<div style={{ height: 100 }} />
+
+### Example 3: Compound component with Context
+
+<DemoLink destination="/compound-component/preview/tabs">View Demo</DemoLink>
+
+By leveraging React context, we can provide the necessary states and functions to child components without exposing them through props, resulting in a cleaner and more maintainable codebase.
+
+<TabsDoc />
+<div style={{ height: 300 }} />
