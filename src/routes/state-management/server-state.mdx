@@ -1,0 +1,64 @@
+import ServerStateExample from './_components/ServerStateExample';
+
+<CH.Scrollycoding>
+
+    ```tsx ServerStateExample.tsx focus=24:27
+    // from ./_components/ServerStateExample.tsx
+    ````
+    #### Initializing local state for filters using useState hook
+
+    Here, we use the `useState` hook to manage the local state of our filters. This state will store the user's input for the movie title and category.
+
+    ---
+
+    ```tsx ServerStateExample.tsx focus=63,71:73
+    // from ./_components/ServerStateExample.tsx
+    ````
+    #### Handle User Input: SearchField & Select
+
+    We use the `SearchField` component to allow the user to input a search query. The `onChange` handler updates the local state with the new search term, which triggers a re-fetch of the data.
+
+    The `Select` component allows the user to choose a category. The `onChange` handler updates the local state with the selected category, which also triggers a re-fetch of the data.
+
+    ---
+
+    ```tsx ServerStateExample.tsx focus=29:37
+    // from ./_components/ServerStateExample.tsx
+    ````
+    #### Fetch date from server
+
+    The `fetchData` function builds the API URL with query parameters and fetches data from the server.
+
+    ---
+
+    ```tsx ServerStateExample.tsx focus=39:51
+    // from ./_components/ServerStateExample.tsx
+    ````
+    #### Use React Query to Manage Server State
+
+    The `useQuery` hook from React Query fetches data based on the current filters and manages the server state, including loading and error states.
+
+    ---
+
+
+
+    ```tsx ServerStateExample.tsx focus=53:55
+    // from ./_components/ServerStateExample.tsx
+    ```
+    #### Error Handling
+
+    If an error occurs during data fetching, we display an error message.
+
+    ---
+
+
+
+
+    ```tsx ServerStateExample.tsx focus=86
+    // from ./_components/ServerStateExample.tsx
+    ```
+    #### Loading State
+
+    While data is being fetched, we display a loading indicator.
+
+</CH.Scrollycoding>

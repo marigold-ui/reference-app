@@ -5,7 +5,7 @@ import { createRouter, RouterProvider } from '@tanstack/react-router';
 import { MarigoldProvider } from '@marigold/components';
 import theme from '@marigold/theme-core';
 
-import { routeTree } from './routeTree.gen';
+import { routeTree } from './route-tree';
 
 // Router
 // ---------------

@@ -23,4 +23,7 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+# tanstack/router
 **/routeTree.gen.ts
+src/route-tree.ts
