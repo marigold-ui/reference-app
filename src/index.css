@@ -26,7 +26,7 @@
 }
 
 .article-content {
-  @apply pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]
+  @apply pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl];
 }
 
 article {
@@ -100,7 +100,6 @@ html {
   margin: 0;
   line-height: 1.5;
 }
-
 
 kbd,
 pre,

@@ -4,4 +4,3 @@ import App from '../components/App';
 export const Route = createLazyFileRoute('/')({
   component: App,
 });
-
