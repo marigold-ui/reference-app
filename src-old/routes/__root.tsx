@@ -1,6 +1,6 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
 import React, { Suspense } from 'react';
-import { SideNavigation } from '../components/SideNavigation';
+import { SideNavigation } from '@/components/SideNavigation';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import Header from '../components/Header';
 
