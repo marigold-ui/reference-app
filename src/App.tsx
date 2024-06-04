@@ -11,6 +11,12 @@ import { routeTree } from './route-tree';
 // ---------------
 const router = createRouter({ routeTree });
 
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: typeof router;
+  }
+}
+
 // Query
 // ---------------
 const queryClient = new QueryClient();
