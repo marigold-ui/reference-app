@@ -1,4 +1,5 @@
-import { ReactNode, useContext } from 'react';
+import { useContext } from 'react';
+import type { ReactNode } from 'react';
 import { TabsContext } from './Tabs';
 
 const TabPanel = ({
