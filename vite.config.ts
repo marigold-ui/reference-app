@@ -1,4 +1,5 @@
-import { UserConfig, defineConfig } from 'vite';
+import { defineConfig } from 'vite';
+import type { UserConfig } from 'vite';
 import path from 'node:path';
 
 import react from '@vitejs/plugin-react-swc';
@@ -28,7 +29,6 @@ export default defineConfig(async () => {
       react(),
       TanStackRouterVite(),
     ],
-    // @ts-expect-error (extending vite's config with vitest's configuration)
     test: {
       globals: true,
       environment: 'jsdom',

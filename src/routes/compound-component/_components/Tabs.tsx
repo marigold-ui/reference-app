@@ -1,4 +1,5 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, useState } from 'react';
+import type { ReactNode } from 'react';
 import Tab from './Tab';
 import TabPanel from './TabPanel';
 

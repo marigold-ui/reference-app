@@ -2,7 +2,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Suspense, lazy } from 'react';
 
 const TanStackRouterDevtools =
-  process.env.NODE_ENV === 'production'
+  process.env['NODE_ENV'] === 'production'
     ? () => null
     : lazy(() =>
         import('@tanstack/router-devtools').then(res => ({
