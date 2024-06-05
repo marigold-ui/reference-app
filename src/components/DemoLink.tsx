@@ -12,7 +12,6 @@ const DemoLink = ({ children, ...props }: DemoLinkProps) => {
       <Link
         {...props}
         target="_blank"
-        search=""
         className="flex-1 cursor-pointer rounded-md border-2 border-solid bg-white p-2 align-baseline font-black text-gray-800 hover:bg-gray-300"
       >
         {children}
