@@ -25,12 +25,12 @@ export const SideNavigation = () => {
       group: 'Patterns',
       items: [
         {
-          linkTo: '/compoundComponent',
+          linkTo: '/compound-component',
           name: 'Compound Component',
         },
         {
           linkTo: '/state-management',
-          name: 'state-management',
+          name: 'State Management',
         },
       ],
     },

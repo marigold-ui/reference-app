@@ -45,7 +45,7 @@
     Copy the chunk for the parent wrapper (`Breadcrumbs`) and made it generic.
 
     ```tsx Breadcrumbs.tsx focus=3:9
-    // from ./Breadcrumbs.tsx
+    // from ./_components/Breadcrumbs.tsx
     ```
 
     ---
@@ -53,7 +53,7 @@
     Copy the chunk for each link in the group (`Crumb`) and made it generic.
 
     ```tsx Breadcrumbs.tsx focus=11:31
-    // from ./Breadcrumbs.tsx
+    // from ./_components/Breadcrumbs.tsx
     ```
 
     ---
@@ -61,7 +61,7 @@
     As final step we need to connect these components.
 
     ```tsx Breadcrumbs.tsx focus=34
-    // from ./Breadcrumbs.tsx
+    // from ./_components/Breadcrumbs.tsx
     ```
 
     We can call it weird or awesome, but JS functions can have properties.
@@ -72,7 +72,7 @@
     Finally we can use this compound component in our BreadcrumbsExample.tsx.
 
     ```tsx BreadcrumbsExample.tsx
-    // from ./BreadcrumbsExample.tsx
+    // from ./_components/BreadcrumbsExample.tsx
     ```
 
     ---
@@ -80,7 +80,7 @@
     Note that we only need to import the `Breadcrumbs` component.
 
     ```tsx BreadcrumbsExample.tsx focus=1,6,12
-    // from ./BreadcrumbsExample.tsx
+    // from ./_components/BreadcrumbsExample.tsx
     ```
 
     ---
@@ -88,7 +88,7 @@
     Because we connect `Crumb` to `Breadcrumbs` we can access it as a property.
 
     ```tsx BreadcrumbsExample.tsx focus=6:12
-    // from ./BreadcrumbsExample.tsx
+    // from ./_components/BreadcrumbsExample.tsx
     ```
 
 </CH.Scrollycoding>

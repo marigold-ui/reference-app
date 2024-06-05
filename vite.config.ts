@@ -1,14 +1,20 @@
-import { defineConfig } from 'vite';
+import { UserConfig, defineConfig } from 'vite';
+import path from 'node:path';
+
 import react from '@vitejs/plugin-react-swc';
 import { remarkCodeHike } from '@code-hike/mdx';
 import { TanStackRouterVite } from '@tanstack/router-vite-plugin';
 
-// @ts-ignore
 export default defineConfig(async () => {
   const mdx = await import('@mdx-js/rollup');
   return {
     optimizeDeps: {
       include: ['react/jsx-runtime'],
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      },
     },
     plugins: [
       {
@@ -22,6 +28,7 @@ export default defineConfig(async () => {
       react(),
       TanStackRouterVite(),
     ],
+    // @ts-expect-error (extending vite's config with vitest's configuration)
     test: {
       globals: true,
       environment: 'jsdom',
@@ -39,5 +46,5 @@ export default defineConfig(async () => {
         ],
       },
     },
-  };
+  } satisfies UserConfig;
 });

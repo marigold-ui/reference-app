@@ -1,6 +1,6 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
-import StateManagementApp from '../../components/state-management/StateManagementApp';
+import Content from './index.mdx';
 
 export const Route = createLazyFileRoute('/state-management/')({
-  component: StateManagementApp,
+  component: Content,
 });
