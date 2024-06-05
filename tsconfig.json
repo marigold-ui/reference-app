@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "types/mdx.d.ts"],
+  "include": ["src", "types/mdx.d.ts", "tests"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
