@@ -9,6 +9,11 @@ module.exports = {
       sans: ['Inter', ...fontFamily.sans],
     },
     extend: {
+      padding: {
+        content: 'var(--page-padding)',
+        'content-md': 'var(--page-padding-md)',
+        'content-xl': 'var(--page-padding-xl)',
+      },
       gridTemplateColumns: {
         content:
           'minmax(var(--page-padding), 1fr) minmax(0, 1300px) minmax(var(--page-padding), 1fr)',

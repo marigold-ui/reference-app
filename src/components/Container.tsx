@@ -22,5 +22,13 @@ export const Content = ({ className, children }: ContentCommonProps) => (
 );
 
 export const Breakout = ({ className, children }: ContentCommonProps) => (
-  <div className={cn('[grid-column:1/4]', className)}>{children}</div>
+  <div
+    className={cn(
+      '[grid-column:1/4]',
+      'px-content md:px-content-md xl:px-content-xl',
+      className
+    )}
+  >
+    {children}
+  </div>
 );
