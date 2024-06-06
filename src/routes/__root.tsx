@@ -1,21 +1,19 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
 import Header from '@/components/Header';
+import { Container } from '@/components/Container';
 import { Devtools } from '@/components/Devtools';
 
 const Layout = () => (
   <>
     <Header />
-    <main
+    <Container
       className={[
-        'grid grid-cols-content md:grid-cols-content-md xl:grid-cols-content-xl',
         'prose prose-docs max-w-none',
         'prose-code:before:content-none prose-code:after:content-none',
       ].join(' ')}
     >
-      <div className="[grid-column:2]">
-        <Outlet />
-      </div>
-    </main>
+      <Outlet />
+    </Container>
     <Devtools />
   </>
 );
