@@ -14,8 +14,17 @@ module.exports = {
           css: {
             // https://github.com/tailwindlabs/tailwindcss-typography#adding-custom-color-themes
             h1: {
-              fontSize: 60,
-              paddingTop: theme('padding.32'),
+              fontSize: 72,
+              fontWeight: 900,
+              letterSpacing: -1.5,
+              paddingTop: theme('spacing.32'),
+              marginBottom: theme('spacing.10'),
+            },
+            h2: {
+              fontSize: 32,
+              fontWeight: 900,
+              marginTop: theme('spacing.24'),
+              marginBottom: theme('spacing.6'),
             },
           },
         },
