@@ -7,12 +7,14 @@ const Layout = () => (
     <Header />
     <main
       className={[
-        'prose prose-docs mx-auto max-w-[1300px]',
+        'grid grid-cols-content md:grid-cols-content-md xl:grid-cols-content-xl',
+        'prose prose-docs max-w-none',
         'prose-code:before:content-none prose-code:after:content-none',
-        'px-[--page-padding] md:px-[--page-padding-md] xl:px-[--page-padding-xl]',
       ].join(' ')}
     >
-      <Outlet />
+      <div className="[grid-column:2]">
+        <Outlet />
+      </div>
     </main>
     <Devtools />
   </>
