@@ -22,7 +22,14 @@ export default defineConfig(async () => {
         enforce: 'pre',
         ...mdx.default({
           remarkPlugins: [
-            [remarkCodeHike, { lineNumbers: true, showCopyButton: true }],
+            [
+              remarkCodeHike,
+              {
+                lineNumbers: true,
+                showCopyButton: true,
+                theme: 'material-palenight',
+              },
+            ],
           ],
         }),
       },

@@ -3,7 +3,7 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { createRouter, RouterProvider } from '@tanstack/react-router';
 
 import { MarigoldProvider } from '@marigold/components';
-import theme from '@marigold/theme-core';
+import theme from '@marigold/theme-docs';
 
 import { routeTree } from './route-tree';
 

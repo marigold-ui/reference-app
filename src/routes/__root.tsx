@@ -1,19 +1,23 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
-import { SideNavigation } from '@/components/SideNavigation';
 import Header from '@/components/Header';
 import { Devtools } from '@/components/Devtools';
 
+const Layout = () => (
+  <>
+    <Header />
+    <main
+      className={[
+        'prose prose-docs mx-auto max-w-[1300px]',
+        'prose-code:before:content-none prose-code:after:content-none',
+        'px-[--page-padding] md:px-[--page-padding-md] xl:px-[--page-padding-xl]',
+      ].join(' ')}
+    >
+      <Outlet />
+    </main>
+    <Devtools />
+  </>
+);
+
 export const Route = createRootRoute({
-  component: () => (
-    <>
-      <Header />
-      <SideNavigation />
-      <div className="bg-gray-50">
-        <article className="pl-[--page-side-nav-width] pt-8 md:pl-[--page-side-nav-width-md] xl:md:pl-[--page-side-nav-width-xl]">
-          <Outlet />
-        </article>
-        <Devtools />
-      </div>
-    </>
-  ),
+  component: Layout,
 });
