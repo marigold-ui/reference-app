@@ -11,6 +11,8 @@ const Page = () => {
           'from-secondary-400/50 via-secondary-50 via-60% to-secondary-50',
         ].join(' ')}
       >
+        <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-neutral-700/50 via-neutral-700/30 via-20% to-transparent" />
+
         <div className="mx-auto min-h-[calc(100vh-var(--page-header-height))] max-w-6xl">
           <h1 className="mb-0 text-balance text-8xl tracking-tighter lg:pt-48 lg:text-9xl">
             Explore Design Patterns in React
