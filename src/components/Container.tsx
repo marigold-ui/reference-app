@@ -6,12 +6,15 @@ export interface ContentCommonProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
 
+// Container
+// ---------------
 export const Container = ({
   className,
   children,
   ...props
 }: ContentCommonProps) => (
   <div
+    data-container=""
     className={cn(
       'grid grid-cols-content md:grid-cols-content-md xl:grid-cols-content-xl',
       className
@@ -22,6 +25,8 @@ export const Container = ({
   </div>
 );
 
+// Content
+// ---------------
 export const Content = ({
   className,
   children,
@@ -32,6 +37,8 @@ export const Content = ({
   </div>
 );
 
+// Breakout
+// ---------------
 export const Breakout = ({
   className,
   children,
@@ -40,7 +47,10 @@ export const Breakout = ({
   <div
     className={cn(
       '[grid-column:1/4]',
-      'px-content md:px-content-md xl:px-content-xl',
+      // Don't apply padding if <Breakout> has a <Container> child
+      '[&:not(:has([data-container]))]:px-content',
+      'md:[&:not(:has([data-container]))]:px-content-md',
+      'xl:[&:not(:has([data-container]))]:px-content-xl',
       className
     )}
     {...props}
