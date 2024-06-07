@@ -1,41 +1,69 @@
+import { Block, Content } from '@/components/Container';
 import Caption from '@/components/Caption';
 import DemoLink from '@/components/DemoLink';
 
 import BreadcrumbDoc from './breadcrumbs.mdx';
 import TabsDoc from './tabs.mdx';
 
-# Compound Components
+<Block className='text-center'>
 
-<Caption>
-  Explore the power of compound components in React with this tutorial.
-</Caption>
+    # Compound Components
 
-Compound components represent a powerful design pattern where a group of related child components are encapsulated within a single parent component.
-This encapsulation enables the creation of reusable and flexible component suites that can be easily customized and composed to suit various needs.
+    <Caption>
+    Explore the power of compound components in React with this tutorial.
+    </Caption>
 
-By structuring components in this way, developers can achieve a higher level of abstraction, simplifying the internal composition of complex UI elements.
-Instead of directly rendering individual child components, the parent component acts as a container, managing the relationship and behavior between them.
+</Block>
+
+<Content>
+
+In our application, we often encounter components that rely on each other, sharing state and logic. This
+reliance can lead to challenges in managing state, ensuring consistent behavior, and maintaining clean,
+organized code. To address these challenges and facilitate a well-structured, reusable, and
+customizable API design, React uses a pattern called compound components.
+
+Remember the `<select>` element in HTML with its `<option>` children? Compound components work similarly but
+are more powerful and flexible. In this tutorial, we'll explore how to use this pattern to build customizable
+and versatility components.
+
+```html
+<select>
+  <option value="pizza">Pizza</option>
+  <option value="sushi">Sushi</option>
+  <option value="soup">Soup</option>
+</select>
+```
+
+## Benefits
+
+Compound components allow you to group related child components within a single parent component. Each child
+component has its own role, but they all work together to perform a specific function, like building a dropdown
+menu or other complex UI elements. This pattern not only makes your components more modular and reusable but also
+simplifies the composition and internal logic of your UI.
 
 Explore the versatility and benefits of this pattern in the following tutorial.
 
 ## Benefits
 
-One of the key benefits of compound components is their ability to enhance customization. By exposing specific props or methods from the parent component,
-developers can provide users with granular control over the appearance and behavior of the compound component. This empowers users to tailor the component
-to their specific requirements without needing to modify its underlying implementation.
+One of the main benefits of compound components is their ability to enhance customization. By exposing specific
+props or methods from the parent component, you can give users detailed control over how the compound component
+looks and behaves. This means users can adjust the component to meet their needs without changing its core code.
 
-Moreover, the encapsulation of related components within a single parent promotes code organization and maintainability. Developers can easily understand
-the structure and dependencies of the compound component, facilitating collaboration and reducing the risk of unintended side effects when making changes.
+Additionally, grouping related components within a single parent improves code organization and maintainability.
+It makes the structure and dependencies of the compound component easier to understand, which helps developers
+collaborate and reduces the risk of mistakes when making changes.
 
-## Importance of the Pattern
-
-Compound components are important for several reasons:
+In short:
 
 - **Encapsulation and Reusability:** They allow encapsulating related components, making the parent component more reusable and modular.
-
 - **Customizability:** Each child component can be individually customized without exposing numerous customization props through the parent component.
-
 - **Simplicity in State Management:** A well-designed compound component should require minimal state management, making the component easier to understand and maintain.
+
+</Content>
+
+<Block>
+
+!!! example for a compound component marigold's select, e.g. the "disabledKeys" API! this is better on the parent, so you don't have to continously check if the item is disabled. this job is done by the components internally!
 
 ## Use-Cases and Examples
 
@@ -43,13 +71,13 @@ Compound components are important for several reasons:
 
 A similiar example in HTML are the `<select>` and `<option>` tags:
 
-    ```html select.html
-        <select>
-            <option value="pizza">Pizza</option>
-            <option value="sushi">Sushi</option>
-            <option value="soup">Soup</option>
-        </select>
-    ```
+```html select.html
+<select>
+  <option value="pizza">Pizza</option>
+  <option value="sushi">Sushi</option>
+  <option value="soup">Soup</option>
+</select>
+```
 
 The select tag works together with the option tag which is used for a drop-down menu to select items in HTML. Here the `<select>` manages the state of the UI, then the `<option>` elements are configured on how the `<select>` should work.
 
@@ -74,3 +102,5 @@ By leveraging React context, we can provide the necessary states and functions t
 
 <TabsDoc />
 <div style={{ height: 300 }} />
+</Block>
+````

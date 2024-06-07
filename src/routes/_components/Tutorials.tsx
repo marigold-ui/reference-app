@@ -1,10 +1,10 @@
-import { Breakout, Container, Content } from '@/components/Container';
+import { Breakout, Container, Block } from '@/components/Container';
 import { TeaserList } from '@/components/TeaserCard';
 
 export const Tutorials = () => (
   <Breakout id="skip-content" className="bg-secondary-400/10 py-32">
     <Container>
-      <Content>
+      <Block>
         <div className="prose-lg pb-8">
           <h2 className="my-0">Tutorials</h2>
           <p className="text-text-primary-muted">
@@ -65,7 +65,7 @@ export const Tutorials = () => (
             },
           ]}
         />
-      </Content>
+      </Block>
     </Container>
   </Breakout>
 );

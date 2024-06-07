@@ -1,22 +1,22 @@
 import type { HTMLAttributes, ReactNode } from 'react';
 import { cn } from '@marigold/system';
 
-export interface ContentCommonProps extends HTMLAttributes<HTMLDivElement> {
+export interface CommonProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: ReactNode;
 }
 
 // Container
 // ---------------
-export const Container = ({
-  className,
-  children,
-  ...props
-}: ContentCommonProps) => (
+/**
+ * Component used as a contaner for blocks, content and breakouts.
+ */
+export const Container = ({ className, children, ...props }: CommonProps) => (
   <div
     data-container=""
     className={cn(
-      'grid grid-cols-content md:grid-cols-content-md xl:grid-cols-content-xl',
+      'grid place-items-center',
+      'grid-cols-content md:grid-cols-content-md xl:grid-cols-content-xl',
       className
     )}
     {...props}
@@ -25,25 +25,38 @@ export const Container = ({
   </div>
 );
 
+// Block
+// ---------------
+/**
+ * Component to wrap arbitrary elements in a block.
+ */
+export const Block = ({ className, children, ...props }: CommonProps) => (
+  <div className={cn('[grid-column:2]', className)} {...props}>
+    {children}
+  </div>
+);
+
 // Content
 // ---------------
-export const Content = ({
-  className,
-  children,
-  ...props
-}: ContentCommonProps) => (
-  <div className={cn('[grid-column:2]', className)} {...props}>
+/**
+ * Component to wrap text content into (optimized for readability).
+ */
+export const Content = ({ className, children, ...props }: CommonProps) => (
+  <div
+    className={cn('[grid-column:2] max-w-[70ch] text-pretty', className)}
+    {...props}
+  >
     {children}
   </div>
 );
 
 // Breakout
 // ---------------
-export const Breakout = ({
-  className,
-  children,
-  ...props
-}: ContentCommonProps) => (
+/**
+ * Component to break out of the regular container grid.
+ * Spans to the full viewport width.
+ */
+export const Breakout = ({ className, children, ...props }: CommonProps) => (
   <div
     className={cn(
       '[grid-column:1/4]',
