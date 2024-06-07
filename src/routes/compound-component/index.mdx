@@ -1,3 +1,4 @@
+import Caption from '@/components/Caption';
 import DemoLink from '@/components/DemoLink';
 
 import BreadcrumbDoc from './breadcrumbs.mdx';
@@ -5,10 +6,26 @@ import TabsDoc from './tabs.mdx';
 
 # Compound Components
 
-This document provides an explanation and examples of using compound components in React. Compound components are a design pattern
-where related child components are encapsulated within a parent component to create a reusable and flexible component suite.
+<Caption>
+  Explore the power of compound components in React with this tutorial.
+</Caption>
 
-This pattern enhances customization and simplifies the internal composition of components.
+Compound components represent a powerful design pattern where a group of related child components are encapsulated within a single parent component.
+This encapsulation enables the creation of reusable and flexible component suites that can be easily customized and composed to suit various needs.
+
+By structuring components in this way, developers can achieve a higher level of abstraction, simplifying the internal composition of complex UI elements.
+Instead of directly rendering individual child components, the parent component acts as a container, managing the relationship and behavior between them.
+
+Explore the versatility and benefits of this pattern in the following tutorial.
+
+## Benefits
+
+One of the key benefits of compound components is their ability to enhance customization. By exposing specific props or methods from the parent component,
+developers can provide users with granular control over the appearance and behavior of the compound component. This empowers users to tailor the component
+to their specific requirements without needing to modify its underlying implementation.
+
+Moreover, the encapsulation of related components within a single parent promotes code organization and maintainability. Developers can easily understand
+the structure and dependencies of the compound component, facilitating collaboration and reducing the risk of unintended side effects when making changes.
 
 ## Importance of the Pattern
 
