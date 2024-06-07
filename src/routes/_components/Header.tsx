@@ -1,5 +1,5 @@
 import { Link, useRouter } from '@tanstack/react-router';
-import { Logo } from './Logo';
+import { Logo } from '../../components/Logo';
 
 const unkebabify = (val: string) =>
   val
@@ -35,7 +35,7 @@ const Navigation = () => {
   );
 };
 
-const Header = () => (
+export const Header = () => (
   <header className="sticky top-0 z-10  flex h-[--page-header-height] w-full items-center justify-between gap-2 border-0 border-b border-solid border-secondary-200 bg-bg-body px-[--page-padding] md:justify-normal md:px-[--page-padding-md] xl:px-[--page-padding-xl]">
     <Link className="md:pr-8" to="/">
       <Logo className="size-6" />
@@ -43,5 +43,3 @@ const Header = () => (
     <Navigation />
   </header>
 );
-
-export default Header;

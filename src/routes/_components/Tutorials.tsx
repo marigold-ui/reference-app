@@ -5,8 +5,8 @@ export const Tutorials = () => (
   <Breakout id="skip-content" className="bg-secondary-400/10 py-32">
     <Container>
       <Content>
-        <div className="not-prose pb-8">
-          <h2 className="text-2xl font-bold">Tutorials</h2>
+        <div className="prose-lg pb-8">
+          <h2 className="my-0">Tutorials</h2>
           <p className="text-text-primary-muted">
             Dive into our fun and easy-to-follow tutorials! Here’s a list of
             available guides to help you learn React step-by-step and boost your

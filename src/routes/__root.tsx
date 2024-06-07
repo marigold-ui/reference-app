@@ -1,7 +1,9 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
-import Header from '@/components/Header';
 import { Container } from '@/components/Container';
-import { Devtools } from '@/components/Devtools';
+
+import { Devtools } from './_components/Devtools';
+import { Footer } from './_components/Footer';
+import { Header } from './_components/Header';
 
 const Layout = () => (
   <>
@@ -14,6 +16,7 @@ const Layout = () => (
     >
       <Outlet />
     </Container>
+    <Footer />
     <Devtools />
   </>
 );
