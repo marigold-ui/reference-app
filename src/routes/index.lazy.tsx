@@ -2,13 +2,13 @@ import { createLazyFileRoute } from '@tanstack/react-router';
 
 import { Content } from '@/components/Container';
 import { Hero } from './_components/Hero';
-import { Patterns } from './_components/Patterns';
+import { Tutorials } from './_components/Tutorials';
 
 const Page = () => {
   return (
     <>
       <Hero />
-      <Patterns />
+      <Tutorials />
       <Content id="skip-content">
         <h2>How to use the React Reference App?</h2>
         <p>

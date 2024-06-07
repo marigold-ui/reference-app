@@ -29,9 +29,9 @@ export const Hero = () => (
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        strokeWidth={1.5}
+        strokeWidth={1.25}
         stroke="currentColor"
-        className="size-10 opacity-50"
+        className="size-10 opacity-80"
       >
         <path
           strokeLinecap="round"
