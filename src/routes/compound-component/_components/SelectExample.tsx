@@ -1,30 +1,59 @@
 import {
   FieldGroup,
+  Inline,
   MarigoldProvider,
   OverlayContainerProvider,
   Select,
+  Text,
 } from '@marigold/components';
 import theme from '@marigold/theme-core';
-import { useState, type Key } from 'react';
 
-const Example = () => {
-  const [, setSelected] = useState<Key>();
+const Indicator = ({ color }: { color: string }) => (
+  <span
+    className={`size-3 rounded-full border border-solid border-white ${color}`}
+  />
+);
 
-  return (
-    <Select
-      label="Select your favorite franchise"
-      width="3/4"
-      onChange={setSelected}
-      disabledKeys={['star-trek']}
-    >
-      <Select.Option id="harry-potter">Harry Potter</Select.Option>
-      <Select.Option id="lord-of-the-rings">Lord of the Rings</Select.Option>
-      <Select.Option id="star-wars">Star Wars</Select.Option>
-      <Select.Option id="star-trek">Star Trek</Select.Option>
-      <Select.Option id="firefly">Firefly</Select.Option>
-    </Select>
-  );
-};
+const options = [
+  {
+    id: 'backlog',
+    label: 'Backlog',
+    color: 'bg-gray-500',
+  },
+  {
+    id: 'in-progress',
+    label: 'In Progress',
+    color: 'bg-blue-500',
+  },
+  {
+    id: 'in-review',
+    label: 'In Review',
+    color: 'bg-yellow-500',
+  },
+  {
+    id: 'done',
+    label: 'Done',
+    color: 'bg-green-500',
+  },
+  {
+    id: 'wont-do',
+    label: "Won't do",
+    color: 'bg-red-500',
+  },
+];
+
+const Example = () => (
+  <Select label="Status" width="3/4" disabledKeys={['wont-do']}>
+    {options.map(o => (
+      <Select.Option id={o.id}>
+        <Inline space={2} alignY="center">
+          <Indicator color={o.color} />
+          <Text>{o.label}</Text>
+        </Inline>
+      </Select.Option>
+    ))}
+  </Select>
+);
 
 const App = () => (
   <OverlayContainerProvider value="portalContainer">
