@@ -10,8 +10,8 @@ export const Hero = () => (
   >
     <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-neutral-700/50 via-neutral-700/30 via-20% to-transparent" />
 
-    <div className="mx-auto max-w-6xl pt-[8vh]">
-      <h1 className="m-0 text-balance text-8xl tracking-tighter lg:text-9xl">
+    <div className="ot-[4vh] mx-auto max-w-6xl md:pt-[8vh]">
+      <h1 className="m-0 text-balance text-7xl tracking-tighter md:text-8xl lg:text-9xl">
         Explore Design Patterns in React
       </h1>
       <p className="mt-4 max-w-[75%] text-pretty text-lg leading-normal text-secondary-400 lg:text-2xl">

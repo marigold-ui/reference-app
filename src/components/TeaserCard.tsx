@@ -33,7 +33,7 @@ export interface TeaserListProps {
 export const TeaserList = ({ items }: TeaserListProps) => (
   <Tiles tilesWidth="400px" space={5}>
     {items.map(props => (
-      <TeaserCard {...props} />
+      <TeaserCard key={props.href} {...props} />
     ))}
   </Tiles>
 );
