@@ -59,7 +59,7 @@ export const Content = ({ className, children, ...props }: CommonProps) => (
 export const Breakout = ({ className, children, ...props }: CommonProps) => (
   <div
     className={cn(
-      '[grid-column:1/4]',
+      '[grid-column:1/4] w-full',
       // Don't apply padding if <Breakout> has a <Container> child
       '[&:not(:has([data-container]))]:px-content',
       'md:[&:not(:has([data-container]))]:px-content-md',

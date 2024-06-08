@@ -1,6 +1,5 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
 
-import { Block } from '@/components/Container';
 import { Hero } from './_components/Hero';
 import { Tutorials } from './_components/Tutorials';
 import { About } from './_components/About';
