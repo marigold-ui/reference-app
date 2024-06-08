@@ -1,6 +1,11 @@
+import { Message } from '@marigold/components';
+
 import { Block, Content } from '@/components/Container';
 import Caption from '@/components/Caption';
 import DemoLink from '@/components/DemoLink';
+import Preview from '@/components/Preview';
+
+import SelectExample from './_components/SelectExample';
 
 import BreadcrumbDoc from './breadcrumbs.mdx';
 import TabsDoc from './tabs.mdx';
@@ -28,42 +33,58 @@ and versatility components.
 
 ```html
 <select>
-  <option value="pizza">Pizza</option>
-  <option value="sushi">Sushi</option>
-  <option value="soup">Soup</option>
+  <option value="harry-potter">Harry Potter</option>
+  <option value="lord-of-the-rings">Lord of the Rings</option>
+  <option value="star-wars">Star Wars</option>
 </select>
 ```
 
 ## Benefits
 
-Compound components allow you to group related child components within a single parent component. Each child
-component has its own role, but they all work together to perform a specific function, like building a dropdown
-menu or other complex UI elements. This pattern not only makes your components more modular and reusable but also
-simplifies the composition and internal logic of your UI.
+Compound components provide a clear way to express relationships between components, making it easier to understand
+and manage how different parts of your UI interact. By managing their own internal state and sharing it among child
+components, compound components free you from handling state management yourself. This built-in state management ensures
+consistent behavior across all related components.
 
-Explore the versatility and benefits of this pattern in the following tutorial.
+An example of this internal state management can be seen with [Marigold's Select](https://www.marigold-ui.io/components/form/select)
+component. The disabled state (`disabledKeys`) and the `onChange` handler are both managed within the parent component,
+instead of handling this on every children individually.
 
-## Benefits
+```tsx
+const [selected, setSelected] = useState<Key>();
 
-One of the main benefits of compound components is their ability to enhance customization. By exposing specific
-props or methods from the parent component, you can give users detailed control over how the compound component
-looks and behaves. This means users can adjust the component to meet their needs without changing its core code.
+return (
+  <Select
+    label="Select your favorite franchise"
+    onChange={setSelected}
+    disabledKeys={['star-trek']}
+  >
+    <Select.Option id="harry-potter">Harry Potter</Select.Option>
+    <Select.Option id="lord-of-the-rings">Lord of the Rings</Select.Option>
+    <Select.Option id="star-wars">Star Wars</Select.Option>
+    <Select.Option id="star-trek">Star Trek</Select.Option>
+    <Select.Option id="firefly">Firefly</Select.Option>
+  </Select>
+);
+```
 
-Additionally, grouping related components within a single parent improves code organization and maintainability.
-It makes the structure and dependencies of the compound component easier to understand, which helps developers
-collaborate and reduces the risk of mistakes when making changes.
+<Message messageTitle="Single Import" variant="info">
+  Note how compound components export their related components using dot
+  notation (`Select.Option`). This technique allows you to bundle the parent and
+  child components together in a single export, making it easy to access and use
+  the entire component suite.
+</Message>
 
-In short:
+Additionally, compound components enhance reusability and customization. You can create a flexible parent component with
+customizable children, allowing you to reuse and adapt the components for different requirements effortlessly.
 
-- **Encapsulation and Reusability:** They allow encapsulating related components, making the parent component more reusable and modular.
-- **Customizability:** Each child component can be individually customized without exposing numerous customization props through the parent component.
-- **Simplicity in State Management:** A well-designed compound component should require minimal state management, making the component easier to understand and maintain.
+<Preview>
+  <SelectExample />
+</Preview>
 
 </Content>
 
 <Block>
-
-!!! example for a compound component marigold's select, e.g. the "disabledKeys" API! this is better on the parent, so you don't have to continously check if the item is disabled. this job is done by the components internally!
 
 ## Use-Cases and Examples
 

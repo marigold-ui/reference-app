@@ -34,3 +34,11 @@
 .ch-frame-buttons {
   display: none;
 }
+
+.ch-mini-browser .ch-frame-buttons {
+  display: flex;
+}
+
+.ch-mini-browser .ch-frame-content {
+  flex-basis: auto;
+}
