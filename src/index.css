@@ -22,6 +22,10 @@
   max-width: none;
 }
 
+.ch-codeblock {
+  margin: theme('spacing.8') 0;
+}
+
 .ch-scrollycoding-step-content {
   padding: theme('spacing.6');
 }

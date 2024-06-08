@@ -1,4 +1,9 @@
-import { FieldGroup, MarigoldProvider, Select } from '@marigold/components';
+import {
+  FieldGroup,
+  MarigoldProvider,
+  OverlayContainerProvider,
+  Select,
+} from '@marigold/components';
 import theme from '@marigold/theme-core';
 import { useState, type Key } from 'react';
 
@@ -8,6 +13,7 @@ const Example = () => {
   return (
     <Select
       label="Select your favorite franchise"
+      width="3/4"
       onChange={setSelected}
       disabledKeys={['star-trek']}
     >
@@ -21,11 +27,13 @@ const Example = () => {
 };
 
 const App = () => (
-  <MarigoldProvider theme={theme}>
-    <FieldGroup labelWidth="200px">
-      <Example />
-    </FieldGroup>
-  </MarigoldProvider>
+  <OverlayContainerProvider value="portalContainer">
+    <MarigoldProvider theme={theme}>
+      <FieldGroup labelWidth="200px">
+        <Example />
+      </FieldGroup>
+    </MarigoldProvider>
+  </OverlayContainerProvider>
 );
 
 export default App;
