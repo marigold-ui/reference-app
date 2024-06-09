@@ -54,25 +54,26 @@ An example of this internal state management can be seen with [Marigold's Select
 component. The disabled state (`disabledKeys`) and the `onChange` handler are both managed within the parent component,
 instead of handling this on every children individually.
 
-```tsx mark=4[26:47],4[49:74]
-const [selected, setSelected] = useState<Key>();
-
-return (
-  <Select label="Status" onChange={setSelected} disabledKeys={['wont-do']}>
-    <Select.Option id="backlog">Backlog</Select.Option>
-    <Select.Option id="in-progress">In Progress</Select.Option>
-    <Select.Option id="in-review">In Review</Select.Option>
-    <Select.Option id="done">Done</Select.Option>
-    <Select.Option id="wont-do">Won't do</Select.Option>
-  </Select>
-);
+```tsx
+<Select label="Status" disabledKeys={['wont-do']}>
+  <Select.Option id="backlog">Backlog</Select.Option>
+  <Select.Option id="in-progress">In Progress</Select.Option>
+  <Select.Option id="in-review">In Review</Select.Option>
+  <Select.Option id="done">Done</Select.Option>
+  <Select.Option id="wont-do">Won't do</Select.Option>
+</Select>
 ```
 
+The provided code demonstrates how centralizing state management in a parent component
+can simplify your code. In this example, the `<Select>` component handles tasks like disabling
+options and tracking user-selected items, eliminating the need for you to handle these
+tasks manually.
+
 <Message messageTitle="Single Import" variant="info">
-  Note how compound components export their related components using dot
+  Note how compound components usually export their related components using dot
   notation (`Select.Option`). This technique allows you to bundle the parent and
-  child components together in a single export, making it easy to access and use
-  the entire component suite.
+  child components together in a single export, making it easy to access all
+  related components.
 </Message>
 
 ### Customization
@@ -102,22 +103,6 @@ to the options and making each option both informative and visually distinct.
 </Content>
 
 <Block>
-
-## Use-Cases and Examples
-
-### Example 1: `<select>` and `<option>` in HTML
-
-A similiar example in HTML are the `<select>` and `<option>` tags:
-
-```html select.html
-<select>
-  <option value="pizza">Pizza</option>
-  <option value="sushi">Sushi</option>
-  <option value="soup">Soup</option>
-</select>
-```
-
-The select tag works together with the option tag which is used for a drop-down menu to select items in HTML. Here the `<select>` manages the state of the UI, then the `<option>` elements are configured on how the `<select>` should work.
 
 ### Example 2: Building a compound component
 
