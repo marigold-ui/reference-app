@@ -91,6 +91,14 @@ components can be individually styled and customized, allowing for a flexible an
 // from ./_components/SelectExample.tsx 45:56
 ```
 
+In this example, the `<Select>` component manages the state with the `disabledKeys` prop, which disables specific options based
+on their `id`. The state is handled by the parent `<Select>` component, ensuring that the disabled state is applied consistently
+across all options without requiring manual checks within each child component.
+
+Furthermore, the `<Select.Option>` component demonstrates how each option can be customized. Inside, we use an `<Inline>` component
+to align the `<Indicator>` and `<Text>` components. This setup allows you to style each option individually, adding visual distinction
+to the options and making each option both informative and visually distinct.
+
 </Content>
 
 <Block>
