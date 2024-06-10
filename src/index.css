@@ -23,7 +23,8 @@
 }
 
 .ch-codeblock,
-.ch-preview {
+.ch-preview,
+.ch-scrollycoding {
   margin: theme('spacing.8') 0;
 }
 

@@ -1,0 +1,62 @@
+import { Block } from '@/components/Container';
+
+<Block>
+  <CH.Scrollycoding>
+
+```tsx focus=4:6
+// from ./TabsBasic.tsx
+```
+
+### Component Interface
+
+For the component's interface, we define a prop called `tabs`, which holds all the information
+to be displayed in the tabs. This prop accepts an array of objects, each with a `title` and
+`content` property. The `title` is used for the tab label, while the `content` contains what will
+be displayed when the related tab is active.
+
+Both properties are `ReactNode`, meaning they can be any renderable React content, not just
+strings but also other components. This flexibility is important as it allows the title and
+content to be highly customizable, accommodating arbitrary contents.
+
+---
+
+```tsx focus=9
+
+```
+
+### Managing the active Tab
+
+To remember the active tab (the one that is currently displayed), we use the `useState` hook.
+This hook is perfect for our case because we only need to store the index of the active tab. The
+component will display the first tab by default (index 0). We'll later read and update this state
+based on user interactions.
+
+If we wanted to, we could make this configurable by adding another prop to the component interface,
+like `defaultActive`. However, for brevity, we will focus on the current implementation.
+
+---
+
+```tsx focus=13:24
+
+```
+
+### Render Tab Titles
+
+Next, we start rendering the tab titles (`tab.title`) by iterating over the given `tabs` prop using the `.map` method.
+This allows us to dynamically create a tab header for each item in the `tabs` array.
+
+For styling purposes, we wrap the list of tab titles in a `div`. As seen before, we want to display the tabs in a horizontal line.
+
+---
+
+```tsx focus=18
+
+```
+
+### Highlighting the active Tab
+
+There are different ways to implement how to highlight the active tab. We've decided to use a data property here. This has the
+benefit that we can easily style the active tab title via CSS, while also making debugging easier.
+
+  </CH.Scrollycoding>
+</Block>
