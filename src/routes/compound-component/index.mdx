@@ -6,6 +6,7 @@ import DemoLink from '@/components/DemoLink';
 import Preview from '@/components/Preview';
 
 import SelectExample from './_components/SelectExample';
+import TabsBasicExample from './_components/TabsBasicExample';
 
 import TabsDoc from './tabs.mdx';
 
@@ -104,23 +105,18 @@ to the options and making each option both informative and visually distinct.
 <Content>
 ## Building a Compound Component
 
-Now let's build a compound component in React. We'll create a simple tab component to demonstrate the compound component pattern,
+Now let's build a compound component in React. We'll create a simple tabs component to demonstrate the compound component pattern,
 showcasing how it can create flexible and reusable UI elements while making it easy and convenient to manage related state.
 
-The tab component will let users switch between content panels by clicking on tab headers. The component will manage which panel is
+The tabs component will let users switch between content panels by clicking on tab headers. The component will manage which panel is
 displayed and visibly highlight the current tab header so users know which panel is active.
 
+Here you can see how the finished tab component should look and function.
+
+<Preview>
+  <TabsBasicExample />
+</Preview>
+
+### A basic tabs component
+
 </Content>
-
-<Block>
-
-### Example 3: Compound component with Context
-
-<DemoLink to="/compound-component/preview/tabs">View Demo</DemoLink>
-
-By leveraging React context, we can provide the necessary states and functions to child components without exposing them through props, resulting in a cleaner and more maintainable codebase.
-
-<TabsDoc />
-<div style={{ height: 300 }} />
-</Block>
-````

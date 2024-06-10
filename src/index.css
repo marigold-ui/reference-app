@@ -22,7 +22,8 @@
   max-width: none;
 }
 
-.ch-codeblock {
+.ch-codeblock,
+.ch-preview {
   margin: theme('spacing.8') 0;
 }
 
