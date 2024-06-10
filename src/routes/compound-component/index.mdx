@@ -7,7 +7,6 @@ import Preview from '@/components/Preview';
 
 import SelectExample from './_components/SelectExample';
 
-import BreadcrumbDoc from './breadcrumbs.mdx';
 import TabsDoc from './tabs.mdx';
 
 <Block className='text-center'>
@@ -102,20 +101,18 @@ to the options and making each option both informative and visually distinct.
 
 </Content>
 
+<Content>
+## Building a Compound Component
+
+Now let's build a compound component in React. We'll create a simple tab component to demonstrate the compound component pattern,
+showcasing how it can create flexible and reusable UI elements while making it easy and convenient to manage related state.
+
+The tab component will let users switch between content panels by clicking on tab headers. The component will manage which panel is
+displayed and visibly highlight the current tab header so users know which panel is active.
+
+</Content>
+
 <Block>
-
-### Example 2: Building a compound component
-
-<DemoLink to="/compound-component/preview/breadcrumbs">View Demo</DemoLink>
-
-E-commerce websites often have “breadcrumbs” to help the user navigate to parent/grand-parent pages. For example:
-
-`Electronics / Cell Phones / Cases`
-
----
-
-<BreadcrumbDoc />
-<div style={{ height: 100 }} />
 
 ### Example 3: Compound component with Context
 
