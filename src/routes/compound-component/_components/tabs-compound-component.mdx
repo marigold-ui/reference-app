@@ -3,15 +3,17 @@ import { Block } from '@/components/Container';
 <Block>
   <CH.Scrollycoding>
 
-```tsx focus=6:11
-// from ./Tabs/Tabs.tsx
+```tsx TabContext.tsx focus=3:8
+// from ./Tabs/Context.tsx
 ```
 
-### Sharing State and Logic
+### Setup State
 
-To achieve this, we are going to use [React's Context](https://react.dev/learn/passing-data-deeply-with-context) feature.
-This allows us to share the state and functions across multiple components without prop drilling, making
-the composition of our components more flexible and easier to maintain.
+To share the state and provide methods to update it, we are going to use [React's Context](https://react.dev/learn/passing-data-deeply-with-context)
+feature. This approach allows us to provide the state to multiple components without the need for [prop drilling](https://www.freecodecamp.org/news/prop-drilling-in-react-explained-with-examples/).
+By doing so, we make the composition of our components more flexible and easier to maintain.
+
+In our case, the context will hold the active tab (`activeTab`), represented by a string identifier, and a function (`setActiveTab`), which updates the currently active tab.
 
 ---
 
