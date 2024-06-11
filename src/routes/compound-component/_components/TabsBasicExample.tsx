@@ -1,9 +1,12 @@
+import { MarigoldProvider } from '@marigold/components';
+import theme from '@marigold/theme-core';
+
 import { Tabs } from './TabsBasic';
 
 // Content
 // ---------------
 const Description = () => (
-  <div>
+  <div className="prose">
     <strong>DJ Wobblemeister's Wobble Extravaganza</strong>
     <p className="m-0">
       Join us for an unforgettable night with DJ Wobblemeister, the maestro of
@@ -15,7 +18,7 @@ const Description = () => (
 );
 
 const Locations = () => (
-  <ul className="m-0">
+  <ul className="prose m-0">
     <li>Wobbleville - June 20th</li>
     <li>Bass City - June 25th</li>
     <li>Quirkytown - July 1st</li>
@@ -24,7 +27,7 @@ const Locations = () => (
 );
 
 const Merchandise = () => (
-  <div>
+  <div className="prose">
     <p className="mt-0">
       Grab your exclusive DJ Wobblemeister merchandise at the concert!
     </p>
@@ -39,7 +42,7 @@ const Merchandise = () => (
 
 const App = () => (
   // add height so the example does not jump
-  <div className="h-[340px]">
+  <MarigoldProvider theme={theme} className="h-[340px]">
     <Tabs
       tabs={[
         { title: 'Description', content: <Description /> },
@@ -47,7 +50,7 @@ const App = () => (
         { title: 'Merchandise', content: <Merchandise /> },
       ]}
     />
-  </div>
+  </MarigoldProvider>
 );
 
 export default App;
