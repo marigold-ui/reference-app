@@ -8,6 +8,7 @@ import Preview from '@/components/Preview';
 import SelectExample from './_components/SelectExample';
 import TabsBasicExample from './_components/TabsBasicExample';
 import TabsAnatomy from './_components/TabsAnatomy';
+import TabsExample from './_components/TabsExample';
 
 import TabsBaiscContent from './_components/tabs-basic.mdx';
 import TabsCompoundComponentContent from './_components/tabs-compound-component.mdx';
@@ -166,16 +167,19 @@ The image below is from Adobe's React Aria library, but it also aligns well with
 
 <TabsAnatomy />
 
-Based on this breakdown, we will create three child components for our Tabs component, each responsible for managing a specific aspect of the functionality. But first,
-let's start with the Tabs component itself, which will be responsible for orchestrating the functionality of its child components.
+Based on this breakdown, we will create three child components for our Tabs component, each responsible
+for managing a specific aspect of the functionality. But first, we have to take care of the logic
+so that it can shared between all the different parts of the component.
 
 </Content>
 
 <TabsCompoundComponentContent />
 
----
-
 <Content>
+
+<Preview>
+  <TabsExample />
+</Preview>
 
 downsides of this implementation: we have a very ugly "data object" with all information and JSX as property inside it. this makes it hard(er) to work with the ... why?
 add a new feature that jumps to a certain tab, making this almost like a wizard (using TabsContext) or something.

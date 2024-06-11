@@ -1,26 +1,51 @@
-import Tabs from './Tabs';
+import { MarigoldProvider } from '@marigold/components';
+import theme from '@marigold/theme-core';
 
-function TabsExample() {
-  return (
-    <Tabs>
-      <div className="flex">
-        <Tabs.Tab index={0}>Mouse Settings</Tabs.Tab>
-        <Tabs.Tab index={1}>Keyboard Settings</Tabs.Tab>
-        <Tabs.Tab index={2}>Gamepad Settings</Tabs.Tab>
-      </div>
-      <Tabs.TabPanel index={0}>
-        Adjust the sensitivity, acceleration, and button assignments for your
-        mouse.
-      </Tabs.TabPanel>
-      <Tabs.TabPanel index={1}>
-        Customize the key bindings and input behavior for your keyboard.
-      </Tabs.TabPanel>
-      <Tabs.TabPanel index={2}>
-        Configure the controls, dead zones, and vibration settings for your
-        gamepad.
-      </Tabs.TabPanel>
+import { Tabs } from './Tabs';
+
+const App = () => (
+  // add height so the example does not jump
+  <MarigoldProvider theme={theme} className="h-[340px]">
+    <Tabs defaultActiveTab="description">
+      <Tabs.List>
+        <Tabs.Item id="description">Description</Tabs.Item>
+        <Tabs.Item id="locations">Locations</Tabs.Item>
+        <Tabs.Item id="merchandise">Merchandise</Tabs.Item>
+      </Tabs.List>
+      <Tabs.Panel id="description">
+        <div className="prose">
+          <strong>DJ Wobblemeister's Wobble Extravaganza</strong>
+          <p className="m-0">
+            Join us for an unforgettable night with DJ Wobblemeister, the
+            maestro of wobble beats and king of quirky dance moves. Expect an
+            evening filled with thumping bass, wobbly rhythms, and an
+            unparalleled light show. It's going to be a wobbly good time!
+          </p>
+        </div>
+      </Tabs.Panel>
+      <Tabs.Panel id="locations">
+        <ul className="prose m-0">
+          <li>Wobbleville - June 20th</li>
+          <li>Bass City - June 25th</li>
+          <li>Quirkytown - July 1st</li>
+          <li>Beatsburgh - July 5th</li>
+        </ul>
+      </Tabs.Panel>
+      <Tabs.Panel id="merchandise">
+        <div className="prose">
+          <p className="mt-0">
+            Grab your exclusive DJ Wobblemeister merchandise at the concert!
+          </p>
+          <ul>
+            <li>Wobble Hats - $25</li>
+            <li>Quirky T-Shirts - $30</li>
+            <li>Bass Boosted Hoodies - $50</li>
+            <li>Glow-in-the-dark Wobble Wristbands - $10</li>
+          </ul>
+        </div>
+      </Tabs.Panel>
     </Tabs>
-  );
-}
+  </MarigoldProvider>
+);
 
-export default TabsExample;
+export default App;

@@ -51,8 +51,8 @@ const TabsAnatomy = () => (
       transform="scale(.9823 1.018)"
       className="text-secondary-950"
     >
-      <tspan x={332.46} y={50.84}>
-        Tab
+      <tspan x={318} y={50.84}>
+        TabItem
       </tspan>
     </text>
     <path
@@ -69,8 +69,8 @@ const TabsAnatomy = () => (
       transform="scale(.9823 1.018)"
       className="text-secondary-950"
     >
-      <tspan x={187} y={50.84} fontWeight={400}>
-        Tab (selected)
+      <tspan x={173} y={50.84} fontWeight={400}>
+        TabItem (selected)
       </tspan>
     </text>
     <path

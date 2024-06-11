@@ -3,13 +3,24 @@ import { Block } from '@/components/Container';
 <Block>
   <CH.Scrollycoding>
 
-```tsx
-// from ./TabsBasic.tsx
+```tsx focus=6:11
+// from ./Tabs/Tabs.tsx
 ```
 
-### The `<Tabs>` Component
+### Sharing State and Logic
 
-Let's begin our refactoring with the parent component, which acts as the central coordinator for all the child components. This component will manage the state of the tabs and provide methods to update it as needed.
+To achieve this, we are going to use [React's Context](https://react.dev/learn/passing-data-deeply-with-context) feature.
+This allows us to share the state and functions across multiple components without prop drilling, making
+the composition of our components more flexible and easier to maintain.
+
+---
+
+```tsx focus=6:11
+// from ./Tabs/Tabs.tsx
+```
+
+Let's begin our refactoring with the parent component. This component will manage the state of the tabs
+and provide methods to update it as needed.
 
   </CH.Scrollycoding>
 </Block>
