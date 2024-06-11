@@ -7,8 +7,10 @@ import Preview from '@/components/Preview';
 
 import SelectExample from './_components/SelectExample';
 import TabsBasicExample from './_components/TabsBasicExample';
+import TabsAnatomy from './_components/TabsAnatomy';
 
 import TabsBaiscContent from './_components/tabs-basic.mdx';
+import TabsCompoundComponentContent from './_components/tabs-compound-component.mdx';
 
 <Block className='text-center'>
 
@@ -51,7 +53,7 @@ components, compound components free you from handling state management yourself
 consistent behavior across all related components.
 
 An example of this internal state management can be seen with [Marigold's Select](https://www.marigold-ui.io/components/form/select)
-component. The disabled state (`disabledKeys`) and the `onChange` handler are both managed within the parent component,
+component. The disabled state (`disabledKeys`) and the `onChange` handler are both managed within the parent component (`<Select>`),
 instead of handling this on every children individually.
 
 ```tsx
@@ -125,3 +127,60 @@ before gradually enhancing it with more advanced features and best practices.
 </Content>
 
 <TabsBaiscContent />
+
+<Content>
+
+This concludes our implementation of a basic tab component. While this implementation may seem fine initially,
+its limitations will become quickly apparent in real-world applications.
+
+For instance, what if we need to style tabs individually or add interactive elements inside tab contents that interact with the tabs component itself?
+With the current implementation, these tasks are not easily achievable, if achievable at all.
+
+Another issue is that the tabs prop currently mixes data and visual presentation, which can become problematic as the component grows.
+Separating data (such as tab titles and content) from visual presentation (such as styling and layout) is a best practice for maintainability
+and scalability. By mixing these concerns, it becomes harder to manage and update the component over time.
+
+This lack of flexibility and separation of concerns makes it challenging to customize the tabs according to specific design or functional requirements.
+As a result, the component may not meet the diverse needs of different projects or UI designs, limiting its usefulness in practical scenarios.
+
+## Compound Components to the Rescue
+
+Now let's see how we can use compound components to address these limitations and create a more flexible and customizable tab component.
+
+First, we want to separate the concerns of data and visual presentation more effectively. This will allow us to define the structure and behavior of the tab component separately
+from its styling and layout. This will enable us to customize tabs more easily and use the component in a more familiar way.
+
+Once this refactoring is complete, we aim to leverage the separation of concerns by enabling custom code to tap into the state of the tab component and even modify the tabs' state.
+This concept is known as [inversion of control](https://kentcdodds.com/blog/inversion-of-control), and it's a powerful pattern for enhancing component reusability and customization.
+
+### Identifying the Parts
+
+Before we start our refactoring, let's first dissect the component by examining its anatomy. Instead of focusing on the code, we'll analyze how the component is structured visually,
+without getting into the nitty-gritty details. This will help us identify the key components and their relationships within the component.
+
+The image below is from Adobe's React Aria library, but it also aligns well with our `<Tabs>` component. It breaks down the component into three main parts:
+
+- **Tab**: Represents each individual tab item, with its titel and possibly being selected (active).
+- **TabList**: Acts as a container for all tab items, facilitating navigation between tabs.
+- **TabPanel**: Displays the content associated with the currently active tab.
+
+<TabsAnatomy />
+
+Based on this breakdown, we will create three child components for our Tabs component, each responsible for managing a specific aspect of the functionality.
+
+</Content>
+
+<TabsCompoundComponentContent />
+
+---
+
+<Content>
+
+downsides of this implementation: we have a very ugly "data object" with all information and JSX as property inside it. this makes it hard(er) to work with the ... why?
+add a new feature that jumps to a certain tab, making this almost like a wizard (using TabsContext) or something.
+
+!!! we can use the component without having to put everything in a "data object" first.
+
+colocation of content and title (we had this in the objects also?)
+
+</Content>
