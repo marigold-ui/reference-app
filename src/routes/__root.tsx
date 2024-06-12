@@ -1,19 +1,22 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
-import Header from '@/components/Header';
-import { Devtools } from '@/components/Devtools';
+import { Container } from '@/components/Container';
+
+import { Devtools } from './_components/Devtools';
+import { Footer } from './_components/Footer';
+import { Header } from './_components/Header';
 
 const Layout = () => (
   <>
     <Header />
-    <main
+    <Container
       className={[
-        'prose prose-docs mx-auto max-w-[1300px]',
+        'prose prose-docs max-w-none',
         'prose-code:before:content-none prose-code:after:content-none',
-        'px-[--page-padding] md:px-[--page-padding-md] xl:px-[--page-padding-xl]',
       ].join(' ')}
     >
       <Outlet />
-    </main>
+    </Container>
+    <Footer />
     <Devtools />
   </>
 );
