@@ -53,11 +53,13 @@
   flex-basis: auto;
 }
 
-.ch-codeblock .ch-code-button {
+.ch-codeblock .ch-code-button,
+.ch-codegroup .ch-editor-button {
   display: none;
 }
 
-.ch-codeblock:hover .ch-code-button {
+.ch-codeblock:hover .ch-code-button,
+.ch-codegroup:hover .ch-editor-button {
   display: block;
 }
 

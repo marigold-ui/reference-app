@@ -8,8 +8,8 @@ import Preview from '@/components/Preview';
 import SelectExample from './_components/SelectExample';
 import TabsBasicExample from './_components/TabsBasicExample';
 import TabsAnatomy from './_components/TabsAnatomy';
-import TabsExample from './_components/TabsExample';
 import TabsActionExample from './_components/TabsActionExample';
+import TabsGotoExample from './_components/TabsGotoExample';
 
 import TabsBaiscContent from './_components/tabs-basic.mdx';
 import TabsCompoundComponentContent from './_components/tabs-compound-component.mdx';
@@ -261,29 +261,44 @@ the state of the `<Tabs>` component. The state is entirely encapsulated within t
 component, making it impossible to accommodate dynamic interactions like switching tabs
 from within the content.
 
-Lucky for us, we won't encounter this issue when using compound components.
+With compound components, implementing such a feature becomes straightforward. By utilizing the
+tabs' context, which provides access to the shared state, we can create additional components
+that both access and update this state, just like `<Tab.Item>` or `<Tab.Panel>` do.
 
-</Content>
+<CH.Code>
 
-<Content>
+```tsx Goto.tsx
+// from ./_components/Tabs/Goto.tsx
+```
 
----
+```tsx App.tsx focus=24:30
+// from ./_components/TabsGotoExample.tsx
+```
 
-However, by breaking down the component into smaller, more focused parts,
+</CH.Code>
 
-we've made the code easier to understand and maintain. Before this
-refactoring, achieving the same outcome would have required writing more
-complex and tightly coupled code.
+Here's our example showcasing the new `<Goto>` component in action!
 
 <Preview>
-  <TabsExample />
+  <TabsGotoExample />
 </Preview>
 
-downsides of this implementation: we have a very ugly "data object" with all information and JSX as property inside it. this makes it hard(er) to work with the ... why?
-add a new feature that jumps to a certain tab, making this almost like a wizard (using TabsContext) or something.
+## Conclusion
 
-!!! When it is not a good idea to use compound components!?
+At first glance, building compound components might seem daunting and complex.
+However, understanding this approach is essential for ["thinking in React"](https://react.dev/learn/thinking-in-react).
+This pattern emphasizes the power of React's component model, enabling us
+to create highly reusable and intuitive components.
 
-we demonstracted how powerful and convenient compound components can be for extending functionality and maintaining clean, scalable code.
+Compound components provide a robust approach to designing React components
+where related functionality is grouped together under a common parent component.
+This design pattern fosters better organization and maintainability by encapsulating
+shared state and logic within the parent component, while allowing child components
+to focus on specific responsibilities.
+
+Like shown in our examples, using this structure enhances code readability and makes
+it easier to extend and customize components without directly modifying their
+internals. In general, compound components are ideal for creating complex UI components
+that require cohesive interaction and seamless integration of different functionalities.
 
 </Content>
