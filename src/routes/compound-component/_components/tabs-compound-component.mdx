@@ -78,7 +78,33 @@ The next child component, `<Tab.Item>`, is a bit more interesting! Its role is t
 It receives a unique identifier (`id`), which serves as a reference to a corresponding `<Tab.Panel>`, and the familiar `children`
 prop that allows us to display the tab title in any way we want.
 
-Reading from the context via the `useTabsContext` hook, the `<Tab.Item>` will set a `[data-active]` attribute when the `activeTab` is set to its `id`. This will apply some addition CSS highlighing the `<Tab.Item>` visually as currently active tab.
+---
+
+```tsx TabItem.tsx focus=15:16
+// from ./Tabs/TabItem.tsx
+```
+
+### Active Tab
+
+The `<Tab.Item>` component is responsible for highlighting and updating the currently active tab. It reads from the context using the
+`useTabsContext` hook to determine if it should be highlighted as the active tab. This is done by setting a `[data-active]` attribute
+when the `activeTab` matches its `id`. This part of the implementation did not change, except that we read the active tab from the
+context rather than the parent props.
+
+To change the active tab, an `onClick` listener is added to the component. When clicked, it updates the shared state via the context,
+triggering a re-render to reflect the new active tab.
+
+---
+
+```tsx TabPanel.tsx
+// from ./Tabs/TabPanel.tsx
+```
+
+### `<Tab.Panel>`
+
+The job of the `<Tab.Panel>` component is to display its content only when its `id` matches the `id` of the currently active tab.
+When this condition is met, it renders its `children`; otherwise, it renders nothing (`null`). This ensures that only the content
+of the active tab is displayed while the rest remains hidden.
 
   </CH.Scrollycoding>
 </Block>
