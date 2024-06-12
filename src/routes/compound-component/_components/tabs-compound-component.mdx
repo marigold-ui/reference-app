@@ -10,19 +10,37 @@ import { Block } from '@/components/Container';
 ### Setup State
 
 To share the state and provide methods to update it, we are going to use [React's Context](https://react.dev/learn/passing-data-deeply-with-context)
-feature. This approach allows us to provide the state to multiple components without the need for [prop drilling](https://www.freecodecamp.org/news/prop-drilling-in-react-explained-with-examples/).
-By doing so, we make the composition of our components more flexible and easier to maintain.
+feature. This approach allows us to provide the state to multiple components without the need for
+[prop drilling](https://www.freecodecamp.org/news/prop-drilling-in-react-explained-with-examples/).
 
-In our case, the context will hold the active tab (`activeTab`), represented by a string identifier, and a function (`setActiveTab`), which updates the currently active tab.
+In our case, the context will hold the active tab (`activeTab`), represented by a string identifier, and a
+function (`setActiveTab`), which updates the currently active tab.
 
 ---
 
-```tsx focus=6:11
+```tsx TabContext.tsx focus=10:22
+// from ./Tabs/Context.tsx
+```
+
+### Accessing State
+
+Now that we have created our context, we need a way for the child components to access it. This will be managed by the `<TabsContextProvider>`,
+which the parent component will use and wrap around its children. The child components can then access the context using the custom `useTabsContext` hook.
+
+---
+
+```tsx Tabs.tsx focus=9:22
 // from ./Tabs/Tabs.tsx
 ```
 
-Let's begin our refactoring with the parent component. This component will manage the state of the tabs
-and provide methods to update it as needed.
+### Parent Component
+
+Like mentioned in the previous step, the main concern of the parent component (`<Tabs>`) is to provide its children with the context.
+Additionally, it will take care of visually separating the `<TabList>` from the `<TabPanel>`.
+
+Note that this implementation of `<Tabs>` also allows setting a tab that is active when the component first renders (`defaultActiveTab`).
+This feature is an improvement over the previous implementation, where the first tab would always be displayed. This makes the component not only more customizable,
+but also more robust to use since you can ensure that the specified tab actually exists.
 
   </CH.Scrollycoding>
 </Block>
