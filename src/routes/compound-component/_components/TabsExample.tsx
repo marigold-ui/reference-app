@@ -4,7 +4,6 @@ import theme from '@marigold/theme-core';
 import { Tabs } from './Tabs';
 
 const App = () => (
-  // add height so the example does not jump
   <MarigoldProvider theme={theme} className="h-[340px]">
     <Tabs defaultActiveTab="description">
       <Tabs.List>

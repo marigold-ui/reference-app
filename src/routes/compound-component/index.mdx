@@ -1,4 +1,4 @@
-import { Message } from '@marigold/components';
+import { Columns, Message } from '@marigold/components';
 
 import { Block, Content } from '@/components/Container';
 import Caption from '@/components/Caption';
@@ -12,6 +12,7 @@ import TabsExample from './_components/TabsExample';
 
 import TabsBaiscContent from './_components/tabs-basic.mdx';
 import TabsCompoundComponentContent from './_components/tabs-compound-component.mdx';
+import CompareImplementation from './_components/compare-implementation.mdx';
 
 <Block className='text-center'>
 
@@ -176,6 +177,32 @@ for setting up this shared state, managing the state of the tabs, and providing 
 <TabsCompoundComponentContent />
 
 <Content>
+  This wraps up our overview of the Tabs component and its child components. At
+  first glance, the benefits of this refactoring might not be immediately
+  obvious. However, as we delve deeper into comparing the two implementations,
+  the advantages of this refactoring become more apparent. Let's take a closer
+  look at each approach and examine their respective strengths and weaknesses.
+
+## Benefits of Compound Components
+
+To begin with, let's compare the code of the two implementations and see how they
+fare when used to build the "DJ Wobblemeister's Wobble Extravaganza" example.
+
+</Content>
+
+<CompareImplementation />
+
+<Content>
+
+Overall, the second implementation using compound components is cleaner, more maintainable compared to the first implementation.
+
+---
+
+However, by breaking down the component into smaller, more focused parts,
+
+we've made the code easier to understand and maintain. Before this
+refactoring, achieving the same outcome would have required writing more
+complex and tightly coupled code.
 
 <Preview>
   <TabsExample />

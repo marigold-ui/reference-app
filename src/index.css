@@ -28,6 +28,10 @@
   margin: theme('spacing.8') 0;
 }
 
+.ch-code-wrapper {
+  padding: 0 theme('spacing.1');
+}
+
 .ch-scrollycoding-step-content {
   padding: theme('spacing.6');
 }

@@ -102,11 +102,9 @@ triggering a re-render to reflect the new active tab.
 
 ### `<Tab.Panel>`
 
-The job of the `<Tab.Panel>` component is to display its content only when its `id` matches the `id` of the currently active tab.
-When this condition is met, it renders its `children`; otherwise, it renders nothing (`null`). This ensures that only the content
-of the active tab is displayed while the rest remains hidden.
+The responsibility of the `<Tab.Panel>` component is to display its content only when its `id` matches the `id` of the currently
+active tab. It retrieves the current active tab from the context (`activeTab`). When this condition is met, it renders its `children`;
+otherwise, it renders nothing (`null`). This ensures that only the content of the active tab is displayed while the rest remains hidden.
 
   </CH.Scrollycoding>
 </Block>
-
-!!! write about exposing the children

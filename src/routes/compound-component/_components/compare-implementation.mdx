@@ -1,0 +1,30 @@
+import { Block } from '@/components/Container';
+
+<Block>
+  <CH.Scrollycoding>
+
+```tsx TabsBasic.tsx
+// from ./TabsBasicExample.tsx 8:52
+```
+
+When comparing the two implementations, one notable difference is how the tabs are defined and organized.
+In the implementation on the right, the tabs are passed as an array of objects directly to the `<Tabs>`
+component, with each object containing a `title` and `content`property.
+
+---
+
+```tsx TabsCompoundComponent.tsx
+// from ./TabsExample.tsx 8:45
+```
+
+On the other hand, the second implementation separates the tabs into `<Tabs.Item>` components within a
+`<Tabs.List>` component and associates each tab with its respective content panel using `<Tabs.Panel>`
+components.
+
+This implementation offers better separation of concerns and encapsulation of logic. It allows for more
+explicit and readable code, as each component is responsible for its own specific functionality.
+Additionally, the use of compound components makes it easier to understand the relationship between
+the tabs and their content panels.
+
+  </CH.Scrollycoding>
+</Block>
