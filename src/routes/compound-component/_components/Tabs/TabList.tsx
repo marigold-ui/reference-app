@@ -5,5 +5,7 @@ export interface TabListProps {
 }
 
 export const TabList = ({ children }: TabListProps) => (
-  <div className="flex gap-4 border-b border-secondary-300">{children}</div>
+  <div className="flex items-center gap-4 border-b border-secondary-300">
+    {children}
+  </div>
 );

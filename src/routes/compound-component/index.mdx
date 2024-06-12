@@ -9,6 +9,7 @@ import SelectExample from './_components/SelectExample';
 import TabsBasicExample from './_components/TabsBasicExample';
 import TabsAnatomy from './_components/TabsAnatomy';
 import TabsExample from './_components/TabsExample';
+import TabsActionExample from './_components/TabsActionExample';
 
 import TabsBaiscContent from './_components/tabs-basic.mdx';
 import TabsCompoundComponentContent from './_components/tabs-compound-component.mdx';
@@ -185,8 +186,8 @@ for setting up this shared state, managing the state of the tabs, and providing 
 
 ## Benefits of Compound Components
 
-To begin with, let's compare the code of the two implementations and see how they
-fare when used to build the "DJ Wobblemeister's Wobble Extravaganza" example.
+Let's stat by comparing the code of the two implementations and see how we can use them to
+build the "DJ Wobblemeister's Wobble Extravaganza" example from before.
 
 </Content>
 
@@ -194,7 +195,77 @@ fare when used to build the "DJ Wobblemeister's Wobble Extravaganza" example.
 
 <Content>
 
-Overall, the second implementation using compound components is cleaner, more maintainable compared to the first implementation.
+One of the biggest strengths of the second implementation is its ease of adding new features
+and customizing the component. This flexibility stems from the clear separation of concerns and
+modular structure, making it straightforward to enhance and extend individual parts without
+affecting the entire component.
+
+For example, consider the following enhancements:
+
+### Adding a "Buy Tickets" Button
+
+Imagine you've built the tabs using the first implementation. A few weeks into the project, your
+product manager comes up with the great idea to make it possible to buy tickets regardless of what
+tab is currently shown. This should be a very prominent feature, ideally a "Buy Ticket" button
+should placed next to the tab titles.
+
+How would you do this?
+
+With the first implementation, adding such a feature is challenging. You'd have to modify the `<Tabs>` component directly,
+which involves adding more props and changing the internal logic. This feature would be essentially hard-coded into the component
+as something like a "tabs action". Adding fratures like this can quickly lead to messy and hard-to-maintain code.
+
+{/* prettier-ignore */}
+```tsx
+<Tabs tabs={[/* ... */]} action={<button onClick={/* ... */}>Buy</button>}/>
+```
+
+If the component is build with compound components, you don't have to touch the
+existing components at all! Let's see how we could implement the action button.
+
+In our case, we can use a pre-styled `<Link>` component. We put this link into the
+`<Tabs.List>`, and we're done! It's as simple as that!
+
+<CH.Code style={{ height: 500 }}>
+
+```tsx App.tsx focus=14:22
+// from ./_components/TabsActionExample.tsx
+```
+
+```tsx Link.tsx
+// from ./_components/Link.tsx
+```
+
+</CH.Code>
+
+Below you can see the end result. We were able to easily satisfy the product manager's
+request without complicating our codebase.
+
+The flexibility of compound components allowed us to insert the new link right next to
+the tab titles within the `<Tabs.List>`, seamlessly integrating it with the rest of the
+tab structure.
+
+<Preview>
+  <TabsActionExample />
+</Preview>
+
+### Adding new Behavior
+
+After using the tabs for a while, the product manager notices that the real content is
+much longer than anticipated. Sometimes, they want to reference content from other tabs
+within a tab. So, she wants to add a new functionality: the ability to easily switch
+from one tab to another within the tab content.
+
+However, this isn't feasible with the first implementation since there is no way to update
+the state of the `<Tabs>` component. The state is entirely encapsulated within the `<Tabs>`
+component, making it impossible to accommodate dynamic interactions like switching tabs
+from within the content.
+
+Lucky for us, we won't encounter this issue when using compound components.
+
+</Content>
+
+<Content>
 
 ---
 
@@ -211,8 +282,8 @@ complex and tightly coupled code.
 downsides of this implementation: we have a very ugly "data object" with all information and JSX as property inside it. this makes it hard(er) to work with the ... why?
 add a new feature that jumps to a certain tab, making this almost like a wizard (using TabsContext) or something.
 
-!!! we can use the component without having to put everything in a "data object" first.
+!!! When it is not a good idea to use compound components!?
 
-colocation of content and title (we had this in the objects also?)
+we demonstracted how powerful and convenient compound components can be for extending functionality and maintaining clean, scalable code.
 
 </Content>

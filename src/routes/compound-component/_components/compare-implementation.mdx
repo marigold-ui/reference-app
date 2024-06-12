@@ -8,8 +8,12 @@ import { Block } from '@/components/Container';
 ```
 
 When comparing the two implementations, one notable difference is how the tabs are defined and organized.
-In the implementation on the right, the tabs are passed as an array of objects directly to the `<Tabs>`
-component, with each object containing a `title` and `content`property.
+
+In the first implementation, the tabs are passed as an array of objects directly to the `<Tabs>` component,
+with each object containing a `title` and `content` property. While this approach works for small examples,
+it can become difficult to maintain as the content structure grows larger and more complex. Using a
+"data object" for the tabs' content goes against the intended use of JSX, which is designed for
+building component structures in a declarative way.
 
 ---
 
@@ -17,14 +21,14 @@ component, with each object containing a `title` and `content`property.
 // from ./TabsExample.tsx 8:45
 ```
 
-On the other hand, the second implementation separates the tabs into `<Tabs.Item>` components within a
-`<Tabs.List>` component and associates each tab with its respective content panel using `<Tabs.Panel>`
-components.
+In contrast, the second implementation, which uses compound components, organizes the tabs into `<Tabs.Item>`
+components within a `<Tabs.List>` component and associates each tab with its respective content panel
+using `<Tabs.Panel>` components. This approach provides better separation of concerns and encapsulates
+the logic more effectively.
 
-This implementation offers better separation of concerns and encapsulation of logic. It allows for more
-explicit and readable code, as each component is responsible for its own specific functionality.
-Additionally, the use of compound components makes it easier to understand the relationship between
-the tabs and their content panels.
+By splitting the logic into distinct components, the code becomes more readable and easier to manage. Each
+component has a specific responsibility, making it clear how the tabs and their content are related. This
+aligns much better with the principles of JSX and React's component-based architecture.
 
   </CH.Scrollycoding>
 </Block>
