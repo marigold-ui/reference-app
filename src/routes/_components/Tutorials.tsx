@@ -19,7 +19,7 @@ export const Tutorials = () => (
               title: 'Compound Components',
               href: '/compound-component',
               caption:
-                'Learn how compound components can enhance parent-child communication beyond prop drilling.',
+                'Learn how compound components can make your components more robust and customizable.',
               icon: (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
