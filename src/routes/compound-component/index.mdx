@@ -105,24 +105,19 @@ Furthermore, the `<Select.Option>` component demonstrates how each option can be
 to align the `<Indicator>` and `<Text>` components. This setup allows you to style each option individually, adding visual distinction
 to the options and making each option both informative and visually distinct.
 
-</Content>
+## An Example to illustrate
 
-<Content>
-## Building a Compound Component
+To illustrate and better understand the benefits of compound components, we'll use a simple tabs component as our example. This tabs component
+will let users switch between content panels by clicking on tab headers. It will manage which panel is displayed and visibly highlight the
+current tab header so users know which panel is active.
 
-Now let's build a compound component in React. We'll create a simple tabs component to demonstrate the compound component pattern,
-showcasing how it can create flexible and reusable UI elements while making it easy and convenient to manage related state.
-
-The tabs component will let users switch between content panels by clicking on tab headers. The component will manage which panel is
-displayed and visibly highlight the current tab header so users know which panel is active.
-
-Here you can see how the finished tab component should look and function.
+Here is a live version of how the finished tab component should look and function.
 
 <Preview>
   <TabsBasicExample />
 </Preview>
 
-### A basic Tabs Component
+## The first Approach
 
 Let's start with a simple, naive approach to building the tabs component. By beginning with the basics, we can understand the core functionality
 before gradually enhancing it with more advanced features and best practices.
