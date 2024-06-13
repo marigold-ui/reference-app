@@ -89,15 +89,11 @@ customizable children, allowing you to reuse and adapt the components for differ
 In the following example, the parent `<Select>` component manages the state and behavior, while the child `<Select.Option>`
 components can be individually styled and customized, allowing for a flexible and tailored user interface.
 
-<Preview>
-  <SelectExample />
-</Preview>
-
 ```tsx mark=2[38:63],4:11
 // from ./_components/SelectExample.tsx 45:56
 ```
 
-In this example, the `<Select>` component manages the state with the `disabledKeys` prop, which disables specific options based
+The `<Select>` component manages the state with the `disabledKeys` prop, which disables specific options based
 on their `id`. The state is handled by the parent `<Select>` component, ensuring that the disabled state is applied consistently
 across all options without requiring manual checks within each child component.
 
@@ -105,7 +101,13 @@ Furthermore, the `<Select.Option>` component demonstrates how each option can be
 to align the `<Indicator>` and `<Text>` components. This setup allows you to style each option individually, adding visual distinction
 to the options and making each option both informative and visually distinct.
 
-## An Example to illustrate
+Let's see how the component looks in practice.
+
+<Preview>
+  <SelectExample />
+</Preview>
+
+## The Case Study
 
 To illustrate and better understand the benefits of compound components, we'll use a simple tabs component as our example. This tabs component
 will let users switch between content panels by clicking on tab headers. It will manage which panel is displayed and visibly highlight the
