@@ -4,17 +4,17 @@ export const Hero = () => (
   <Breakout
     className={[
       'relative min-h-[calc(100dvh-var(--page-header-height))]',
-      "bg-[linear-gradient(to_bottom,_var(--tw-gradient-stops)),url('/circuit-board.svg')] bg-repeat",
-      'from-secondary-400/50 via-secondary-50 via-70% to-secondary-50',
+      "bg-[linear-gradient(to_bottom,_var(--tw-gradient-stops)),url('/topography.svg')] bg-repeat",
+      'from-primary-800/25 via-secondary-50 via-70% to-secondary-50',
     ].join(' ')}
   >
     <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-neutral-700/50 via-neutral-700/30 via-20% to-transparent" />
 
     <div className="mx-auto max-w-6xl pt-[4dvh] md:pt-[8dvh]">
-      <h1 className="m-0 text-balance text-7xl tracking-tighter md:text-8xl lg:text-9xl">
+      <h1 className="m-0 text-balance text-7xl tracking-tighter text-primary-950 md:text-8xl lg:text-9xl">
         Explore Design Patterns in React
       </h1>
-      <p className="mt-4 max-w-[75%] text-pretty text-lg leading-normal text-secondary-400 lg:text-2xl">
+      <p className="mt-4 max-w-[75%] text-pretty text-lg leading-normal text-primary-950/60 lg:text-2xl">
         Discover a curated collection of tutorials with practical examples that
         showcase various design patterns and practices.
       </p>

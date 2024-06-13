@@ -2,12 +2,12 @@ import { Breakout, Container, Block } from '@/components/Container';
 import { TeaserList } from '@/components/TeaserCard';
 
 export const Tutorials = () => (
-  <Breakout id="skip-content" className="bg-secondary-400/10 py-32">
+  <Breakout id="skip-content" className="bg-primary-800/5 py-32">
     <Container>
       <Block>
         <div className="prose-lg pb-8">
-          <h2 className="my-0">Tutorials</h2>
-          <p className="text-text-primary-muted">
+          <h2 className="my-0 text-primary-950">Tutorials</h2>
+          <p className="text-primary-950/60">
             Dive into our fun and easy-to-follow tutorials! Here’s a list of
             available guides to help you learn React step-by-step and boost your
             coding skills!
