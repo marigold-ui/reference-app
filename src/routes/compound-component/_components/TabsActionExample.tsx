@@ -2,6 +2,7 @@ import { MarigoldProvider } from '@marigold/components';
 import theme from '@marigold/theme-core';
 
 import { Tabs } from './Tabs';
+import { Link } from './Link';
 
 const App = () => (
   <MarigoldProvider theme={theme} className="h-[340px]">
@@ -10,6 +11,15 @@ const App = () => (
         <Tabs.Item id="description">Description</Tabs.Item>
         <Tabs.Item id="locations">Locations</Tabs.Item>
         <Tabs.Item id="merchandise">Merchandise</Tabs.Item>
+        <Link
+          variant="cta"
+          className="ml-auto"
+          href="https://www.reservix.de/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Buy Tickets!
+        </Link>
       </Tabs.List>
       <Tabs.Panel id="description">
         <div className="prose">

@@ -1,0 +1,95 @@
+import { Block } from '@/components/Container';
+
+<Block>
+  <CH.Scrollycoding>
+
+```tsx focus=4:6
+// from ./TabsBasic.tsx
+```
+
+### Component Interface
+
+For the component's interface, we define a prop called `tabs`, which holds all the information
+to be displayed in the tabs. This prop accepts an array of objects, each with a `title` and
+`content` property. The `title` is used for the tab label, while the `content` contains what will
+be displayed when the related tab is active.
+
+Both properties are `ReactNode`, meaning they can be any renderable React content, not just
+strings but also other components. This flexibility is important as it allows the title and
+content to be highly customizable, accommodating arbitrary contents.
+
+---
+
+```tsx focus=9
+
+```
+
+### Managing the active Tab
+
+To remember the active tab (the one that is currently displayed), we use the `useState` hook.
+This hook is perfect for our case because we only need to store the index of the active tab. The
+component will display the first tab by default (index 0). We'll later read and update this state
+based on user interactions.
+
+If we wanted to, we could make this configurable by adding another prop to the component interface,
+like `defaultActive`. However, for brevity, we will focus on the current implementation.
+
+---
+
+```tsx focus=13:24
+
+```
+
+### Render Tab Titles
+
+Next, we start rendering the tab titles (`tab.title`) by iterating over the given `tabs` prop using the `.map` method.
+This allows us to dynamically create a tab header for each item in the `tabs` array.
+
+For styling purposes, we wrap the list of tab titles in a `div`. As seen before, we want to display the tabs in a horizontal line.
+
+---
+
+```tsx focus=18
+
+```
+
+### Highlighting the active Tab
+
+There are different ways to implement how to highlight the active tab. We've decided to use a data property here. This
+has the benefit that we can easily style the active tab title via CSS (`data-[active]:`), while also making debugging easier since
+the data attributes are visible in the DOM and can be inspected.
+
+In order to test if the current tab corresponds with our state of the active tab, we compare the `activeIndex` state with the index
+of each tab during rendering. If they match, we apply the appropriate styling to indicate that the tab is active.
+
+---
+
+```tsx focus=19
+
+```
+
+### Change the active Tab
+
+The titles need to do is allow the user to switch the active tab. We achieve this by listening for the click
+event on the tab title. When a user clicks (or tabs) on a title, the `onClick` handler updates the state to its index, which will
+then cause the component to update itself and display the corresponding tab content.
+
+---
+
+```tsx focus=25
+
+```
+
+### Render the active Tab's Content
+
+Lastly, the component renders the content of the active tab (`activeTab.content`) in another `div` element. When the active tab
+is changed and the state is updated, React will automatically update the content displayed for us.
+
+If you are wondering what the exclamation mark (!) after `tabs[activeIndex]` does, this is a TypeScript non-null assertion operator. It tells TypeScript that you are
+confident that `tabs[activeIndex]` will not be `null` or `undefined` at that point in the code.
+
+In simple terms, it's used here to assure TypeScript that `tabs[activeIndex]` definitely exists and its `content` property can be safely accessed. This
+helps avoid potential type errors during compilation.
+
+  </CH.Scrollycoding>
+</Block>

@@ -1,59 +1,290 @@
+import { Columns, Message } from '@marigold/components';
+
+import { Block, Content } from '@/components/Container';
 import DemoLink from '@/components/DemoLink';
+import Preview from '@/components/Preview';
 
-import BreadcrumbDoc from './breadcrumbs.mdx';
-import TabsDoc from './tabs.mdx';
+import SelectExample from './_components/SelectExample';
+import TabsBasicExample from './_components/TabsBasicExample';
+import TabsAnatomy from './_components/TabsAnatomy';
+import TabsActionExample from './_components/TabsActionExample';
+import TabsGotoExample from './_components/TabsGotoExample';
 
-# Compound Components
+import TabsBaiscContent from './_components/tabs-basic.mdx';
+import TabsCompoundComponentContent from './_components/tabs-compound-component.mdx';
+import CompareImplementation from './_components/compare-implementation.mdx';
 
-This document provides an explanation and examples of using compound components in React. Compound components are a design pattern
-where related child components are encapsulated within a parent component to create a reusable and flexible component suite.
+<Content>
 
-This pattern enhances customization and simplifies the internal composition of components.
+In our application, we often encounter components that rely on each other, sharing state and logic. This
+reliance can lead to challenges in managing state, ensuring consistent behavior, and maintaining clean,
+organized code. To address these challenges and facilitate a well-structured, reusable, and
+customizable API design, React uses a pattern called compound components.
 
-## Importance of the Pattern
+Remember the `<select>` element in HTML with its `<option>` children? Compound components work similarly but
+are more powerful and flexible. In this tutorial, we'll explore how to use this pattern to build customizable
+and versatility components.
 
-Compound components are important for several reasons:
+```html
+<select>
+  <option value="backlog">Backlog</option>
+  <option value="in-progress">In Progress</option>
+  <option value="in-review">In Review</option>
+  <option value="done">Done</option>
+  <option value="wont-do">Won't do</option>
+</select>
+```
 
-- **Encapsulation and Reusability:** They allow encapsulating related components, making the parent component more reusable and modular.
+## Benefits
 
-- **Customizability:** Each child component can be individually customized without exposing numerous customization props through the parent component.
+### State Management
 
-- **Simplicity in State Management:** A well-designed compound component should require minimal state management, making the component easier to understand and maintain.
+Compound components provide a clear way to express relationships between components, making it easier to understand
+and manage how different parts of your UI interact. By managing their own internal state and sharing it among child
+components, compound components free you from handling state management yourself. This built-in state management ensures
+consistent behavior across all related components.
 
-## Use-Cases and Examples
+An example of this internal state management can be seen with [Marigold's Select](https://www.marigold-ui.io/components/form/select)
+component. The disabled state (`disabledKeys`) and the `onChange` handler are both managed within the parent component (`<Select>`),
+instead of handling this on every children individually.
 
-### Example 1: `<select>` and `<option>` in HTML
+```tsx
+<Select label="Status" disabledKeys={['wont-do']}>
+  <Select.Option id="backlog">Backlog</Select.Option>
+  <Select.Option id="in-progress">In Progress</Select.Option>
+  <Select.Option id="in-review">In Review</Select.Option>
+  <Select.Option id="done">Done</Select.Option>
+  <Select.Option id="wont-do">Won't do</Select.Option>
+</Select>
+```
 
-A similiar example in HTML are the `<select>` and `<option>` tags:
+The provided code demonstrates how centralizing state management in a parent component
+can simplify your code. In this example, the `<Select>` component handles tasks like disabling
+options and tracking user-selected items, eliminating the need for you to handle these
+tasks manually.
 
-    ```html select.html
-        <select>
-            <option value="pizza">Pizza</option>
-            <option value="sushi">Sushi</option>
-            <option value="soup">Soup</option>
-        </select>
-    ```
+<Message messageTitle="Single Import" variant="info">
+  Note how compound components usually export their related components using dot
+  notation (`Select.Option`). This technique allows you to bundle the parent and
+  child components together in a single export, making it easy to access all
+  related components.
+</Message>
 
-The select tag works together with the option tag which is used for a drop-down menu to select items in HTML. Here the `<select>` manages the state of the UI, then the `<option>` elements are configured on how the `<select>` should work.
+### Customization
 
-### Example 2: Building a compound component
+Additionally, compound components enhance reusability and customization. You can create a flexible parent component with
+customizable children, allowing you to reuse and adapt the components for different requirements effortlessly.
 
-<DemoLink to="/compound-component/preview/breadcrumbs">View Demo</DemoLink>
+In the following example, the parent `<Select>` component manages the state and behavior, while the child `<Select.Option>`
+components can be individually styled and customized, allowing for a flexible and tailored user interface.
 
-E-commerce websites often have “breadcrumbs” to help the user navigate to parent/grand-parent pages. For example:
+```tsx mark=2[38:63],4:11
+// from ./_components/SelectExample.tsx 45:56
+```
 
-`Electronics / Cell Phones / Cases`
+The `<Select>` component manages the state with the `disabledKeys` prop, which disables specific options based
+on their `id`. The state is handled by the parent `<Select>` component, ensuring that the disabled state is applied consistently
+across all options without requiring manual checks within each child component.
 
----
+Furthermore, the `<Select.Option>` component demonstrates how each option can be customized. Inside, we use an `<Inline>` component
+to align the `<Indicator>` and `<Text>` components. This setup allows you to style each option individually, adding visual distinction
+to the options and making each option both informative and visually distinct.
 
-<BreadcrumbDoc />
-<div style={{ height: 100 }} />
+Let's see how the component looks in practice.
 
-### Example 3: Compound component with Context
+<Preview>
+  <SelectExample />
+</Preview>
 
-<DemoLink to="/compound-component/preview/tabs">View Demo</DemoLink>
+## The Case Study
 
-By leveraging React context, we can provide the necessary states and functions to child components without exposing them through props, resulting in a cleaner and more maintainable codebase.
+To illustrate and better understand the benefits of compound components, we'll use a simple tabs component as our example. This tabs component
+will let users switch between content panels by clicking on tab headers. It will manage which panel is displayed and visibly highlight the
+current tab header so users know which panel is active.
 
-<TabsDoc />
-<div style={{ height: 300 }} />
+Here is a live version of how the finished tab component should look and function.
+
+<Preview>
+  <TabsBasicExample />
+</Preview>
+
+## The first Approach
+
+Let's start with a simple, naive approach to building the tabs component. By beginning with the basics, we can understand the core functionality
+before gradually enhancing it with more advanced features and best practices.
+
+</Content>
+
+<TabsBaiscContent />
+
+<Content>
+
+This concludes our implementation of a basic tab component. While this implementation may seem fine initially,
+its limitations will become quickly apparent in real-world applications.
+
+For instance, what if we need to style tabs individually or add interactive elements inside tab contents that interact with the tabs component itself?
+With the current implementation, these tasks are not easily achievable, if achievable at all.
+
+Another issue is that the tabs prop currently mixes data and visual presentation, which can become problematic as the component grows.
+Separating data (such as tab titles and content) from visual presentation (such as styling and layout) is a best practice for maintainability
+and scalability. By mixing these concerns, it becomes harder to manage and update the component over time.
+
+This lack of flexibility and separation of concerns makes it challenging to customize the tabs according to specific design or functional requirements.
+As a result, the component may not meet the diverse needs of different projects or UI designs, limiting its usefulness in practical scenarios.
+
+## Compound Components to the Rescue
+
+Now let's see how we can use compound components to address these limitations and create a more flexible and customizable tab component.
+
+First, we want to separate the concerns of data and visual presentation more effectively. This will allow us to define the structure and behavior of the tab component separately
+from its styling and layout. This will enable us to customize tabs more easily and use the component in a more familiar way.
+
+Once this refactoring is complete, we aim to leverage the separation of concerns by enabling custom code to tap into the state of the tab component and even modify the tabs' state.
+This concept is known as [inversion of control](https://kentcdodds.com/blog/inversion-of-control), and it's a powerful pattern for enhancing component reusability and customization.
+
+### Identifying the Parts
+
+Before we start our refactoring, let's first dissect the component by examining its anatomy. Instead of focusing on the code, we'll analyze how the component is structured visually,
+without getting into the nitty-gritty details. This will help us identify the key components and their relationships within the component.
+
+The image below is from Adobe's React Aria library, but it also aligns well with our `<Tabs>` component. It breaks down the component into three main parts:
+
+- **Tab**: Represents each individual tab item, with its titel and possibly being selected (active).
+- **TabList**: Acts as a container for all tab items, facilitating navigation between tabs.
+- **TabPanel**: Displays the content associated with the currently active tab.
+
+<TabsAnatomy />
+
+Based on this breakdown, we will create three child components for our `<Tabs>` component, each responsible for managing a specific aspect of the functionality.
+But first, we need to take care of the state that will be shared between all the different parts of the component. The parent component will be responsible
+for setting up this shared state, managing the state of the tabs, and providing methods to update it.
+
+</Content>
+
+<TabsCompoundComponentContent />
+
+<Content>
+  This wraps up our overview of the Tabs component and its child components. At
+  first glance, the benefits of this refactoring might not be immediately
+  obvious. However, as we delve deeper into comparing the two implementations,
+  the advantages of this refactoring become more apparent. Let's take a closer
+  look at each approach and examine their respective strengths and weaknesses.
+
+## Benefits of Compound Components
+
+Let's stat by comparing the code of the two implementations and see how we can use them to
+build the "DJ Wobblemeister's Wobble Extravaganza" example from before.
+
+</Content>
+
+<CompareImplementation />
+
+<Content>
+
+One of the biggest strengths of the second implementation is its ease of adding new features
+and customizing the component. This flexibility stems from the clear separation of concerns and
+modular structure, making it straightforward to enhance and extend individual parts without
+affecting the entire component.
+
+For example, consider the following enhancements:
+
+### Adding a "Buy Tickets" Button
+
+Imagine you've built the tabs using the first implementation. A few weeks into the project, your
+product manager comes up with the great idea to make it possible to buy tickets regardless of what
+tab is currently shown. This should be a very prominent feature, ideally a "Buy Ticket" button
+should placed next to the tab titles.
+
+How would you do this?
+
+With the first implementation, adding such a feature is challenging. You'd have to modify the `<Tabs>` component directly,
+which involves adding more props and changing the internal logic. This feature would be essentially hard-coded into the component
+as something like a "tabs action". Adding fratures like this can quickly lead to messy and hard-to-maintain code.
+
+{/* prettier-ignore */}
+```tsx
+<Tabs tabs={[/* ... */]} action={<button onClick={/* ... */}>Buy</button>}/>
+```
+
+If the component is build with compound components, you don't have to touch the
+existing components at all! Let's see how we could implement the action button.
+
+In our case, we can use a pre-styled `<Link>` component. We put this link into the
+`<Tabs.List>`, and we're done! It's as simple as that!
+
+<CH.Code style={{ height: 500 }}>
+
+```tsx App.tsx focus=14:22
+// from ./_components/TabsActionExample.tsx
+```
+
+```tsx Link.tsx
+// from ./_components/Link.tsx
+```
+
+</CH.Code>
+
+Below you can see the end result. We were able to easily satisfy the product manager's
+request without complicating our codebase.
+
+The flexibility of compound components allowed us to insert the new link right next to
+the tab titles within the `<Tabs.List>`, seamlessly integrating it with the rest of the
+tab structure.
+
+<Preview>
+  <TabsActionExample />
+</Preview>
+
+### Adding new Behavior
+
+After using the tabs for a while, the product manager notices that the real content is
+much longer than anticipated. Sometimes, they want to reference content from other tabs
+within a tab. So, she wants to add a new functionality: the ability to easily switch
+from one tab to another within the tab content.
+
+However, this isn't feasible with the first implementation since there is no way to update
+the state of the `<Tabs>` component. The state is entirely encapsulated within the `<Tabs>`
+component, making it impossible to accommodate dynamic interactions like switching tabs
+from within the content.
+
+With compound components, implementing such a feature becomes straightforward. By utilizing the
+tabs' context, which provides access to the shared state, we can create additional components
+that both access and update this state, just like `<Tab.Item>` or `<Tab.Panel>` do.
+
+<CH.Code>
+
+```tsx Goto.tsx
+// from ./_components/Tabs/Goto.tsx
+```
+
+```tsx App.tsx focus=24:30
+// from ./_components/TabsGotoExample.tsx
+```
+
+</CH.Code>
+
+Here's our example showcasing the new `<Goto>` component in action!
+
+<Preview>
+  <TabsGotoExample />
+</Preview>
+
+## Conclusion
+
+At first glance, building compound components might seem daunting and complex.
+However, understanding this approach is essential for ["thinking in React"](https://react.dev/learn/thinking-in-react).
+This pattern emphasizes the power of React's component model, enabling us
+to create highly reusable and intuitive components.
+
+Compound components provide a robust approach to designing React components
+where related functionality is grouped together under a common parent component.
+This design pattern fosters better organization and maintainability by encapsulating
+shared state and logic within the parent component, while allowing child components
+to focus on specific responsibilities.
+
+Like shown in our examples, using this structure enhances code readability and makes
+it easier to extend and customize components without directly modifying their
+internals. In general, compound components are ideal for creating complex UI components
+that require cohesive interaction and seamless integration of different functionalities.
+
+</Content>

@@ -1,13 +1,13 @@
-import { Breakout, Container, Content } from '@/components/Container';
+import { Breakout, Container, Block } from '@/components/Container';
 import { TeaserList } from '@/components/TeaserCard';
 
 export const Tutorials = () => (
-  <Breakout id="skip-content" className="bg-secondary-400/10 py-32">
+  <Breakout id="skip-content" className="bg-primary-800/5 py-32">
     <Container>
-      <Content>
+      <Block>
         <div className="prose-lg pb-8">
-          <h2 className="my-0">Tutorials</h2>
-          <p className="text-text-primary-muted">
+          <h2 className="my-0 text-primary-950">Tutorials</h2>
+          <p className="text-primary-950/60">
             Dive into our fun and easy-to-follow tutorials! Here’s a list of
             available guides to help you learn React step-by-step and boost your
             coding skills!
@@ -19,7 +19,7 @@ export const Tutorials = () => (
               title: 'Compound Components',
               href: '/compound-component',
               caption:
-                'Learn how compound components can enhance parent-child communication beyond prop drilling.',
+                'Learn how compound components can make your components more robust and customizable.',
               icon: (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ export const Tutorials = () => (
             },
           ]}
         />
-      </Content>
+      </Block>
     </Container>
   </Breakout>
 );

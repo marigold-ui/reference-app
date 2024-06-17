@@ -1,9 +1,9 @@
-import { Content } from '@/components/Container';
-import { Columns, Inset, Message } from '@marigold/components';
+import { Block } from '@/components/Container';
+import { Columns, Message } from '@marigold/components';
 import { Link } from '@tanstack/react-router';
 
 export const About = () => (
-  <Content className="prose-lg text-pretty py-20">
+  <Block className="prose-lg text-pretty py-20">
     <Columns columns={[1, 1]} space={24} collapseAt="900px">
       <div>
         <h2>About</h2>
@@ -44,5 +44,5 @@ export const About = () => (
         </p>
       </Message>
     </div>
-  </Content>
+  </Block>
 );

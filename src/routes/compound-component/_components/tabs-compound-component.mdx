@@ -1,0 +1,110 @@
+import { Block } from '@/components/Container';
+
+<Block>
+  <CH.Scrollycoding>
+
+```tsx TabContext.tsx focus=3:8
+// from ./Tabs/Context.tsx
+```
+
+### Setup State
+
+To share the state and provide methods to update it, we are going to use [React's Context](https://react.dev/learn/passing-data-deeply-with-context)
+feature. This approach allows us to provide the state to multiple components without the need for
+[prop drilling](https://www.freecodecamp.org/news/prop-drilling-in-react-explained-with-examples/).
+
+In our case, the context will hold the active tab (`activeTab`), represented by a string identifier, and a
+function (`setActiveTab`), which updates the currently active tab.
+
+---
+
+```tsx TabContext.tsx focus=10:22
+// from ./Tabs/Context.tsx
+```
+
+### Accessing State
+
+Now that we have created our context, we need a way for the child components to access it. This will be managed by the `<TabsContextProvider>`,
+which the parent component will use and wrap around its children. The child components can then access the context using the custom `useTabsContext` hook.
+
+---
+
+```tsx Tabs.tsx focus=9:22
+// from ./Tabs/Tabs.tsx
+```
+
+### Parent Component
+
+Like mentioned in the previous step, the main concern of the parent component (`<Tabs>`) is to provide its children with the context.
+Additionally, it will take care of visually separating the list of tabs from the content.
+
+Note that this implementation of `<Tabs>` also allows setting a tab that is active when the component first renders (`defaultActiveTab`).
+This feature is an improvement over the previous implementation, where the first tab would always be displayed. This makes the component not only more customizable,
+but also more robust to use since you can ensure that the specified tab actually exists.
+
+---
+
+### All-In-One Import
+
+```tsx Tabs.tsx focus=24:26
+// from ./Tabs/Tabs.tsx
+```
+
+The `<Tabs>` component exposes all its children using dot notation. This approach groups related components together under
+the `Tabs` namespace, allowing us to import all relevant components with a single import. This method helps organize related components,
+making it easy to identify and use them cohesively. Additionally, this structure makes the API more intuitive,
+as all related functionality is grouped logically.
+
+---
+
+```tsx TabList.tsx
+// from ./Tabs/TabList.tsx
+```
+
+### `<Tab.List>`
+
+Let's take a peek at the first of the child components, `<Tab.List>`. Its main job is pretty straightforward: to line up the `<Tab.Item>`s
+in a horizontal list, and that's it!
+
+---
+
+```tsx TabItem.tsx
+// from ./Tabs/TabItem.tsx
+```
+
+### `<Tab.Item>`
+
+The next child component, `<Tab.Item>`, is a bit more interesting! Its role is to represent each individual tab within our tabs component.
+It receives a unique identifier (`id`), which serves as a reference to a corresponding `<Tab.Panel>`, and the familiar `children`
+prop that allows us to display the tab title in any way we want.
+
+---
+
+```tsx TabItem.tsx focus=15:16
+// from ./Tabs/TabItem.tsx
+```
+
+### Active Tab
+
+The `<Tab.Item>` component is responsible for highlighting and updating the currently active tab. It reads from the context using the
+`useTabsContext` hook to determine if it should be highlighted as the active tab. This is done by setting a `[data-active]` attribute
+when the `activeTab` matches its `id`. This part of the implementation did not change, except that we read the active tab from the
+context rather than the parent props.
+
+To change the active tab, an `onClick` listener is added to the component. When clicked, it updates the shared state via the context,
+triggering a re-render to reflect the new active tab.
+
+---
+
+```tsx TabPanel.tsx
+// from ./Tabs/TabPanel.tsx
+```
+
+### `<Tab.Panel>`
+
+The responsibility of the `<Tab.Panel>` component is to display its content only when its `id` matches the `id` of the currently
+active tab. It retrieves the current active tab from the context (`activeTab`). When this condition is met, it renders its `children`;
+otherwise, it renders nothing (`null`). This ensures that only the content of the active tab is displayed while the rest remains hidden.
+
+  </CH.Scrollycoding>
+</Block>

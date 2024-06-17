@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router';
 
 export const Footer = () => (
-  <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t px-4 py-6 sm:flex-row md:px-6">
+  <footer className="mt-48 flex w-full shrink-0 flex-col items-center gap-2 border-t px-4 py-6 sm:flex-row md:px-6">
     <p className="text-xs text-secondary-500 dark:text-secondary-400">
       Build with 🧡 by the Design System Team
     </p>

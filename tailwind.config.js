@@ -3,7 +3,11 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [...preset.content, './index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    ...preset.content,
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     fontFamily: {
       sans: ['Inter', ...fontFamily.sans],
@@ -27,7 +31,7 @@ module.exports = {
           css: {
             // https://github.com/tailwindlabs/tailwindcss-typography#adding-custom-color-themes
             h1: {
-              fontSize: 72,
+              fontSize: 80,
               fontWeight: 900,
               letterSpacing: -1.5,
               paddingTop: theme('spacing.32'),

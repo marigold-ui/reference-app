@@ -22,6 +22,16 @@
   max-width: none;
 }
 
+.ch-codeblock,
+.ch-preview,
+.ch-scrollycoding {
+  margin: theme('spacing.8') 0;
+}
+
+.ch-code-wrapper {
+  padding: 0 theme('spacing.1');
+}
+
 .ch-scrollycoding-step-content {
   padding: theme('spacing.6');
 }
@@ -33,4 +43,26 @@
 
 .ch-frame-buttons {
   display: none;
+}
+
+.ch-mini-browser .ch-frame-buttons {
+  display: flex;
+}
+
+.ch-mini-browser .ch-frame-content {
+  flex-basis: auto;
+}
+
+.ch-codeblock .ch-code-button,
+.ch-codegroup .ch-editor-button {
+  display: none;
+}
+
+.ch-codeblock:hover .ch-code-button,
+.ch-codegroup:hover .ch-editor-button {
+  display: block;
+}
+
+.ch-code-multiline-mark > .ch-code-button {
+  display: none !important;
 }

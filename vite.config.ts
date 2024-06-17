@@ -25,7 +25,7 @@ export default defineConfig(async () => {
             [
               remarkCodeHike,
               {
-                lineNumbers: true,
+                lineNumbers: false,
                 showCopyButton: true,
                 theme: 'material-palenight',
               },
