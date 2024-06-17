@@ -1,5 +1,5 @@
 import { Block } from '@/components/Container';
-import { Columns, Inset, Message } from '@marigold/components';
+import { Columns, Message } from '@marigold/components';
 import { Link } from '@tanstack/react-router';
 
 export const About = () => (
