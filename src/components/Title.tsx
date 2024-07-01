@@ -15,7 +15,7 @@ export const Title = ({ title, caption, image }: TitleProps) => (
     className={[
       'relative grid place-items-center',
       'bg-[linear-gradient(to_bottom,_var(--tw-gradient-stops)),var(--bg-image)] bg-repeat [background-size:auto,var(--bg-size)]',
-      'from-violet-700/15 via-secondary-50 via-70% to-secondary-50',
+      'from-primary-800/25 via-secondary-50 via-70% to-secondary-50',
     ].join(' ')}
     style={
       {
