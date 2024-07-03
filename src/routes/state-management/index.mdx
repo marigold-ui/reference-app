@@ -14,26 +14,32 @@ In React, **state refers to any data that represents the current behavior of an 
 - Reading the current value
 - Updating a value
 
-<Preview>
-    <Counter />
-</Preview>
-
-Let's have a look how the code looks like.
-</Content>
-
-<CounterExampleDoc />
-
-<Content>
-
 React applications determine what UI to render based on the current state values. Thus, understanding when and how to use different techniques for managing state is a crucial skill for all React developers, as is deciding where a given piece of state should live.
 
 For a comprehensive approach to state management, it's important to consider:
 
 1. **Local State:** This is state that is managed within a single component. It's ideal for state that doesn't need to be shared across multiple components.
-2. **Global State:** This is state that needs to be accessible by multiple components throughout the application. Tools like Redux or Context API can be used to manage global state.
+2. **Global State:** This is state that needs to be accessible by multiple components throughout the application. Tools like Context API or Redux can be used to manage global state.
 3. **Server Cache:** This involves state that represents data fetched from a server. Unlike UI state, server cache should be managed differently, often using tools like React Query or SWR to handle data fetching, caching, and synchronization with the server.
 
 By effectively managing local state, global state, and server cache, you can create a React application that is both efficient and easy to maintain.
+
+### Using local state
+
+Local state in React is the state that is confined to a single component. It's ideal for managing data that doesn't need to be shared across multiple components.
+By mastering these techniques for initializing, reading, updating, and handling local state, you can create dynamic and responsive React components that effectively manage their own data.
+
+In the following example we have a component which counts the clicks on the button.
+<Preview>
+    <Counter />
+</Preview>
+
+Here's a detailed explanation of how to use local state in React:
+</Content>
+
+<CounterExampleDoc />
+
+<Content>
 
 ### Let's break down the state management code example:
 

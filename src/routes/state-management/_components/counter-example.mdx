@@ -1,0 +1,38 @@
+import { Block } from '@/components/Container';
+
+<Block>
+    <CH.Scrollycoding>
+        ```tsx CounterExample.tsx focus=6
+        // from ./CounterExample.tsx
+        ````
+
+        ### Storing an initial value
+
+        Local state is typically initialized using the useState hook. This hook takes an initial state value as an argument and returns an array containing the current state and a function to update it.
+
+        **0** is the initial value for the count state on the first render.
+
+        ---
+
+        ```tsx CounterExample.tsx focus=14
+        // from ./CounterExample.tsx
+        ````
+
+        ### Reading the current state value
+
+        The current state value can be read directly from the state variable returned by useState. This state value can then be used in the component's JSX to dynamically render content.
+        This will display the current value of **count** in the UI.
+
+        ---
+
+        ```tsx CounterExample.tsx focus=9
+        // from ./CounterExample.tsx
+        ````
+
+        ### Updating a state value
+        To update the state, we use the state update function (in this case, **setCount**). This function takes the new state value as an argument and triggers a re-render of the component with the new state.
+
+        This function updates the **count** state by adding 1 to its current value.
+
+    </CH.Scrollycoding>
+</Block>
