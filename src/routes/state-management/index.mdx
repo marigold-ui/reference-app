@@ -1,24 +1,44 @@
 import DemoLink from '@/components/DemoLink';
 import ServerStateDoc from './server-state.mdx';
+import CounterExampleDoc from './_components/counter-example.mdx';
+import { Content } from '@/components/Container';
+import Preview from '@/components/Preview';
+import Counter from './_components/CounterExample';
 
-# State Management
+<Content>
+In React, **state refers to any data that represents the current behavior of an application**. Examples include a list of objects fetched from the server, which item is currently selected, the name of the currently logged-in user and whether a modal is open.
 
-## What is State Management ?
+**State Management is the process of handling changes to state over time**. This involves:
 
-**"State" is any data that describes the current behavior of an application.** This could include values like "a list of objects fetched from the server", "which item is currently selected", "name of the currently logged-in user", and "is this modal open?".
+- Storing an initial value
+- Reading the current value
+- Updating a value
 
-**State** allows you to create interactive and dynamic user interfaces. By managing the state of component, you can update the UI in response to user interactions, API calls, or other events.
+<Preview>
+    <Counter />
+</Preview>
 
-Here are different types for state management that will be covered in our example:
+Let's have a look how the code looks like.
+</Content>
 
-- **Local State:** Data we manage in one or another component e.g handling inputs data in from.
+<CounterExampleDoc />
 
-- **Server State:** Data are fetched from the server via an API and cached on the client, there are a couple of great libraries that make data fetching in React a breeze such as: **_React Query_**.
+<Content>
+
+React applications determine what UI to render based on the current state values. Thus, understanding when and how to use different techniques for managing state is a crucial skill for all React developers, as is deciding where a given piece of state should live.
+
+For a comprehensive approach to state management, it's important to consider:
+
+1. **Local State:** This is state that is managed within a single component. It's ideal for state that doesn't need to be shared across multiple components.
+2. **Global State:** This is state that needs to be accessible by multiple components throughout the application. Tools like Redux or Context API can be used to manage global state.
+3. **Server Cache:** This involves state that represents data fetched from a server. Unlike UI state, server cache should be managed differently, often using tools like React Query or SWR to handle data fetching, caching, and synchronization with the server.
+
+By effectively managing local state, global state, and server cache, you can create a React application that is both efficient and easy to maintain.
 
 ### Let's break down the state management code example:
 
 <DemoLink to="/state-management/preview">View Demo</DemoLink>
 
-<ServerStateDoc />
+</Content>
 
-<div style={{ height: 300 }} />
+<ServerStateDoc />
