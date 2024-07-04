@@ -38,7 +38,7 @@ export const About = () => (
           Your feedback, ideas, and suggestions for improvement are always
           welcome. Feel free to reach out to us through any of{' '}
           <Link href="https://www.marigold-ui.io/introduction/get-in-touch">
-            our communication channels
+            <u>our communication channels</u>
           </Link>
           .
         </p>
