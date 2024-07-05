@@ -1,5 +1,5 @@
 import { Block } from '@/components/Container';
-import { Columns, Message } from '@marigold/components';
+import { Columns, SectionMessage } from '@marigold/components';
 import { Link } from '@tanstack/react-router';
 
 export const About = () => (
@@ -28,21 +28,24 @@ export const About = () => (
       </div>
     </Columns>
     <div className="mx-auto grid max-w-screen-sm place-items-center pt-32">
-      <Message variant="info" messageTitle="Feedback">
-        <p className="mb-4">
-          If you have any suggestions for patterns that we should add, or if you
-          some your own code could become a valuable addition here, we'd love to
-          hear from you!
-        </p>
-        <p>
-          Your feedback, ideas, and suggestions for improvement are always
-          welcome. Feel free to reach out to us through any of{' '}
-          <Link href="https://www.marigold-ui.io/introduction/get-in-touch">
-            our communication channels
-          </Link>
-          .
-        </p>
-      </Message>
+      <SectionMessage variant="info">
+        <SectionMessage.Title>Feedback</SectionMessage.Title>
+        <SectionMessage.Content>
+          <p className="mb-4">
+            If you have any suggestions for patterns that we should add, or if
+            you some your own code could become a valuable addition here, we'd
+            love to hear from you!
+          </p>
+          <p>
+            Your feedback, ideas, and suggestions for improvement are always
+            welcome. Feel free to reach out to us through any of{' '}
+            <Link href="https://www.marigold-ui.io/introduction/get-in-touch">
+              our communication channels
+            </Link>
+            .
+          </p>
+        </SectionMessage.Content>
+      </SectionMessage>
     </div>
   </Block>
 );
