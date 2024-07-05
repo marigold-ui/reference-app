@@ -4,46 +4,51 @@ import CounterExampleDoc from './_components/counter-example.mdx';
 import { Content } from '@/components/Container';
 import Preview from '@/components/Preview';
 import Counter from './_components/CounterExample';
+import SearchFilterComponent from './_components/SearchFilterComponent';
 
 <Content>
-In React, **state refers to any data that represents the current behavior of an application**. Examples include a list of objects fetched from the server, which item is currently selected, the name of the currently logged-in user and whether a modal is open.
+    In React, **state refers to any data that represents the current behavior of an application**. Examples include a list of objects fetched from the server, which item is currently selected, the name of the currently logged-in user and whether a modal is open.
 
-**State Management is the process of handling changes to state over time**. This involves:
+    **State Management is the process of handling changes to state over time**. This involves:
 
-- Storing an initial value
-- Reading the current value
-- Updating a value
+    - Storing an initial value
+    - Reading the current value
+    - Updating a value
 
-React applications determine what UI to render based on the current state values. Thus, understanding when and how to use different techniques for managing state is a crucial skill for all React developers, as is deciding where a given piece of state should live.
+    React applications determine what UI to render based on the current state values. Thus, understanding when and how to use different techniques for managing state is a crucial skill for all React developers, as is deciding where a given piece of state should live.
 
-For a comprehensive approach to state management, it's important to consider:
+    For a comprehensive approach to state management, it's important to consider:
 
-1. **Local State:** This is state that is managed within a single component. It's ideal for state that doesn't need to be shared across multiple components.
-2. **Global State:** This is state that needs to be accessible by multiple components throughout the application. Tools like Context API or Redux can be used to manage global state.
-3. **Server Cache:** This involves state that represents data fetched from a server. Unlike UI state, server cache should be managed differently, often using tools like React Query or SWR to handle data fetching, caching, and synchronization with the server.
+    1. **Local State:** This is state that is managed within a single component. It's ideal for state that doesn't need to be shared across multiple components.
+    2. **Global State:** This is state that needs to be accessible by multiple components throughout the application. Tools like Context API or Redux can be used to manage global state.
+    3. **Server Cache:** This involves state that represents data fetched from a server. Unlike UI state, server cache should be managed differently, often using tools like React Query or SWR to handle data fetching, caching, and synchronization with the server.
 
-By effectively managing local state, global state, and server cache, you can create a React application that is both efficient and easy to maintain.
+    By effectively managing local state, global state, and server cache, you can create a React application that is both efficient and easy to maintain.
 
-### Using local state
+    ### Using local state
 
-Local state in React is the state that is confined to a single component. It's ideal for managing data that doesn't need to be shared across multiple components.
-By mastering these techniques for initializing, reading, updating, and handling local state, you can create dynamic and responsive React components that effectively manage their own data.
+    Local state in React is the state that is confined to a single component. It's ideal for managing data that doesn't need to be shared across multiple components.
+    By mastering these techniques for initializing, reading, updating, and handling local state, you can create dynamic and responsive React components that effectively manage their own data.
 
-In the following example we have a component which counts the clicks on the button.
-<Preview>
-    <Counter />
-</Preview>
+    In the following example we have a component which counts the clicks on the button.
+    <Preview>
+        <Counter />
+    </Preview>
 
-Here's a detailed explanation of how to use local state in React:
-</Content>
+    Here's a detailed explanation of how to use local state in React:
+    </Content>
 
-<CounterExampleDoc />
+    <CounterExampleDoc />
 
 <Content>
+    ### Example: Search and Filter using `useState`
+    <Preview>
+        <SearchFilterComponent />
+    </Preview>
 
-### Let's break down the state management code example:
+    ### Let's break down the state management code example:
 
-<DemoLink to="/state-management/preview">View Demo</DemoLink>
+    <DemoLink to="/state-management/preview">View Demo</DemoLink>
 
 </Content>
 

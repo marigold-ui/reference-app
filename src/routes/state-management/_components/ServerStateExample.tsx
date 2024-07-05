@@ -9,17 +9,8 @@ import {
 } from '@marigold/components';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
+import type {IMovie} from '@/routes/state-management/_components/types';
 
-interface IMovie {
-  href: string;
-  year: number;
-  title: string;
-  category: string;
-  thumbnail: string;
-  thumbnail_width: number;
-  thumbnail_height: number;
-  extract: string;
-}
 function ServerStateExample() {
   const [filters, setFilters] = useState<{ title: string; category: string }>({
     title: '',
