@@ -1,0 +1,34 @@
+import { Block } from '@/components/Container';
+
+<Block>
+    <CH.Scrollycoding>
+        ```tsx SimpleSearchFilterComponent.tsx focus=11:12,23
+        // from ./SimpleSearchFilterComponent.tsx
+        ````
+
+        ### Storing an initial value
+
+        Here we hold two local state. `searchQuery` is for saving the current input value. `filteredList` holds all filtered movies based on the searchQuery.
+
+        ---
+
+        ```tsx SimpleSearchFilterComponent.tsx focus=52:57
+        // from ./SimpleSearchFilterComponent.tsx
+        ````
+
+        ### Reading the current state value
+
+        `filteredList` has the current data based on the `searchQuery`. Initially it shows all available movies loaded from the API.
+
+        ---
+
+        ```tsx SimpleSearchFilterComponent.tsx focus=27:34,47:51
+        // from ./SimpleSearchFilterComponent.tsx
+        ````
+
+        ### Updating a state value
+        From our `SearchField` we trigger an onChange event which updates the state variable which is hold by `searchQuery` (also known as [`controlled input`](https://www.marigold-ui.io/patterns/building-forms?theme=core#controlled-or-uncontrolled-components)).
+        Also `filteredList` will be updated via the state update function `setFilteredList` which only holds the filtered values. Both triggers a re-render of the component which updates the UI based on these updated values.
+
+    </CH.Scrollycoding>
+</Block>

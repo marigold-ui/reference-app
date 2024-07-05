@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import {apiUrl, type IMovie} from '@/routes/state-management/_components/globals';
-import { MarigoldProvider, SearchField } from '@marigold/components';
+import {
+  apiUrl,
+  type IMovie,
+} from '@/routes/state-management/_components/globals';
+import { MarigoldProvider, SearchField, Stack } from '@marigold/components';
 import theme from '@marigold/theme-core';
 import useFetch from './useFetch';
 
@@ -13,10 +16,7 @@ const SimpleSearchFilterComponent = () => {
     isError,
     isLoading,
     error,
-  } = useFetch<Array<IMovie>>(
-    apiUrl,
-    ['movies']
-  );
+  } = useFetch<Array<IMovie>>(apiUrl, ['movies']);
 
   useEffect(() => {
     if (movies) {
@@ -43,16 +43,22 @@ const SimpleSearchFilterComponent = () => {
 
   return (
     <MarigoldProvider theme={theme}>
-      <SearchField
-        value={searchQuery}
-        onChange={value => handleSearchChange(value)}
-        label="search"
-      />
-      <ul>
-        {filteredList.map((item, index) => (
-          <li key={index}>{item.title}</li>
-        ))}
-      </ul>
+      <Stack space={2}>
+        <SearchField
+          value={searchQuery}
+          onChange={value => handleSearchChange(value)}
+          label="search"
+        />
+        {filteredList.length > 0 ? (
+          <ul>
+            {filteredList.map((item, index) => (
+              <li key={index}>{item.title}</li>
+            ))}
+          </ul>
+        ) : (
+          <span>No movies found!</span>
+        )}
+      </Stack>
     </MarigoldProvider>
   );
 };

@@ -2,14 +2,19 @@ import {
   Card,
   Image,
   Inline,
+  MarigoldProvider,
   SearchField,
   Select,
   Stack,
   Text,
 } from '@marigold/components';
 import { useState } from 'react';
-import {apiUrl, type IMovie} from '@/routes/state-management/_components/globals';
+import {
+  apiUrl,
+  type IMovie,
+} from '@/routes/state-management/_components/globals';
 import useFetch from '@/routes/state-management/_components/useFetch';
+import theme from '@marigold/theme-core';
 
 function ServerStateExample() {
   const [filters, setFilters] = useState<{ title: string; category: string }>({
@@ -21,18 +26,14 @@ function ServerStateExample() {
     isError,
     isLoading,
     error,
-  } = useFetch<Array<IMovie>>(
-    apiUrl,
-    ['movies', filters],
-    filters
-  );
+  } = useFetch<Array<IMovie>>(apiUrl, ['movies', filters], filters);
 
   if (isError) {
     return <span>Error: {error.message}</span>;
   }
 
   return (
-    <>
+    <MarigoldProvider theme={theme}>
       <Stack space={4}>
         <Inline space={4}>
           <SearchField
@@ -86,7 +87,7 @@ function ServerStateExample() {
           }
         </Inline>
       </Stack>
-    </>
+    </MarigoldProvider>
   );
 }
 

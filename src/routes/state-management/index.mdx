@@ -1,6 +1,7 @@
 import DemoLink from '@/components/DemoLink';
 import ServerStateDoc from './server-state.mdx';
 import CounterExampleDoc from './_components/counter-example.mdx';
+import SimpleSearchFilterComponentDoc from './_components/simple-search-filter-example.mdx';
 import { Content } from '@/components/Container';
 import Preview from '@/components/Preview';
 import Counter from './_components/CounterExample';
@@ -36,20 +37,53 @@ import SimpleSearchFilterComponent from './_components/SimpleSearchFilterCompone
     </Preview>
 
     Here's a detailed explanation of how to use local state in React:
-    </Content>
+</Content>
 
-    <CounterExampleDoc />
+<CounterExampleDoc />
 
 <Content>
-    ### Example: Search and Filter using `useState`
+    #### Example: Search and Filter using `useState`
+    In the example below we have a simple search/filter component where we can search/filter for movies when typing something in the searchbar. If nothing is found, a corresponding message appears.
+
     <Preview>
         <SimpleSearchFilterComponent />
     </Preview>
+</Content>
 
+<SimpleSearchFilterComponentDoc />
+
+<Content>
+    #### Potential disadvantages
+    For now the component above works well but let us think where we could possibly improve it to avoid some pitfalls.
+
+    State management complexity:
+
+    * Multiple sources of truth: Using local state (searchQuery and filteredList) means managing state within the component. If the state is also used or needed elsewhere, it can lead to inconsistencies and difficulties in synchronizing state across components.
+    * Component bloat: As the component grows in complexity, managing multiple pieces of state within a single component can make it harder to read, maintain, and debug.
+
+    Performance issues:
+
+    * Frequent re-renders: Each time searchQuery or filteredList updates, the component re-renders. If this component is part of a larger application, these frequent re-renders can negatively impact performance, especially if the component is deeply nested or the movie list is large.
+    * Inefficient filtering: Filtering the movies array within the handleSearchChange function can become inefficient if the dataset is large. This operation is performed on each keystroke, which can lead to noticeable lag.
+
+    Testability and reusability:
+
+    * Difficult testing: Testing components with local state often requires setting up the component in a specific state to test various scenarios. This can make tests more complex and harder to write.
+    * Limited reusability: Local state ties the logic to a specific component. If the filtering logic is needed elsewhere, it has to be duplicated, violating the DRY (Don't Repeat Yourself) principle.
+
+    Limited scalability:
+    * Handling more features: As the application grows and more features are added (e.g., additional filters, pagination), managing all these states within a single component becomes cumbersome. It may be better to use a state management library like Context API, Redux or Zustand to handle **global state** more efficiently.
+
+    ### Using global state
+</Content>
+
+
+{/*
+<Content>
     ### Let's break down the state management code example:
 
     <DemoLink to="/state-management/preview">View Demo</DemoLink>
-
 </Content>
 
 <ServerStateDoc />
+*/}
