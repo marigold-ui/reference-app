@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import type { IMovie } from '@/routes/state-management/_components/types';
+import {apiUrl, type IMovie} from '@/routes/state-management/_components/globals';
 import { MarigoldProvider, SearchField } from '@marigold/components';
 import theme from '@marigold/theme-core';
-import { useQuery } from '@tanstack/react-query';
+import useFetch from './useFetch';
 
-const SearchFilterComponent = () => {
+const SimpleSearchFilterComponent = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredList, setFilteredList] = useState<Array<IMovie>>([]);
 
@@ -13,15 +13,10 @@ const SearchFilterComponent = () => {
     isError,
     isLoading,
     error,
-  } = useQuery<Array<IMovie>>({
-    queryKey: ['users'],
-    queryFn: async () => {
-      const data = await fetch(
-        'https://6630d183c92f351c03db2e12.mockapi.io/movies'
-      );
-      return await data.json();
-    },
-  });
+  } = useFetch<Array<IMovie>>(
+    apiUrl,
+    ['movies']
+  );
 
   useEffect(() => {
     if (movies) {
@@ -62,4 +57,4 @@ const SearchFilterComponent = () => {
   );
 };
 
-export default SearchFilterComponent;
+export default SimpleSearchFilterComponent;

@@ -8,3 +8,5 @@ export interface IMovie {
     thumbnail_height: number;
     extract: string;
 }
+
+export const apiUrl = 'https://6630d183c92f351c03db2e12.mockapi.io/movies';

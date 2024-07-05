@@ -7,39 +7,25 @@ import {
   Stack,
   Text,
 } from '@marigold/components';
-import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
-import type {IMovie} from '@/routes/state-management/_components/types';
+import {apiUrl, type IMovie} from '@/routes/state-management/_components/globals';
+import useFetch from '@/routes/state-management/_components/useFetch';
 
 function ServerStateExample() {
   const [filters, setFilters] = useState<{ title: string; category: string }>({
     title: '',
     category: '',
   });
-
-  const fetchData = async (
-    url: string,
-    queryParams: Record<string, string>
-  ) => {
-    const queryString = new URLSearchParams(queryParams).toString();
-    const apiURL = `${url}${queryString ? `?${queryString}` : ''}`;
-    const data = await fetch(apiURL);
-    return await data.json();
-  };
-
   const {
     data: movies,
     isError,
     isLoading,
     error,
-  } = useQuery<Array<IMovie>>({
-    queryKey: ['users', filters],
-    queryFn: async () =>
-      await fetchData(
-        'https://6630d183c92f351c03db2e12.mockapi.io/movies',
-        filters
-      ),
-  });
+  } = useFetch<Array<IMovie>>(
+    apiUrl,
+    ['movies', filters],
+    filters
+  );
 
   if (isError) {
     return <span>Error: {error.message}</span>;
