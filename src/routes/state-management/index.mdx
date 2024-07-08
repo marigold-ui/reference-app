@@ -6,6 +6,7 @@ import { Content } from '@/components/Container';
 import Preview from '@/components/Preview';
 import Counter from './_components/CounterExample';
 import SimpleSearchFilterComponent from './_components/SimpleSearchFilterComponent';
+import {Aspect, Image, Message} from '@marigold/components';
 
 <Content>
     In React, **state refers to any data that represents the current behavior of an application**. Examples include a list of objects fetched from the server, which item is currently selected, the name of the currently logged-in user and whether a modal is open.
@@ -86,6 +87,40 @@ import SimpleSearchFilterComponent from './_components/SimpleSearchFilterCompone
     2. **Complex state logic**: When the state logic is complex and needs to be shared across components. For instance, managing the state of a shopping cart in an e-commerce application.
     3. **Consistency**: Ensuring consistency across the application by maintaining a single source of truth for specific data.
     4. **Communication between components**: Facilitating communication between sibling components that do not have a direct parent-child relationship.
+
+    <Aspect ratio="golden">
+        <img src="/component-tree-prop-drill.png"
+            alt="component_tree_prop_drill" />
+    </Aspect>
+
+    In the picture above you see a visualization of a component tree in react. So `ProductPage` contains `Sidebar` and `MainContent`. Sidebar holds `Filter`, `SubCategoryFilter` and `Sort`. The MainContent has `ProductList` and inside ProductList is `ProductItem` rendered.
+
+    There is prop `category` which is used from multiples components. But the thing is that `category` isn't used in any components down the tree. So Sidebar, MainContent and ProductList are just pass down the props to their child components.
+
+    Also when category changes value all the components which uses category will be re-rendered. This can lead to performance issues.
+
+    When changing the prop name or adding another prop which is also needed in a lot of components you have to got through all your components which has the potential for adding bugs.
+
+    <Message messageTitle="Rule of thumb" variant="info">
+        There is no official rule, but from experience if you pass props more than 3-levels deep you should consider using global state.
+    </Message>
+
+    The good news are that there are some possibilities to avoid these problems.
+
+    #### Context API
+    The Context API is built into React and allows you to pass data through the component tree without having to pass props down manually at every level - it's like you "teleport" data down the tree where it is needed.
+
+    <Aspect ratio="golden">
+        <img src="/goku.gif"
+             alt="goku_teleportation" />
+    </Aspect>
+
+    To use Context they are mainly 3 steps necessary:
+
+    1. Create and export it with `export const MyContext = createContext(defaultValue)`.
+    2. Pass it to the `useContext(MyContext)` Hook to read it in any child component, no matter how deep.
+    3. Wrap children into `<MyContext.Provider value={...}>` to provide it from a parent.
+
 </Content>
 
 
