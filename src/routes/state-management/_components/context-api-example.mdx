@@ -1,0 +1,44 @@
+import { Block } from '@/components/Container';
+import {Message} from '@marigold/components';
+
+<Block>
+    <CH.Scrollycoding>
+        ```tsx ContextApiExample.tsx focus=11
+        // from ./ContextApiExample.tsx
+        ````
+
+        ### Create the context
+
+        First, we need to create the context. The only argument to createContext is the `default` value.
+
+        ---
+
+        ```tsx ContextApiExample.tsx focus=36:38
+        // from ./ContextApiExample.tsx
+        ````
+
+        ### Use the context
+        To read the value from the context `CategoryContext` we can use the hook `useContext`.
+        This tells React that the ProductList component wants to read the CategoryContext.
+
+        Than we can use our variable, e.g. for filtering products.
+
+        ---
+
+        ```tsx ContextApiExample.tsx focus=16,18
+        // from ./ContextApiExample.tsx
+        ````
+
+        ### Provide the context
+        As final step we need to provide it because until now React doesn't know where to get it.
+
+        We need to find the highest component in our tree which uses category and than we just need to wrap this component with a context provider so all children will have access to this Context.
+
+        This tells React: `if any component inside this ProductPage asks for CategoryContext, give them this category.`
+
+
+        <Message messageTitle='Note'>
+            If we don’t provide the context, React will use the default value we’ve specified in the first step.
+        </Message>
+    </CH.Scrollycoding>
+</Block>

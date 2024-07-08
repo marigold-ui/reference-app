@@ -1,6 +1,7 @@
 import DemoLink from '@/components/DemoLink';
 import ServerStateDoc from './server-state.mdx';
 import CounterExampleDoc from './_components/counter-example.mdx';
+import ContextApiExampleDoc from './_components/context-api-example.mdx';
 import SimpleSearchFilterComponentDoc from './_components/simple-search-filter-example.mdx';
 import { Content } from '@/components/Container';
 import Preview from '@/components/Preview';
@@ -120,9 +121,38 @@ import {Aspect, Image, Message} from '@marigold/components';
     1. Create and export it with `export const MyContext = createContext(defaultValue)`.
     2. Pass it to the `useContext(MyContext)` Hook to read it in any child component, no matter how deep.
     3. Wrap children into `<MyContext.Provider value={...}>` to provide it from a parent.
-
 </Content>
 
+<ContextApiExampleDoc />
+
+<Content>
+
+    Let's look again how our component tree looks like after using `ContextAPI`.
+
+    <Aspect ratio="golden">
+        <img src="/component-tree-context-api.png"
+             alt="component_tree_prop_drill" />
+    </Aspect>
+
+    Finally we stripped away all the prop-drilling stuff and we know exactly where the state is used.
+
+    **Pros:**
+
+    * Centralized state management: Useful for managing global state that multiple components need access to.
+    * Encapsulation: State logic is encapsulated in the Provider, making the application more modular.
+    * Avoid prop drilling: Helps to avoid passing props through many layers of components.
+
+    **Cons:**
+
+    * Overhead for small apps: Might be overkill for small applications with simple state requirements.
+    * Performance: If not used carefully, it can lead to unnecessary re-renders of components.
+
+    **Use Cases:**
+
+    * User authentication status.
+    * theme settings (dark/light mode).
+    * User preferences that need to be accessible globally.
+</Content>
 
 {/*
 <Content>
