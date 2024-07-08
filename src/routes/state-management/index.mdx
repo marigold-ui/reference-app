@@ -75,6 +75,17 @@ import SimpleSearchFilterComponent from './_components/SimpleSearchFilterCompone
     * Handling more features: As the application grows and more features are added (e.g., additional filters, pagination), managing all these states within a single component becomes cumbersome. It may be better to use a state management library like Context API, Redux or Zustand to handle **global state** more efficiently.
 
     ### Using global state
+    When you have growing applications a point will come where it doesn't feel good to use equal or similar state in multiple components. It also doesn't feel good to pass state through different component until it reaches the component where the state is used (also know as prop drilling).
+    When you feel bad about this than it's time to think about global state.
+    Primarily, global state refers to state tge is accessible across different components in the application, enabling a centralized and consistent way to manage data.
+
+    #### Why use global state?
+    Global state is useful in several scenarios:
+
+    1. **Shared data**: When multiple components need to access and update the same piece of data. For example, user authentication status, theme settings, or language preferences.
+    2. **Complex state logic**: When the state logic is complex and needs to be shared across components. For instance, managing the state of a shopping cart in an e-commerce application.
+    3. **Consistency**: Ensuring consistency across the application by maintaining a single source of truth for specific data.
+    4. **Communication between components**: Facilitating communication between sibling components that do not have a direct parent-child relationship.
 </Content>
 
 
