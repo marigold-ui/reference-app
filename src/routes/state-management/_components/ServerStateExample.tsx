@@ -8,25 +8,32 @@ import {
   Stack,
   Text,
 } from '@marigold/components';
-import { useState } from 'react';
 import {
   apiUrl,
   type IMovie,
 } from '@/routes/state-management/_components/globals';
-import useFetch from '@/routes/state-management/_components/useFetch';
 import theme from '@marigold/theme-core';
+import { Route } from '@/routes/state-management/preview.lazy';
+import {useRouterState} from '@tanstack/react-router';
+import {useQuery} from '@tanstack/react-query';
 
 function ServerStateExample() {
-  const [filters, setFilters] = useState<{ title: string; category: string }>({
-    title: '',
-    category: '',
-  });
+  const filters: { title: string; category: string } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const router = useRouterState();
+
   const {
     data: movies,
     isError,
-    isLoading,
+    isPending,
     error,
-  } = useFetch<Array<IMovie>>(apiUrl, ['movies', filters], filters);
+  } = useQuery<Array<IMovie>>({
+    queryKey: ['users', filters],
+    queryFn: async () => {
+      const data = await fetch(`${apiUrl}${router.location.searchStr}`);
+      return await data.json();
+    }
+  });
 
   if (isError) {
     return <span>Error: {error.message}</span>;
@@ -37,8 +44,12 @@ function ServerStateExample() {
       <Stack space={4}>
         <Inline space={4}>
           <SearchField
-            value={filters?.title}
-            onChange={value => setFilters(prev => ({ ...prev, title: value }))}
+            value={filters.title}
+            onChange={value =>
+              navigate({
+                search: prev => ({ ...prev, title: value }),
+              })
+            }
             label="search"
             width={'1/2'}
           />
@@ -47,7 +58,9 @@ function ServerStateExample() {
             placeholder="Select your character"
             width={'1/5'}
             onChange={key => {
-              setFilters(prev => ({ ...prev, category: key as string }));
+              navigate({
+                search: prev => ({ ...prev, category: key }),
+              });
             }}
             selectedKey={filters.category}
           >
@@ -61,7 +74,7 @@ function ServerStateExample() {
           </Select>
         </Inline>
 
-        {isLoading && <span>Loading...</span>}
+        {isPending && <span>Loading...</span>}
         <Inline space={4}>
           {
             // check if search returns nothing(movies='not found')

@@ -1,0 +1,117 @@
+import ServerStateExample from './ServerStateExample';
+import { Block } from '@/components/Container';
+import {Message} from '@marigold/components';
+
+{/* 
+
+What is state management?
+
+- take parts of https://react-community-tools-practices-cheatsheet.netlify.app/state-management/overview/
+
+    --> relevant for the tutorial are local, global state and server cache
+
+important! "Server cache is not the same as UI state, and should be handled differently."
+
+---
+
+## Local State
+
+- explain local state (useState on a single component -> maybe just an regular <input>)
+- ref compound components ? 
+- example: search and filter using `useState`
+
+---
+
+## Global State
+
+- context can be used as global, but another approach to avoid this complexity and decuple your application is using URL as storage
+- example: previous introduced search and filter -> from `useState` -> to "URL State"
+  (https://tanstack.com/router/v1/docs/framework/react/guide/search-params#search-params-the-og-state-manager)
+  (search resulst and "search bar" can be decoupled)
+- don't introduce libs like: zustand/redux (when should you use them?)
+
+## Server Cache
+
+- https://epicreact.dev/my-state-management-mistake
+- https://betterprogramming.pub/why-you-should-be-separating-your-server-cache-from-your-ui-state-1585a9ae8336
+- server cache = keep the data fresh!
+- client state vs server state (note that the previous two are types of clients states)
+    client: owned completly, synchronous available, always up to date
+    server: persisted remotely, async available, potentially out of date
+- (maybe? https://tkdodo.eu/blog/react-query-as-a-state-manager)
+- example: search results
+- explain that they could potentially change, this would be automatically handled by the lib (react-query)
+- benefits of this model: managing state and errors (they don't need to be handled locally)
+
+- https://frontendmasters.com/blog/combining-react-server-components-with-react-query-for-easy-data-management/
+
+*/}
+<Block>
+    <CH.Scrollycoding>
+
+        ```tsx ServerStateExample.tsx focus=21:23
+        // from ./ServerStateExample.tsx
+        ````
+        #### Initializing URL state for filters
+
+        We use the `useSearch` hook to get the url state for our filters. This state will store the user's input for the movie title and category.
+
+        We also initialize the `useNavigate` hook which we need for updating our URL params.
+
+        The `userRouterState` hook is useful to get the current URL params directly as string.
+
+        ---
+
+        ```tsx ServerStateExample.tsx focus=30:36
+        // from ./ServerStateExample.tsx
+        ```
+        #### Loading initial data
+
+        For loading the initial data from the server we using the hook `useQuery`. It needs a queryKey for checking if the query is already cached.
+        The second param takes a function which is normally the requested endpoint and returns the requested data.
+
+        ---
+
+        ```tsx ServerStateExample.tsx focus=26:29
+        // from ./ServerStateExample.tsx
+        ````
+        #### Result object
+
+        The result object from `useQuery` has - besides the data - some useful states.
+
+        * isPending - The query has no data yet
+        * isError - The query encountered an error
+        * error - If the query is in an isError state, the error is available via the error property
+
+        <Message variant="info" messageTitle="Note">
+            Because useQuery give use the states above we don't need to do it ourselves and get rid of using `useState` three times - awesome!
+        </Message>
+
+        ---
+
+        ```tsx ServerStateExample.tsx focus=38:40
+        // from ./ServerStateExample.tsx
+        ````
+        #### Error handling
+
+        If an error occurs from the API we just return the error message.
+
+        ---
+
+        ```tsx ServerStateExample.tsx focus=48:52,60:64
+        // from ./ServerStateExample.tsx
+        ```
+        #### Updating search params
+
+        Like in the other example we use the navigate function to update our search params. Because we have multiple params we are using the spread operator to copy the whole object and just update the specific value.
+
+        ---
+
+        ```tsx ServerStateExample.tsx focus=77
+        // from ./ServerStateExample.tsx
+        ```
+        #### Loading State
+
+        While data is being fetched, we display a loading indicator.
+    </CH.Scrollycoding>
+</Block>

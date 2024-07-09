@@ -3,6 +3,7 @@ import CounterExampleDoc from './_components/counter-example.mdx';
 import ContextApiExampleDoc from './_components/context-api-example.mdx';
 import SimpleSearchFilterComponentDoc from './_components/simple-search-filter-example.mdx';
 import SimpleSearchFilterUrlComponentDoc from './_components/simple-search-filter-url-example.mdx';
+import ServerStateDoc from './_components/server-state.mdx';
 import { Content } from '@/components/Container';
 import Preview from '@/components/Preview';
 import Counter from './_components/CounterExample';
@@ -192,14 +193,136 @@ import SimpleSearchFilterUrlComponent from './_components/SimpleSearchFilterUrlC
 
     **Security**: Avoid storing sensitive information in the URL, as it is not secure and can be easily accessed by others.
 
-</Content>
+    ### Server cache
 
-{/*
-<Content>
-    ### Let's break down the state management code example:
+    Another approach in state management is using a `server cache`. Server Cache refers to storing frequently accessed data on the server side to improve performance and reduce the load on the backend database or other persistent storage.
+
+    <Center>
+        <img src="/server-cache-dia.png"
+             alt="server_cache_diagram" />
+    </Center>
+
+    They are two different scenarios:
+
+    **Requested data already cached:** When the client sends a request, the server first checks the cache. If the data is present, the response is returned immediately.
+
+    **Requested data isn't cached:** When the client sends a request, the server first checks the cache. The data isn't available yet, the server fetches the data from the primary storage, stores it in the cache for future requests, and then returns it to the client.
+
+    #### Using server cache in react
+
+    A common pattern in React for handling remote data is to fetch inside `useEffect` and copy the result into component state. Something like this:
+
+    ```tsx Example.tsx
+        function Example() {
+            const [isLoading, setIsLoading] = useState();
+            const [error, setError] = useState();
+            const [userData, setUserData] = useState();
+
+            useEffect(() => {
+                async function getUserData() {
+                    try {
+                        setIsLoading(true);
+                        const data = await fetchUser();
+                        setUserData(data);
+                        setIsLoading(false);
+                    } catch (err) {
+                        setIsLoading(false);
+                        setError(err);
+                    }
+                }
+                getUserData();
+            }, []);
+
+            if (error) {
+                return <div>An error occured: {error.message}</div>;
+            } else if (isLoading) {
+                return <Loading />;
+            } else if (data) {
+                return <div>Loaded data: {userData.name}</div>;
+            }
+        }
+    ````
+
+    So far so good. But what is if we need userData also in other components at different levels of nesting? For example, we might need to read user permissions from completely independent areas of our app. Passing data through props can quickly get unfeasible.
+
+    One solution might be to reach for a global state store like `Context API` or `URL state`. The thing is we need to repeat this boilerplate in every component where we fetch data.
+    The useEffect needs to be written and we need to maintain the exact same states of the asynchronous process each time.
+
+    We can solve these problems by:
+
+    1. Abstracting away the boilerplate of the asynchronous process (loading, error, etc.).
+    2. Storing our remote data in an in-memory cache.
+
+    Thankfully, there are two good libraries solve both of these problems: [swr](https://swr.vercel.app/) and [react-query](https://tanstack.com/query/latest). Both libraries provide custom React Hooks for managing remote data fetching. In the following example we use react-query because it's part of tanstack (we used tanstack router already).
+
+    #### Caching with react-query
+    When using queries the returned data will automatically be cached.
+    Query instances via useQuery or useInfiniteQuery by default consider cached data as stale. Stale means that the data on the client side could be outdated. For this react-query has some smart refetch strategies where it tells "Yep, now would be a good time to go get some data". These are:
+
+    * New instances of the query mount
+    * The window is refocused
+    * The network is reconnected
+    * The query is optionally configured with a refetch interval
+
+    The best thing about this is that it works out-of-the-box.
+
+    In the next example you can see a page where you can search for movies and filter for some categories using react-query.
+
+    Here are some hints on how you can see the cache and refetch strategies in action:
+
+    * When typing the first time you will see how the loading indicator appears. Typing again the same you will notice that the indicator doesn't appear again - cause of the cached results
+    * Open the network tab in the developer tools. Open another tab and go back to the previous. You will see that the data request is executed again. The same happens when you turn the network off/on.
 
     <DemoLink to="/state-management/preview">View Demo</DemoLink>
+
+    #### Let's break down the state management code example:
 </Content>
 
 <ServerStateDoc />
-*/}
+
+<Content>
+    #### Benefits
+    Using server cache and a library like react-query has some nice benefits.
+
+    * **Improved performance and speed**: Cause of the caching mechanism the amount of API calls will be reduced and speeds up data retrieval.
+    * **Simplified data fetching logic**: Less code because libraries like react-query abstract away the complexities of managing the data fetching lifecycle.
+    * **Easier state handling**: Cause of the built-in mechanism it is easier to handle error, loading and pending states.
+    * **Smart refetching strategies**: Your local data keeps up to date with the server data.
+
+    ### Recap state management strategies
+    We have now seen a few different ways to manage status in a React app. The following part is a recommendation on when to use a certain strategy.
+
+    #### When to use local state:
+    * **Component-specific data:** Data that only needs to be accessed or modified within a single component.
+    Example: Form inputs, toggles, counters.
+    * **Temporary state:** Data that doesn't need to persist beyond the lifecycle of a component.
+    Example: Modal visibility, dropdown open/close state.
+    * **Simple state logic:** When state management logic is straightforward and does not require complex handling.
+    Example: UI element states like hover effects, active tab index.
+
+    #### When to use global state:
+    * **Shared data:** Data that needs to be accessible by multiple components.
+    Example: User authentication status, theme settings, application-wide notifications.
+    * **Application-wide state:** State that needs to be consistent and shared throughout the application.
+    Example: Shopping cart contents, user preferences.
+    * **Complex state logic:** When state management requires advanced logic, derived data, or needs to be centralized.
+    Example: Multi-step workflows.
+
+    #### When to use URL state:
+    * **Shareable state:** When you want to enable users to share the current state of the application via a URL.
+    Example: Search filters, pagination state, current view or tab.
+    * **Persisted across reloads:** State that should persist even when the page is reloaded.
+    Example: Form step in a multi-step form, selected items in a list.
+    * **Routing state:** State that is naturally part of the navigation logic.
+    Example: Selected product in a product detail page, active section in a single-page application.
+
+    #### When to use server cache:
+    * **Remote data fetching:** When data needs to be fetched from a server or external API.
+    Example: User data, product listings, blog posts.
+    * **Asynchronous data:** Handling data that involves asynchronous operations and needs to manage loading and error states.
+    Example: Data fetched on component mount, search results.
+    * **Data synchronization:** Keeping data in sync with the server and managing cache invalidation.
+    Example: Real-time updates, live data feeds.
+    * **Performance optimization:** Reducing network requests and improving load times by caching responses.
+    Example: Caching API responses to avoid redundant requests.
+</Content>
