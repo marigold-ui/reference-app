@@ -1,13 +1,14 @@
 import DemoLink from '@/components/DemoLink';
-import ServerStateDoc from './server-state.mdx';
 import CounterExampleDoc from './_components/counter-example.mdx';
 import ContextApiExampleDoc from './_components/context-api-example.mdx';
 import SimpleSearchFilterComponentDoc from './_components/simple-search-filter-example.mdx';
+import SimpleSearchFilterUrlComponentDoc from './_components/simple-search-filter-url-example.mdx';
 import { Content } from '@/components/Container';
 import Preview from '@/components/Preview';
 import Counter from './_components/CounterExample';
 import SimpleSearchFilterComponent from './_components/SimpleSearchFilterComponent';
-import {Aspect, Image, Message} from '@marigold/components';
+import {Aspect, Center, Image, Message} from '@marigold/components';
+import SimpleSearchFilterUrlComponent from './_components/SimpleSearchFilterUrlComponent';
 
 <Content>
     In React, **state refers to any data that represents the current behavior of an application**. Examples include a list of objects fetched from the server, which item is currently selected, the name of the currently logged-in user and whether a modal is open.
@@ -111,10 +112,10 @@ import {Aspect, Image, Message} from '@marigold/components';
     #### Context API
     The Context API is built into React and allows you to pass data through the component tree without having to pass props down manually at every level - it's like you "teleport" data down the tree where it is needed.
 
-    <Aspect ratio="golden">
+    <Center>
         <img src="/goku.gif"
              alt="goku_teleportation" />
-    </Aspect>
+    </Center>
 
     To use Context they are mainly 3 steps necessary:
 
@@ -152,6 +153,45 @@ import {Aspect, Image, Message} from '@marigold/components';
     * User authentication status.
     * theme settings (dark/light mode).
     * User preferences that need to be accessible globally.
+
+    ### URL state
+    URL State is used to manage state that should be reflected in the URL, which can be bookmarked or shared. This is particularly useful for representing the state of the application in a way that is persistent and shareable.
+
+    By encoding state in the URL, navigation concerns are separated from the component logic. This means that components can focus on rendering and managing their own local state, while the URL manages the global navigation state.
+
+    Using the URL for global state reduces the need for complex state management libraries like Redux for certain scenarios. For instance, filtering, sorting, and pagination states can be managed directly through URL parameters.
+
+    Let's see how we can improve our `SimpleSearchFilterComponent` from above when using URL state.
+
+    <Preview>
+        <SimpleSearchFilterUrlComponent />
+    </Preview>
+
+    When you type something in the search you will see how the URL param is updated. In our case we use `tanstack-router`. They provide some useful hooks for working with URL params.
+    Using this we manage the URL state more efficiently and keep the component decoupled and clean. This method ensures that the search query is reflected in the URL, making the application state shareable and bookmarkable.
+
+    To test this type something into the search field. Than copy the URL and open another tab. The result should be the same.
+
+    But let's have look into the code how it works.
+</Content>
+
+<SimpleSearchFilterUrlComponentDoc />
+
+<Content>
+    **Advantages**
+
+    **Simplified state management**: By leveraging the URL for state, you can reduce the complexity of managing global state in your application.
+
+    **Improved component reusability**: Decoupled components that rely on URL parameters can be reused in different contexts with minimal modification.
+
+    **Enhanced user experience****: Users can share URLs that fully represent the application state, improving the overall user experience through better navigation and state persistence.
+
+    **Considerations**
+
+    **URL length and complexity**: Be mindful of the length and complexity of URLs. Encoding too much state in the URL can make it cumbersome and less readable.
+
+    **Security**: Avoid storing sensitive information in the URL, as it is not secure and can be easily accessed by others.
+
 </Content>
 
 {/*
