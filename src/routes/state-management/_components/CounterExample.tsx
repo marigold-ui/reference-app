@@ -5,12 +5,8 @@ import theme from '@marigold/theme-core';
 const MyButton = () => {
     const [count, setCount] = useState(0);
 
-    function handleClick() {
-        setCount(count + 1);
-    }
-
     return (
-        <Button onPress={handleClick} size='small'>
+        <Button onPress={() => setCount(count + 1)} size='small'>
             Clicked {count} times
         </Button>
     );

@@ -9,7 +9,9 @@ import {Message} from '@marigold/components';
 
         ### Create the context
 
-        First, we need to create the context. The only argument to createContext is the `default` value.
+        Creating a context object, which stores the global data, is straightforward. We just need to use the `createContext` function which lets us create a context object that components can provide or read.
+
+        The only param that is required ist the default value - in our case **'all'**.
 
         ---
 
@@ -21,7 +23,7 @@ import {Message} from '@marigold/components';
         To read the value from the context `CategoryContext` we can use the hook `useContext`.
         This tells React that the ProductList component wants to read the CategoryContext.
 
-        Than we can use our variable, e.g. for filtering products.
+        This way we can use our variable, e.g. for filtering products.
 
         ---
 
@@ -30,12 +32,11 @@ import {Message} from '@marigold/components';
         ````
 
         ### Provide the context
-        As final step we need to provide it because until now React doesn't know where to get it.
+        As a final step we need to provide it because until now React doesn't know where to get it.
 
         We need to find the highest component in our tree which uses category and than we just need to wrap this component with a context provider so all children will have access to this Context.
 
-        This tells React: `if any component inside this ProductPage asks for CategoryContext, give them this category.`
-
+        This tells React: "If any component inside this ProductPage asks for CategoryContext, give them this category."
 
         <Message messageTitle='Note'>
             If we don’t provide the context, React will use the default value we’ve specified in the first step.

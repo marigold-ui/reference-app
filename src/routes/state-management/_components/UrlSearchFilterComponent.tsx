@@ -8,7 +8,7 @@ import theme from '@marigold/theme-core';
 import useFetch from './useFetch';
 import { Route } from '@/routes/state-management/index.lazy';
 
-const SimpleSearchFilterUrlComponent = () => {
+const UrlSearchFilterComponent = () => {
   const { name }: { name: string } = Route.useSearch();
   const navigate = Route.useNavigate();
   const [filteredList, setFilteredList] = useState<Array<IMovie>>([]);
@@ -75,4 +75,4 @@ const SimpleSearchFilterUrlComponent = () => {
   );
 };
 
-export default SimpleSearchFilterUrlComponent;
+export default UrlSearchFilterComponent;

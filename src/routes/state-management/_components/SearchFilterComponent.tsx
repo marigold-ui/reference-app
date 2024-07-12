@@ -7,7 +7,7 @@ import { MarigoldProvider, SearchField, Stack } from '@marigold/components';
 import theme from '@marigold/theme-core';
 import useFetch from './useFetch';
 
-const SimpleSearchFilterComponent = () => {
+const SearchFilterComponent = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredList, setFilteredList] = useState<Array<IMovie>>([]);
 
@@ -63,4 +63,4 @@ const SimpleSearchFilterComponent = () => {
   );
 };
 
-export default SimpleSearchFilterComponent;
+export default SearchFilterComponent;
