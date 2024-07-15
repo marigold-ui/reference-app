@@ -45,7 +45,7 @@ const options = [
 const Example = () => (
   <Select label="Status" width="3/4" disabledKeys={['wont-do']}>
     {options.map(o => (
-      <Select.Option id={o.id}>
+      <Select.Option key={o.id} id={o.id}>
         <Inline space={2} alignY="center">
           <Indicator color={o.color} />
           <Text>{o.label}</Text>
