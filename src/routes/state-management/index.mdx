@@ -8,7 +8,7 @@ import { Content } from '@/components/Container';
 import Preview from '@/components/Preview';
 import Counter from './_components/CounterExample';
 import SearchFilterComponent from './_components/SearchFilterComponent';
-import {Breakout, Center, SectionMessage, Text} from '@marigold/components';
+import { Breakout, Center, SectionMessage, Text } from '@marigold/components';
 import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 
 <Content>
@@ -41,6 +41,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     </Preview>
 
     Here's a detailed explanation of how to use local state in React:
+
 </Content>
 
 <CounterExampleDoc />
@@ -54,6 +55,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     </Preview>
 
     The following explanation explains how two handle multiple states:
+
 </Content>
 
 <SimpleSearchFilterComponentDoc />
@@ -91,6 +93,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     1. **Shared data**: When multiple components need to access and update the same piece of data. For example, user authentication status, theme settings, or language preferences.
     2. **Complex state logic**: When the state logic is complex and needs to be shared across components. For instance, managing the state of a shopping cart in an e-commerce application.
     3. **Communication between components**: Facilitating communication between sibling components that do not have a direct parent-child relationship.
+
 </Content>
     <Breakout alignX="center">
         <img src="/component-tree-prop-drill.png"
@@ -127,6 +130,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     1. Create and export it with `export const MyContext = createContext(defaultValue)`.
     2. Pass it to the `useContext(MyContext)` hook to read it in any child component, no matter how deep.
     3. Wrap children into `<MyContext.Provider value={...}>` to provide it from a parent.
+
 </Content>
 
 <ContextApiExampleDoc />
@@ -134,6 +138,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 <Content>
 
     Let's look again how our component tree looks like after using `ContextAPI`.
+
 </Content>
 
     <Breakout alignX='center'>
@@ -176,6 +181,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     To test this type something into the search field. Than copy the URL and open another tab. The result should be the same.
 
     But let's have look into the code how it works.
+
 </Content>
 
 <SimpleSearchFilterUrlComponentDoc />
@@ -205,11 +211,11 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
             <Text>Even it is called server cache it doesn't belongs to the server itself! It's on the client side and stored in-memory.</Text>
         </SectionMessage.Content>
     </SectionMessage>
+
 </Content>
 
-<Breakout alignX='center'>
-    <img src="/server-cache-dia.png"
-         alt="server_cache_diagram" />
+<Breakout alignX="center">
+  <img src="/server-cache-dia.png" alt="server_cache_diagram" />
 </Breakout>
 
 <Content>
@@ -292,6 +298,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     <DemoLink to="/state-management/preview">View Demo</DemoLink>
 
     #### Let's break down the state management code example:
+
 </Content>
 
 <ServerStateDoc />
@@ -345,4 +352,5 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     Example: Real-time updates, live data feeds.
     * **Performance optimization:** Reducing network requests and improving load times by caching responses.
     Example: Caching API responses to avoid redundant requests.
+
 </Content>

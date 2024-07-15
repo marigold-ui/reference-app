@@ -14,8 +14,8 @@ import {
 } from '@/routes/state-management/_components/globals';
 import theme from '@marigold/theme-core';
 import { Route } from '@/routes/state-management/preview.lazy';
-import {useRouterState} from '@tanstack/react-router';
-import {useQuery} from '@tanstack/react-query';
+import { useRouterState } from '@tanstack/react-router';
+import { useQuery } from '@tanstack/react-query';
 
 function ServerStateExample() {
   const filters: { title: string; category: string } = Route.useSearch();
@@ -32,7 +32,7 @@ function ServerStateExample() {
     queryFn: async () => {
       const data = await fetch(`${apiUrl}${router.location.searchStr}`);
       return await data.json();
-    }
+    },
   });
 
   if (isError) {
