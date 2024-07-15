@@ -18,19 +18,19 @@
   "packageManager": "pnpm@9.1.0",
   "dependencies": {
     "@code-hike/mdx": "0.9.0",
-    "@marigold/components": "8.0.0",
-    "@marigold/icons": "1.2.52",
-    "@marigold/system": "^8.0.0",
-    "@marigold/theme-core": "26.1.12",
-    "@marigold/theme-docs": "^2.0.2",
+    "@marigold/components": "8.0.2",
+    "@marigold/icons": "1.2.54",
+    "@marigold/system": "^8.0.2",
+    "@marigold/theme-core": "26.1.14",
+    "@marigold/theme-docs": "^2.0.4",
     "@mdx-js/rollup": "3.0.1",
     "@tailwindcss/typography": "^0.5.13",
-    "@tanstack/react-query": "5.48.0",
-    "@tanstack/react-query-devtools": "5.48.0",
-    "@tanstack/react-router": "1.40.0",
+    "@tanstack/react-query": "5.51.1",
+    "@tanstack/react-query-devtools": "5.51.1",
+    "@tanstack/react-router": "1.45.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "tailwind-merge": "2.3.0"
+    "tailwind-merge": "2.4.0"
   },
   "devDependencies": {
     "@marigold/eslint-config": "0.4.16",
