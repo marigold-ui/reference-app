@@ -1,6 +1,6 @@
 import ServerStateExample from './ServerStateExample';
 import { Block } from '@/components/Container';
-import {Message} from '@marigold/components';
+import {SectionMessage, Text} from '@marigold/components';
 
 {/* 
 
@@ -83,9 +83,12 @@ important! "Server cache is not the same as UI state, and should be handled diff
         * isError - The query encountered an error
         * error - If the query is in an isError state, the error is available via the error property
 
-        <Message variant="info" messageTitle="Note">
-            Because useQuery give use the states above we don't need to do it ourselves and get rid of using `useState` three times - awesome!
-        </Message>
+        <SectionMessage variant="info">
+            <SectionMessage.Title>Note</SectionMessage.Title>
+            <SectionMessage.Content>
+                <Text>Because useQuery give use the states above we don't need to do it ourselves and get rid of using `useState` three times - awesome!</Text>
+            </SectionMessage.Content>
+        </SectionMessage>
 
         ---
 

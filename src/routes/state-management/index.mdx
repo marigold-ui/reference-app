@@ -8,7 +8,7 @@ import { Content } from '@/components/Container';
 import Preview from '@/components/Preview';
 import Counter from './_components/CounterExample';
 import SearchFilterComponent from './_components/SearchFilterComponent';
-import { Breakout, Center, Message } from '@marigold/components';
+import {Breakout, Center, SectionMessage, Text} from '@marigold/components';
 import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 
 <Content>
@@ -105,9 +105,12 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 
     Another disadvantage is that when changing the prop name or adding another prop, which is also required in many components, you have to go through all the components, which can lead to errors.
 
-    <Message messageTitle="Rule of thumb" variant="info">
-        There is no official rule, but from experience if you pass props more than 3-levels deep you should consider using global state.
-    </Message>
+    <SectionMessage variant="info">
+        <SectionMessage.Title>Rule of thumb</SectionMessage.Title>
+        <SectionMessage.Content>
+            <Text>There is no official rule, but from experience if you pass props more than 3-levels deep you should consider using global state.</Text>
+        </SectionMessage.Content>
+    </SectionMessage>
 
     The good news are that there are some possibilities to avoid these problems.
 
@@ -196,9 +199,12 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 
     Another approach in state management is using a **server cache**. Server Cache refers to storing frequently accessed data on the client side to improve performance and reduce the load on the backend database or other persistent storage. It's also great from the UX perspective because the user "never" has to wait, so to speak.
 
-    <Message messageTitle='Note'>
-        Even it is called server cache it doesn't belongs to the server itself! It's on the client side and stored in-memory.
-    </Message>
+    <SectionMessage variant="info">
+        <SectionMessage.Title>Rule of thumb</SectionMessage.Title>
+        <SectionMessage.Content>
+            <Text>Even it is called server cache it doesn't belongs to the server itself! It's on the client side and stored in-memory.</Text>
+        </SectionMessage.Content>
+    </SectionMessage>
 </Content>
 
 <Breakout alignX='center'>

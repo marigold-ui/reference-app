@@ -1,5 +1,5 @@
 import { Block } from '@/components/Container';
-import {Message} from '@marigold/components';
+import {SectionMessage, Text} from '@marigold/components';
 
 <Block>
     <CH.Scrollycoding>
@@ -38,8 +38,11 @@ import {Message} from '@marigold/components';
 
         This tells React: "If any component inside this ProductPage asks for CategoryContext, give them this category."
 
-        <Message messageTitle='Note'>
-            If we don’t provide the context, React will use the default value we’ve specified in the first step.
-        </Message>
+        <SectionMessage variant="info">
+            <SectionMessage.Title>Note</SectionMessage.Title>
+            <SectionMessage.Content>
+                <Text>If we don’t provide the context, React will use the default value we’ve specified in the first step.</Text>
+            </SectionMessage.Content>
+        </SectionMessage>
     </CH.Scrollycoding>
 </Block>
