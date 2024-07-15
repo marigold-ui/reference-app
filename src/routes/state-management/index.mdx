@@ -30,7 +30,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 
     By effectively managing local state, global state, and server cache, you can create a React application that is both efficient and easy to maintain.
 
-    ## Using local state
+    ## Using Local State
 
     Local state in React is the state that is confined to a single component. It's ideal for managing data that doesn't need to be shared across multiple components.
     By understanding these techniques for initializing, reading, updating, and handling local state, you can create dynamic and responsive React components that effectively manage their own data.
@@ -47,7 +47,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 <CounterExampleDoc />
 
 <Content>
-    ### Implementing search and filtering
+    ### Implementing Search and Filtering
     In the next example below we build a little bit more complex component. With this we can search/filter for movies when typing something in the search input field. If something is found, the list is updated accordingly, otherwise a corresponding message appears.
 
     <Preview>
@@ -61,33 +61,33 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 <SimpleSearchFilterComponentDoc />
 
 <Content>
-    ### Potential disadvantages
+    ### Potential Disadvantages
     For now the component above works well but let us think where we could possibly improve it to avoid some pitfalls.
 
-    #### State management complexity:
+    #### State Management Complexity:
 
     * **Multiple sources of truth:** Using local state (`searchQuery` and `filteredList) means managing state within the component. If the state is also used or needed elsewhere, it can lead to inconsistencies and difficulties in synchronizing state across components.
     * **Component bloat:** As the component grows in complexity, managing multiple pieces of state within a single component can make it harder to read, maintain, and debug.
 
-    #### Performance issues:
+    #### Performance Issues:
 
     * **Frequent re-renders:** Each time `searchQuery` or `filteredList` updates, the component re-renders. If this component is part of a larger application, these frequent re-renders can negatively impact performance, especially if the component is deeply nested or the movie list is large.
     * **Inefficient filtering:** Filtering the movies array within the `handleSearchChange function can become inefficient if the dataset is large. This operation is performed on each keystroke, which can lead to noticeable lag.
 
-    #### Testability and reusability:
+    #### Testability and Reusability:
 
     * **Difficult testing:** Testing components with local state often requires setting up the component in a specific state to test various scenarios. This can make tests more complex and harder to write.
     * **Limited reusability:** Local state ties the logic to a specific component. If the filtering logic is needed elsewhere, it has to be duplicated, violating the DRY (Don't Repeat Yourself) principle.
 
-    #### Limited scalability:
+    #### Limited Scalability:
     * **Handling more features:** As the application grows and more features are added (e.g., additional filters, pagination), managing all these states within a single component becomes cumbersome. It may be better to use a state management library like [Context API](#context-api), [Redux](https://redux.js.org/) or [Zustand](https://github.com/pmndrs/zustand) to handle **global state** more efficiently.
 
-    ## Using global state
+    ## Using Global State
     When you have growing applications a point will come where it doesn't feel good to use equal or similar state in multiple components. It also doesn't feel good to pass state through different component until it reaches the component where the state is used (also know as [prop drilling](https://dev.to/codeofrelevancy/what-is-prop-drilling-in-react-3kol)).
     When you feel bad about this than it's time to think about global state.
     Primarily, global state refers to state tge is accessible across different components in the application, enabling a centralized and consistent way to manage data.
 
-    ### Why use global state?
+    ### Why Use Global State?
     Global state is useful in several scenarios:
 
     1. **Shared data**: When multiple components need to access and update the same piece of data. For example, user authentication status, theme settings, or language preferences.
@@ -160,14 +160,14 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     * **Overhead for small apps:** Might be overkill for small applications with simple state requirements.
     * **Performance:** When the value provided by a context changes, all components that consume this context will re-render. If the context value changes frequently or includes data that changes often, it can cause a cascade of re-renders throughout the component tree, leading to performance issues.
 
-    ## URL state
+    ## URL State
     Another option to manage global state, especially if it is not very complex, is URL state. This pattern is used to manage state that should be reflected in the URL, which can be bookmarked or shared. This is particularly useful for representing the state of the application in a way that is persistent and shareable.
 
     By encoding state in the URL, navigation concerns are separated from the component logic. This means that components can focus on rendering and managing their own local state, while the URL manages the global navigation state.
 
     Using the URL for global state reduces the need for complex state management libraries like Redux for certain scenarios. For instance, filtering, sorting, and pagination states can be managed directly through URL parameters.
 
-    ### Extend search and filtering
+    ### Extend Search and Filtering
 
     Let's see how we can improve our `SearchFilterComponent` from above when using URL state.
 
@@ -201,16 +201,9 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 
     * **Security**: Avoid storing sensitive information in the URL, as it is not secure and can be easily accessed by others.
 
-    ## Server cache
+    ## Server Cache
 
     Another approach in state management is using a **server cache**. Server Cache refers to storing frequently accessed data on the client side to improve performance and reduce the load on the backend database or other persistent storage. It's also great from the UX perspective because the user "never" has to wait, so to speak.
-
-    <SectionMessage variant="info">
-        <SectionMessage.Title>Rule of thumb</SectionMessage.Title>
-        <SectionMessage.Content>
-            <Text>Even it is called server cache it doesn't belongs to the server itself! It's on the client side and stored in-memory.</Text>
-        </SectionMessage.Content>
-    </SectionMessage>
 
 </Content>
 
@@ -221,11 +214,18 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 <Content>
     How you can see from the image above they are two different scenarios:
 
+    <SectionMessage variant="info">
+        <SectionMessage.Title>Note</SectionMessage.Title>
+        <SectionMessage.Content>
+            <Text>Even it is called server cache it doesn't belongs to the server itself! It's on the client side and stored in-memory.</Text>
+        </SectionMessage.Content>
+    </SectionMessage>
+
     **Requested data already cached:** When the client sends a request, the server cache is checked first. If the data is present, the response is returned immediately.
 
     **Requested data isn't cached:** When the client sends a request, the server cache is checked first. The data isn't available yet, the server fetches the data from the primary storage, stores it in the cache for future requests, and then returns it to the client.
 
-    ### Using server cache in react
+    ### Using Server Cache in React
 
     A common pattern in React for handling remote data is to fetch inside `useEffect` and copy the result into component state. Something like this:
 
@@ -287,7 +287,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 
     The best thing about this is that it works out-of-the-box.
 
-    ### react-query in action
+    ### react-query in Action
     In the next example you can see a page where you can search for movies and filter for some categories using react-query.
 
     Here are some hints on how you can see the cache and refetch strategies in action:
@@ -297,7 +297,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 
     <DemoLink to="/state-management/preview">View Demo</DemoLink>
 
-    #### Let's break down the state management code example:
+    #### Let's Break Down the State Management Code Example:
 
 </Content>
 
@@ -316,10 +316,10 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     Server cache in combination with react-query is a powerful tool for managing server state in your React applications.
     It abstracts the complexities of data fetching, caching, and synchronization, allowing you to focus on building your UI.
 
-    ## Recap state management strategies
+    ## Recap State Management Strategies
     We have now seen a few different ways to manage status in a React app. The following part is a recommendation on when to use a certain strategy.
 
-    ### When to use local state:
+    ### When to Use Local State:
     * **Component-specific data:** Data that only needs to be accessed or modified within a single component.
     Example: Form inputs, toggles, counters.
     * **Temporary state:** Data that doesn't need to persist beyond the lifecycle of a component.
@@ -327,7 +327,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     * **Simple state logic:** When state management logic is straightforward and does not require complex handling.
     Example: UI element states like hover effects, active tab index.
 
-    ### When to use global state:
+    ### When to Use Global State:
     * **Shared data:** Data that needs to be accessible by multiple components.
     Example: User authentication status, theme settings, application-wide notifications.
     * **Application-wide state:** State that needs to be consistent and shared throughout the application.
@@ -335,7 +335,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     * **Complex state logic:** When state management requires advanced logic, derived data, or needs to be centralized.
     Example: Multi-step workflows.
 
-    ### When to use URL state:
+    ### When to Use URL State:
     * **Shareable state:** When you want to enable users to share the current state of the application via a URL.
     Example: Search filters, pagination state, current view or tab.
     * **Persisted across reloads:** State that should persist even when the page is reloaded.
@@ -343,7 +343,7 @@ import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
     * **Routing state:** State that is naturally part of the navigation logic.
     Example: Selected product in a product detail page, active section in a single-page application.
 
-    ### When to use server cache:
+    ### When to Use Server Cache:
     * **Remote data fetching:** When data needs to be fetched from a server or external API.
     Example: User data, product listings, blog posts.
     * **Asynchronous data:** Handling data that involves asynchronous operations and needs to manage loading and error states.

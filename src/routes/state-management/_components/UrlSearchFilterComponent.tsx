@@ -59,7 +59,7 @@ const UrlSearchFilterComponent = () => {
         <SearchField
           value={searchQuery}
           onChange={handleSearchChange}
-          label="search"
+          label="Search"
         />
         {filteredList.length > 0 ? (
           <ul>

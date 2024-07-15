@@ -8,7 +8,7 @@ import { SectionMessage, Text } from '@marigold/components';
         ```tsx ServerStateExample.tsx focus=21:23
         // from ./ServerStateExample.tsx
         ````
-        #### Initializing URL state for filters
+        #### Initializing URL State for Filters
 
         We use the `useSearch` hook to get the url state for our filters. This state will store the user's input for the movie title and category.
 
@@ -21,7 +21,7 @@ import { SectionMessage, Text } from '@marigold/components';
         ```tsx ServerStateExample.tsx focus=30:36
         // from ./ServerStateExample.tsx
         ```
-        #### Loading initial data
+        #### Loading Initial Data
 
         For loading the initial data from the server we using the hook `useQuery`. It needs a queryKey for checking if the query is already cached.
         The second param takes a function which is the requested endpoint and returns the requested data.
@@ -31,7 +31,7 @@ import { SectionMessage, Text } from '@marigold/components';
         ```tsx ServerStateExample.tsx focus=26:29
         // from ./ServerStateExample.tsx
         ````
-        #### Result object
+        #### Result Object
 
         The result object from `useQuery` has - besides the data - some useful states.
 
@@ -51,16 +51,16 @@ import { SectionMessage, Text } from '@marigold/components';
         ```tsx ServerStateExample.tsx focus=38:40
         // from ./ServerStateExample.tsx
         ````
-        #### Error handling
+        #### Error Handling
 
-        If an error occurs from the API we just return the error message.
+        If an error occurs from the API we just return the error message. We get the error message from the error object we retrieve from `useQuery`.
 
         ---
 
         ```tsx ServerStateExample.tsx focus=48:52,60:64
         // from ./ServerStateExample.tsx
         ```
-        #### Updating search params
+        #### Updating Search Params
 
         Like in the other example we use the navigate function to update our search params. Because we have multiple params we are using the spread operator to copy the whole object and just update the specific value.
 

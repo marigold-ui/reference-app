@@ -47,7 +47,7 @@ const SearchFilterComponent = () => {
         <SearchField
           value={searchQuery}
           onChange={value => handleSearchChange(value)}
-          label="search"
+          label="Search"
         />
         {filteredList.length > 0 ? (
           <ul>

@@ -50,7 +50,7 @@ function ServerStateExample() {
                 search: prev => ({ ...prev, title: value }),
               })
             }
-            label="search"
+            label="Search"
             width={'1/2'}
           />
           <Select
