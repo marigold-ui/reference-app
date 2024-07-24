@@ -1,0 +1,56 @@
+import { Block } from '@/components/Container';
+import {SectionMessage} from '@marigold/components';
+
+<Block>
+    <CH.Scrollycoding>
+        ```tsx SearchFilterComponent.tsx focus=11:12,23
+        // from ./SearchFilterComponent.tsx
+        ````
+
+        ### Storing an Initial Value
+
+        In React, we can use the `useState` hook is used to store the initial value of a state variable. When defining state variables, we provide an initial value as an argument to `useState`.
+
+        In our example we hold two local states. `searchQuery` is for saving the current input value. `filteredList` holds all filtered movies based on the `searchQuery`.
+
+        ---
+
+        ```tsx SearchFilterComponent.tsx focus=47:48,52:57
+        // from ./SearchFilterComponent.tsx
+        ````
+
+        ### Reading the Current State Value
+
+        State variables in React can be accessed directly to read their current values.
+
+        The value of `searchQuery`is shown in the search field.
+
+        `filteredList` has the current data based on the `searchQuery`. Initially it shows all available movies loaded from the API.
+
+        ---
+
+        ```tsx SearchFilterComponent.tsx focus=27:34,47:51
+        // from ./SearchFilterComponent.tsx
+        ````
+
+        ### Updating a State Value
+        From our `SearchField` we trigger an onChange event which updates the state variable which is hold by `searchQuery` (also known as [`controlled input`](https://www.marigold-ui.io/patterns/building-forms?theme=core#controlled-or-uncontrolled-components)).
+
+        Also `filteredList` will be updated via the state update function `setFilteredList` which only holds the filtered values. Both triggers a re-render of the component which updates the UI based on these updated values.
+
+        ---
+
+        ```tsx SearchFilterComponent.tsx
+        // from ./SearchFilterComponent.tsx
+        ````
+
+        <SectionMessage variant="info">
+            <SectionMessage.Title>Note</SectionMessage.Title>
+            <SectionMessage.Content>
+               In this example we using [`tanstack-query`](https://tanstack.com/query/latest). We will discuss this in more detail in a later chapter.
+            </SectionMessage.Content>
+        </SectionMessage>
+
+    </CH.Scrollycoding>
+
+</Block>

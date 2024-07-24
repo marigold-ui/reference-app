@@ -1,0 +1,77 @@
+import ServerStateExample from './ServerStateExample';
+import { Block } from '@/components/Container';
+import { SectionMessage, Text } from '@marigold/components';
+
+<Block>
+    <CH.Scrollycoding>
+
+        ```tsx ServerStateExample.tsx focus=21:23
+        // from ./ServerStateExample.tsx
+        ````
+        #### Initializing URL State for Filters
+
+        We use the `useSearch` hook to get the url state for our filters. This state will store the user's input for the movie title and category.
+
+        We also initialize the `useNavigate` hook which we need for updating our URL params.
+
+        The `userRouterState` hook is useful to get the current URL params directly as string.
+
+        ---
+
+        ```tsx ServerStateExample.tsx focus=30:36
+        // from ./ServerStateExample.tsx
+        ```
+        #### Loading Initial Data
+
+        For loading the initial data from the server we using the hook `useQuery`. It needs a queryKey for checking if the query is already cached.
+        The second param takes a function which is the requested endpoint and returns the requested data.
+
+        ---
+
+        ```tsx ServerStateExample.tsx focus=26:29
+        // from ./ServerStateExample.tsx
+        ````
+        #### Result Object
+
+        The result object from `useQuery` has - besides the data - some useful states.
+
+        * isPending - The query has no data yet
+        * isError - The query encountered an error
+        * error - If the query is in an isError state, the error is available via the error property
+
+        <SectionMessage variant="info">
+            <SectionMessage.Title>Note</SectionMessage.Title>
+            <SectionMessage.Content>
+                <Text>Because useQuery give use the states above we don't need to do it ourselves and get rid of using `useState` three times - awesome!</Text>
+            </SectionMessage.Content>
+        </SectionMessage>
+
+        ---
+
+        ```tsx ServerStateExample.tsx focus=38:40
+        // from ./ServerStateExample.tsx
+        ````
+        #### Error Handling
+
+        If an error occurs from the API we just return the error message. We get the error message from the error object we retrieve from `useQuery`.
+
+        ---
+
+        ```tsx ServerStateExample.tsx focus=48:52,60:64
+        // from ./ServerStateExample.tsx
+        ```
+        #### Updating Search Params
+
+        Like in the other example we use the navigate function to update our search params. Because we have multiple params we are using the spread operator to copy the whole object and just update the specific value.
+
+        ---
+
+        ```tsx ServerStateExample.tsx focus=77
+        // from ./ServerStateExample.tsx
+        ```
+        #### Loading State
+
+        While data is being fetched, we display a loading indicator.
+    </CH.Scrollycoding>
+
+</Block>

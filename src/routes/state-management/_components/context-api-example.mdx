@@ -1,0 +1,55 @@
+import { Block } from '@/components/Container';
+import { SectionMessage, Text } from '@marigold/components';
+
+<Block>
+    <CH.Scrollycoding>
+        ```tsx ContextApiExample.tsx focus=11
+        // from ./ContextApiExample.tsx
+        ````
+
+        ### Create the Context
+
+        Creating a context object, which stores the global data, is straightforward. We just need to use the `createContext` function which lets us create a context object that components can provide or read.
+
+        The only param that is required ist the default value - in our case **'all'**.
+
+        ---
+
+        ```tsx ContextApiExample.tsx focus=46:50
+        // from ./ContextApiExample.tsx
+        ````
+
+        ### Use the Context
+        To read the value from the context `CategoryContext` we can use the hook `useContext`.
+        This tells React that the ProductList component wants to read the CategoryContext.
+
+        This way we can use our variable, e.g. for filtering products.
+
+        ---
+
+        ```tsx ContextApiExample.tsx focus=16,18
+        // from ./ContextApiExample.tsx
+        ````
+
+        ### Provide the Context
+        As a final step we need to provide it because until now React doesn't know where to get it.
+
+        We need to find the highest component in our tree which uses category and than we just need to wrap this component with a context provider so all children will have access to this Context.
+
+        This tells React: "If any component inside this ProductPage asks for CategoryContext, give them this category."
+
+        ---
+
+        ```tsx ContextApiExample.tsx
+        // from ./ContextApiExample.tsx
+        ````
+
+        <SectionMessage variant="info">
+            <SectionMessage.Title>Note</SectionMessage.Title>
+            <SectionMessage.Content>
+                <Text>If we don’t provide the context, React will use the default value we’ve specified in the first step.</Text>
+            </SectionMessage.Content>
+        </SectionMessage>
+    </CH.Scrollycoding>
+
+</Block>

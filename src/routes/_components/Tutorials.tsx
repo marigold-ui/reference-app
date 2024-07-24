@@ -43,7 +43,7 @@ export const Tutorials = () => (
               title: 'State Management',
               href: '/state-management',
               caption:
-                'Learn how compound components can enhance parent-child communication beyond prop drilling.',
+                'Learn to structure and maintain your state effectively.',
               icon: (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

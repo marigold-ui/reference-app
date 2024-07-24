@@ -1,0 +1,43 @@
+import { Block } from '@/components/Container';
+
+<Block>
+    <CH.Scrollycoding>
+        ```tsx UrlSearchFilterComponent.tsx focus=9,12
+        // from ./UrlSearchFilterComponent.tsx
+        ````
+
+        ### Reading Search Params
+
+        To read search params you have to import the current route config. With that access to different hooks.
+        The `useSearch` hook allows to get access to the search params. In our case we can read the value from `name`.
+        E.g. `/state-management?name=old` our value would be `old`.
+
+        ---
+
+        ```tsx UrlSearchFilterComponent.tsx focus=13,42:46
+        // from ./UrlSearchFilterComponent.tsx
+        ````
+
+        ### Update the URL State
+        To update our search params to the actual value from the search bar we can use the `useNavigate` hook.
+        This allows to put the current value back in to the search param.
+
+        ---
+
+        <CH.Code>
+            ```tsx UrlSearchFilterComponent.tsx
+            // from ./UrlSearchFilterComponent.tsx
+            ````
+
+            ---
+
+            ```tsx SearchFilterComponent.tsx
+            // from ./SearchFilterComponent.tsx
+            ````
+        </CH.Code>
+
+        Compared to the `SearchFilterComponent` the rest stays as it is.
+
+    </CH.Scrollycoding>
+
+</Block>

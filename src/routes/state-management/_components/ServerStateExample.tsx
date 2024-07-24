@@ -2,52 +2,37 @@ import {
   Card,
   Image,
   Inline,
+  MarigoldProvider,
   SearchField,
   Select,
   Stack,
   Text,
 } from '@marigold/components';
+import {
+  apiUrl,
+  type IMovie,
+} from '@/routes/state-management/_components/globals';
+import theme from '@marigold/theme-core';
+import { Route } from '@/routes/state-management/preview.lazy';
+import { useRouterState } from '@tanstack/react-router';
 import { useQuery } from '@tanstack/react-query';
-import { useState } from 'react';
 
-interface IMovie {
-  href: string;
-  year: number;
-  title: string;
-  category: string;
-  thumbnail: string;
-  thumbnail_width: number;
-  thumbnail_height: number;
-  extract: string;
-}
 function ServerStateExample() {
-  const [filters, setFilters] = useState<{ title: string; category: string }>({
-    title: '',
-    category: '',
-  });
-
-  const fetchData = async (
-    url: string,
-    queryParams: Record<string, string>
-  ) => {
-    const queryString = new URLSearchParams(queryParams).toString();
-    const apiURL = `${url}${queryString ? `?${queryString}` : ''}`;
-    const data = await fetch(apiURL);
-    return await data.json();
-  };
+  const filters: { title: string; category: string } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const router = useRouterState();
 
   const {
     data: movies,
     isError,
-    isLoading,
+    isPending,
     error,
   } = useQuery<Array<IMovie>>({
     queryKey: ['users', filters],
-    queryFn: async () =>
-      await fetchData(
-        'https://6630d183c92f351c03db2e12.mockapi.io/movies',
-        filters
-      ),
+    queryFn: async () => {
+      const data = await fetch(`${apiUrl}${router.location.searchStr}`);
+      return await data.json();
+    },
   });
 
   if (isError) {
@@ -55,13 +40,17 @@ function ServerStateExample() {
   }
 
   return (
-    <>
+    <MarigoldProvider theme={theme}>
       <Stack space={4}>
         <Inline space={4}>
           <SearchField
-            value={filters?.title}
-            onChange={value => setFilters(prev => ({ ...prev, title: value }))}
-            label="search"
+            value={filters.title}
+            onChange={value =>
+              navigate({
+                search: prev => ({ ...prev, title: value }),
+              })
+            }
+            label="Search"
             width={'1/2'}
           />
           <Select
@@ -69,7 +58,9 @@ function ServerStateExample() {
             placeholder="Select your character"
             width={'1/5'}
             onChange={key => {
-              setFilters(prev => ({ ...prev, category: key as string }));
+              navigate({
+                search: prev => ({ ...prev, category: key }),
+              });
             }}
             selectedKey={filters.category}
           >
@@ -83,7 +74,7 @@ function ServerStateExample() {
           </Select>
         </Inline>
 
-        {isLoading && <span>Loading...</span>}
+        {isPending && <span>Loading...</span>}
         <Inline space={4}>
           {
             // check if search returns nothing(movies='not found')
@@ -109,7 +100,7 @@ function ServerStateExample() {
           }
         </Inline>
       </Stack>
-    </>
+    </MarigoldProvider>
   );
 }
 

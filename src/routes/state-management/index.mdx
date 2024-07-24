@@ -1,24 +1,356 @@
 import DemoLink from '@/components/DemoLink';
-import ServerStateDoc from './server-state.mdx';
+import CounterExampleDoc from './_components/counter-example.mdx';
+import ContextApiExampleDoc from './_components/context-api-example.mdx';
+import SimpleSearchFilterComponentDoc from './_components/search-filter-example.mdx';
+import SimpleSearchFilterUrlComponentDoc from './_components/url-search-filter-example.mdx';
+import ServerStateDoc from './_components/server-state.mdx';
+import { Content } from '@/components/Container';
+import Preview from '@/components/Preview';
+import Counter from './_components/CounterExample';
+import SearchFilterComponent from './_components/SearchFilterComponent';
+import { Breakout, Center, SectionMessage, Text } from '@marigold/components';
+import UrlSearchFilterComponent from './_components/UrlSearchFilterComponent';
 
-# State Management
+<Content>
+    In React, **state refers to any data that represents the current behavior of an application**. Examples include a list of objects fetched from the server, which item is currently selected, the name of the currently logged-in user and whether a modal is open.
 
-## What is State Management ?
+    **State Management is the process of handling changes to state over time**. This involves:
 
-**"State" is any data that describes the current behavior of an application.** This could include values like "a list of objects fetched from the server", "which item is currently selected", "name of the currently logged-in user", and "is this modal open?".
+    - Storing an initial value
+    - Reading the current value
+    - Updating a value
 
-**State** allows you to create interactive and dynamic user interfaces. By managing the state of component, you can update the UI in response to user interactions, API calls, or other events.
+    React applications determine what UI to render based on the current state values. Thus, understanding when and how to use different techniques for managing state is a crucial skill for all React developers, as is deciding where a given piece of state should live.
 
-Here are different types for state management that will be covered in our example:
+    For a comprehensive approach to state management, it's important to consider:
 
-- **Local State:** Data we manage in one or another component e.g handling inputs data in from.
+    1. **Local State:** This is state that is managed within a single component. It's ideal for state that doesn't need to be shared across multiple components. For this the hook `useState` can be used.
+    2. **Global State:** This is state that needs to be accessible by multiple components throughout the application. Tools like Context API or Redux can be used to manage global state.
+    3. **Server Cache:** This involves state that represents data fetched from a server. Unlike UI state, server cache should be managed differently, often using tools like React Query or SWR to handle data fetching, caching, and synchronization with the server.
 
-- **Server State:** Data are fetched from the server via an API and cached on the client, there are a couple of great libraries that make data fetching in React a breeze such as: **_React Query_**.
+    By effectively managing local state, global state, and server cache, you can create a React application that is both efficient and easy to maintain.
 
-### Let's break down the state management code example:
+    ## Using Local State
 
-<DemoLink to="/state-management/preview">View Demo</DemoLink>
+    Local state in React is the state that is confined to a single component. It's ideal for managing data that doesn't need to be shared across multiple components.
+    By understanding these techniques for initializing, reading, updating, and handling local state, you can create dynamic and responsive React components that effectively manage their own data.
+
+    In the following example we have a component which counts the clicks on the button.
+    <Preview>
+        <Counter />
+    </Preview>
+
+    Here's a detailed explanation of how to use local state in React:
+
+</Content>
+
+<CounterExampleDoc />
+
+<Content>
+    ### Implementing Search and Filtering
+    In the next example below we build a little bit more complex component. With this we can search/filter for movies when typing something in the search input field. If something is found, the list is updated accordingly, otherwise a corresponding message appears.
+
+    <Preview>
+        <SearchFilterComponent />
+    </Preview>
+
+    The following explanation explains how two handle multiple states:
+
+</Content>
+
+<SimpleSearchFilterComponentDoc />
+
+<Content>
+    ### Potential Disadvantages
+    For now the component above works well but let us think where we could possibly improve it to avoid some pitfalls.
+
+    #### State Management Complexity:
+
+    * **Multiple sources of truth:** Using local state (`searchQuery` and `filteredList) means managing state within the component. If the state is also used or needed elsewhere, it can lead to inconsistencies and difficulties in synchronizing state across components.
+    * **Component bloat:** As the component grows in complexity, managing multiple pieces of state within a single component can make it harder to read, maintain, and debug.
+
+    #### Performance Issues:
+
+    * **Frequent re-renders:** Each time `searchQuery` or `filteredList` updates, the component re-renders. If this component is part of a larger application, these frequent re-renders can negatively impact performance, especially if the component is deeply nested or the movie list is large.
+    * **Inefficient filtering:** Filtering the movies array within the `handleSearchChange function can become inefficient if the dataset is large. This operation is performed on each keystroke, which can lead to noticeable lag.
+
+    #### Testability and Reusability:
+
+    * **Difficult testing:** Testing components with local state often requires setting up the component in a specific state to test various scenarios. This can make tests more complex and harder to write.
+    * **Limited reusability:** Local state ties the logic to a specific component. If the filtering logic is needed elsewhere, it has to be duplicated, violating the DRY (Don't Repeat Yourself) principle.
+
+    #### Limited Scalability:
+    * **Handling more features:** As the application grows and more features are added (e.g., additional filters, pagination), managing all these states within a single component becomes cumbersome. It may be better to use a state management library like [Context API](#context-api), [Redux](https://redux.js.org/) or [Zustand](https://github.com/pmndrs/zustand) to handle **global state** more efficiently.
+
+    ## Using Global State
+    When you have growing applications a point will come where it doesn't feel good to use equal or similar state in multiple components. It also doesn't feel good to pass state through different component until it reaches the component where the state is used (also know as [prop drilling](https://dev.to/codeofrelevancy/what-is-prop-drilling-in-react-3kol)).
+    When you feel bad about this than it's time to think about global state.
+    Primarily, global state refers to state tge is accessible across different components in the application, enabling a centralized and consistent way to manage data.
+
+    ### Why Use Global State?
+    Global state is useful in several scenarios:
+
+    1. **Shared data**: When multiple components need to access and update the same piece of data. For example, user authentication status, theme settings, or language preferences.
+    2. **Complex state logic**: When the state logic is complex and needs to be shared across components. For instance, managing the state of a shopping cart in an e-commerce application.
+    3. **Communication between components**: Facilitating communication between sibling components that do not have a direct parent-child relationship.
+
+</Content>
+    <Breakout alignX="center">
+        <img src="/component-tree-prop-drill.png"
+            alt="component_tree_prop_drill" />
+    </Breakout>
+<Content>
+    In the picture above you see a visualization of a component tree in React. So `<ProductPage>` contains `<Sidebar>` and `<MainContent>`. Sidebar holds `<Filter>`, `<SubCategoryFilter>` and `<Sort>`. The MainContent has `<ProductList>` and inside ProductList is `<ProductItem>` rendered.
+
+    There is a prop `category` which is used by multiples components. But the thing is that `category` isn't used in any components down the tree. So Sidebar, MainContent and ProductList are just pass down the props to their child components.
+
+    A disadvantage of this approach is that when the category value is changed, all components that use the category are re-rendered. This can lead to performance issues.
+
+    Another disadvantage is that when changing the prop name or adding another prop, which is also required in many components, you have to go through all the components, which can lead to errors.
+
+    <SectionMessage variant="info">
+        <SectionMessage.Title>Rule of thumb</SectionMessage.Title>
+        <SectionMessage.Content>
+            <Text>There is no official rule, but from experience if you pass props more than 3-levels deep you should consider using global state.</Text>
+        </SectionMessage.Content>
+    </SectionMessage>
+
+    The good news are that there are some possibilities to avoid these problems.
+
+    ### Context API
+    The Context API is built into React and allows you to pass data through the component tree without having to pass props down manually at every level - it's like you "teleport" data down the tree where it is needed.
+
+    <Center>
+        <img src="/goku.gif"
+             alt="goku_teleportation" />
+    </Center>
+
+    To use Context there are mainly 3 steps necessary:
+
+    1. Create and export it with `export const MyContext = createContext(defaultValue)`.
+    2. Pass it to the `useContext(MyContext)` hook to read it in any child component, no matter how deep.
+    3. Wrap children into `<MyContext.Provider value={...}>` to provide it from a parent.
+
+</Content>
+
+<ContextApiExampleDoc />
+
+<Content>
+
+    Let's look again how our component tree looks like after using `ContextAPI`.
+
+</Content>
+
+    <Breakout alignX='center'>
+        <img src="/component-tree-context-api.png"
+             alt="component_tree_prop_drill" />
+    </Breakout>
+
+<Content>
+    Finally, we were able to remove the places where the props are simply passed on to the next component, so we now exactly know which components are using that state.
+
+    **Pros:**
+
+    * **Centralized state management:** Useful for managing global state that multiple components need access to.
+    * **Encapsulation:** State logic is encapsulated in the Provider, making the application more modular.
+    * **Avoid prop drilling:** Helps to avoid passing props through many layers of components.
+
+    **Cons:**
+
+    * **Overhead for small apps:** Might be overkill for small applications with simple state requirements.
+    * **Performance:** When the value provided by a context changes, all components that consume this context will re-render. If the context value changes frequently or includes data that changes often, it can cause a cascade of re-renders throughout the component tree, leading to performance issues.
+
+    ## URL State
+    Another option to manage global state, especially if it is not very complex, is URL state. This pattern is used to manage state that should be reflected in the URL, which can be bookmarked or shared. This is particularly useful for representing the state of the application in a way that is persistent and shareable.
+
+    By encoding state in the URL, navigation concerns are separated from the component logic. This means that components can focus on rendering and managing their own local state, while the URL manages the global navigation state.
+
+    Using the URL for global state reduces the need for complex state management libraries like Redux for certain scenarios. For instance, filtering, sorting, and pagination states can be managed directly through URL parameters.
+
+    ### Extend Search and Filtering
+
+    Let's see how we can improve our `SearchFilterComponent` from above when using URL state.
+
+    <Preview>
+        <UrlSearchFilterComponent />
+    </Preview>
+
+    When you type something in the search you will see how the URL param is updated. In our case we use [`tanstack-router`](https://tanstack.com/router/latest). This 3rd party library provide some useful hooks for working with URL params.
+    Using this we manage the URL state more efficiently and keep the component decoupled and clean. This method ensures that the search query is reflected in the URL, making the application state shareable and bookmarkable.
+
+    To test this type something into the search field. Than copy the URL and open another tab. The result should be the same.
+
+    But let's have look into the code how it works.
+
+</Content>
+
+<SimpleSearchFilterUrlComponentDoc />
+
+<Content>
+    **Advantages**
+
+    * **Simplified state management**: By leveraging the URL for state, you can reduce the complexity of managing global state in your application.
+
+    * **Improved component reusability**: Decoupled components that rely on URL parameters can be reused in different contexts with minimal modification.
+
+    * **Enhanced user experience**: Users can share URLs that fully represent the application state, improving the overall user experience through better navigation and state persistence.
+
+    **Considerations**
+
+    * **URL length and complexity**: Be mindful of the length and complexity of URLs. Encoding too much state in the URL can make it cumbersome and less readable.
+
+    * **Security**: Avoid storing sensitive information in the URL, as it is not secure and can be easily accessed by others.
+
+    ## Server Cache
+
+    Another approach in state management is using a **server cache**. Server Cache refers to storing frequently accessed data on the client side to improve performance and reduce the load on the backend database or other persistent storage. It's also great from the UX perspective because the user "never" has to wait, so to speak.
+
+</Content>
+
+<Breakout alignX="center">
+  <img src="/server-cache-dia.png" alt="server_cache_diagram" />
+</Breakout>
+
+<Content>
+    How you can see from the image above they are two different scenarios:
+
+    <SectionMessage variant="info">
+        <SectionMessage.Title>Note</SectionMessage.Title>
+        <SectionMessage.Content>
+            <Text>Even it is called server cache it doesn't belongs to the server itself! It's on the client side and stored in-memory.</Text>
+        </SectionMessage.Content>
+    </SectionMessage>
+
+    **Requested data already cached:** When the client sends a request, the server cache is checked first. If the data is present, the response is returned immediately.
+
+    **Requested data isn't cached:** When the client sends a request, the server cache is checked first. The data isn't available yet, the server fetches the data from the primary storage, stores it in the cache for future requests, and then returns it to the client.
+
+    ### Using Server Cache in React
+
+    A common pattern in React for handling remote data is to fetch inside `useEffect` and copy the result into component state. Something like this:
+
+    ```tsx Example.tsx
+        function Example() {
+            const [isLoading, setIsLoading] = useState();
+            const [error, setError] = useState();
+            const [userData, setUserData] = useState();
+
+            useEffect(() => {
+                async function getUserData() {
+                    try {
+                        setIsLoading(true);
+                        const data = await fetchUser();
+                        setUserData(data);
+                        setIsLoading(false);
+                    } catch (err) {
+                        setIsLoading(false);
+                        setError(err);
+                    }
+                }
+                getUserData();
+            }, []);
+
+            if (error) {
+                return <div>An error occured: {error.message}</div>;
+            }
+
+            if (isLoading) {
+                return <Loading />;
+            }
+
+            if (data) {
+                return <div>Loaded data: {userData.name}</div>;
+            }
+        }
+    ````
+
+    So far so good. But what is if we need `userData also in other components at different levels of nesting? For example, we might need to read user permissions from completely independent areas of our app. Passing data through props can quickly get unfeasible.
+
+    One solution might be to reach for a global state store like **Context API** or **URL state**. The thing is we need to repeat this boilerplate in every component where we fetch data.
+    The `useEffect needs to be written and we need to maintain the exact same states of the asynchronous process each time.
+
+    We can solve these problems by:
+
+    1. Abstracting away the boilerplate of the asynchronous process (loading, error, etc.).
+    2. Storing our remote data in an in-memory cache.
+
+    Thankfully, there are two good libraries solve both of these problems: [swr](https://swr.vercel.app/) and [react-query](https://tanstack.com/query/latest). Both libraries provide custom React hooks for managing remote data fetching. In the following example we use react-query because it's part of tanstack (we have already used the Tanstack router in a previous example).
+
+    ### Caching with react-query
+    When using queries the returned data will automatically be cached.
+    Query instances via `useQuery` or `useInfiniteQuery` by default consider cached data as stale. Stale means that the data on the client side could be outdated. For this react-query has some smart refetch strategies where it tells "Yep, now would be a good time to go get some data". These are:
+
+    * New instances of the query mount
+    * The window is refocused
+    * The network is reconnected
+    * The query is optionally configured with a refetch interval
+
+    The best thing about this is that it works out-of-the-box.
+
+    ### react-query in Action
+    In the next example you can see a page where you can search for movies and filter for some categories using react-query.
+
+    Here are some hints on how you can see the cache and refetch strategies in action:
+
+    * When typing the first time you will see how the loading indicator appears. Typing again the same you will notice that the indicator doesn't appear again - cause of the cached results
+    * Open the network tab in the developer tools (F12). Open another tab and go back to the previous. You will see that the data request is executed again. The same happens when you turn the network off/on.
+
+    <DemoLink to="/state-management/preview">View Demo</DemoLink>
+
+    #### Let's Break Down the State Management Code Example:
+
+</Content>
 
 <ServerStateDoc />
 
-<div style={{ height: 300 }} />
+<Content>
+    ### Benefits
+    Using server cache and a library like `react-query` has some nice benefits.
+
+    * **Improved performance and speed**: Cause of the caching mechanism the amount of API calls will be reduced and speeds up data retrieval.
+    * **Simplified data fetching logic**: Less code because libraries like react-query abstract away the complexities of managing the data fetching lifecycle.
+    * **Easier state handling**: Cause of the built-in mechanism it is easier to handle error, loading and pending states.
+    * **Smart refetching strategies**: Your local data keeps up to date with the server data.
+
+    ### Conclusion
+    Server cache in combination with react-query is a powerful tool for managing server state in your React applications.
+    It abstracts the complexities of data fetching, caching, and synchronization, allowing you to focus on building your UI.
+
+    ## Recap State Management Strategies
+    We have now seen a few different ways to manage status in a React app. The following part is a recommendation on when to use a certain strategy.
+
+    ### When to Use Local State:
+    * **Component-specific data:** Data that only needs to be accessed or modified within a single component.
+    Example: Form inputs, toggles, counters.
+    * **Temporary state:** Data that doesn't need to persist beyond the lifecycle of a component.
+    Example: Modal visibility, dropdown open/close state.
+    * **Simple state logic:** When state management logic is straightforward and does not require complex handling.
+    Example: UI element states like hover effects, active tab index.
+
+    ### When to Use Global State:
+    * **Shared data:** Data that needs to be accessible by multiple components.
+    Example: User authentication status, theme settings, application-wide notifications.
+    * **Application-wide state:** State that needs to be consistent and shared throughout the application.
+    Example: Shopping cart contents, user preferences.
+    * **Complex state logic:** When state management requires advanced logic, derived data, or needs to be centralized.
+    Example: Multi-step workflows.
+
+    ### When to Use URL State:
+    * **Shareable state:** When you want to enable users to share the current state of the application via a URL.
+    Example: Search filters, pagination state, current view or tab.
+    * **Persisted across reloads:** State that should persist even when the page is reloaded.
+    Example: Form step in a multi-step form, selected items in a list.
+    * **Routing state:** State that is naturally part of the navigation logic.
+    Example: Selected product in a product detail page, active section in a single-page application.
+
+    ### When to Use Server Cache:
+    * **Remote data fetching:** When data needs to be fetched from a server or external API.
+    Example: User data, product listings, blog posts.
+    * **Asynchronous data:** Handling data that involves asynchronous operations and needs to manage loading and error states.
+    Example: Data fetched on component mount, search results.
+    * **Data synchronization:** Keeping data in sync with the server and managing cache invalidation.
+    Example: Real-time updates, live data feeds.
+    * **Performance optimization:** Reducing network requests and improving load times by caching responses.
+    Example: Caching API responses to avoid redundant requests.
+
+</Content>

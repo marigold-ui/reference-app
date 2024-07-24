@@ -1,7 +1,6 @@
-import { Columns, SectionMessage } from '@marigold/components';
+import { SectionMessage } from '@marigold/components';
 
-import { Block, Content } from '@/components/Container';
-import DemoLink from '@/components/DemoLink';
+import { Content } from '@/components/Container';
 import Preview from '@/components/Preview';
 
 import SelectExample from './_components/SelectExample';
@@ -64,14 +63,12 @@ options and tracking user-selected items, eliminating the need for you to handle
 tasks manually.
 
 <SectionMessage variant="info">
-  <SectionMessage.Title>
-  Single Import
-  </SectionMessage.Title>
+  <SectionMessage.Title>Single Import</SectionMessage.Title>
   <SectionMessage.Content>
-    Note how compound components usually export their related components using dot
-    notation (`Select.Option`). This technique allows you to bundle the parent and
-    child components together in a single export, making it easy to access all
-    related components.
+    Note how compound components usually export their related components using
+    dot notation (`Select.Option`). This technique allows you to bundle the
+    parent and child components together in a single export, making it easy to
+    access all related components.
   </SectionMessage.Content>
 </SectionMessage>
 
