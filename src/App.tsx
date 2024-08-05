@@ -1,5 +1,5 @@
 import { StrictMode } from 'react';
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createRouter, RouterProvider } from '@tanstack/react-router';
 
 import { MarigoldProvider } from '@marigold/components';
@@ -10,6 +10,10 @@ import { routeTree } from './route-tree';
 // Router
 // ---------------
 const router = createRouter({ routeTree });
+
+router.subscribe('onLoad', () => {
+  window.scrollTo(0, 0);
+});
 
 declare module '@tanstack/react-router' {
   interface Register {
