@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createRouter, RouterProvider } from '@tanstack/react-router';
-
+import { Analytics } from '@vercel/analytics/react';
 import { MarigoldProvider } from '@marigold/components';
 import theme from '@marigold/theme-docs';
 
@@ -33,6 +33,7 @@ export const App = () => (
       <MarigoldProvider theme={theme}>
         <RouterProvider router={router} />
       </MarigoldProvider>
+      <Analytics />
     </QueryClientProvider>
   </StrictMode>
 );
