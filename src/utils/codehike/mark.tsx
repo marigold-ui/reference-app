@@ -2,6 +2,7 @@ import { type AnnotationHandler, InnerLine } from 'codehike/code';
 
 export const mark: AnnotationHandler = {
   name: 'mark',
+  onlyIfAnnotated: true,
   Line: ({ annotation, ...props }) => {
     const color = annotation?.query || 'rgb(14 165 233)';
     if (annotation) {

@@ -10,6 +10,7 @@ import React, { useLayoutEffect, useRef } from 'react';
 
 export const focus: AnnotationHandler = {
   name: 'focus',
+  onlyIfAnnotated: true,
   PreWithRef: props => {
     const ref = getPreRef(props);
     useScrollToFocus(ref);
