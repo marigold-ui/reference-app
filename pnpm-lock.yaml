@@ -50,6 +50,9 @@ importers:
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.5.0(react@19.1.0)
+      codehike:
+        specifier: ^1.0.0
+        version: 1.0.0
       react:
         specifier: 19.1.0
         version: 19.1.0
@@ -822,6 +825,9 @@ packages:
 
   '@code-hike/lighter@0.7.0':
     resolution: {integrity: sha512-64O07rIORKQLB+5T/GKAmKcD9sC0N9yHFJXa0Hs+0Aee1G+I4bSXxTccuDFP6c/G/3h5Pk7yv7PoX9/SpzaeiQ==}
+
+  '@code-hike/lighter@1.0.0':
+    resolution: {integrity: sha512-GVd0NveUTZ2jgeUh4lrLBZr2zSQT1ws32H747qK6AxSOMas4lXfp5KvkgmsHVg8WLdWwhtaaU9IXpyHEjfeDBw==}
 
   '@code-hike/mdx@0.9.0':
     resolution: {integrity: sha512-0wg68ZCjVWAkWT4gBUZJ8Mwktjen/XeWyqBQCrhA2IZSbZZnMYsEI6JJEFb/nZoNI3comB3JdxPLykZRq3qT2A==}
@@ -2793,6 +2799,9 @@ packages:
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
+
+  codehike@1.0.0:
+    resolution: {integrity: sha512-JJVrAgjWvueIEaKdMqdygOjPeVt11y+xn+Sa7nsKJSmYuhxzDfEPzY3z6MR17OIY+DqgwK/HiaEhY91UaqhyWw==}
 
   collapse-white-space@2.1.0:
     resolution: {integrity: sha512-loKTxY1zCOuG4j9f6EPnuyyYkf58RnhhWTvRoZEokgB+WbdXehfjFviyOVYkqzEWz1Q5kRiZdBYS5SwxbQYwzw==}
@@ -5777,6 +5786,10 @@ snapshots:
 
   '@code-hike/lighter@0.7.0': {}
 
+  '@code-hike/lighter@1.0.0':
+    dependencies:
+      ansi-sequence-parser: 1.1.1
+
   '@code-hike/mdx@0.9.0(react@19.1.0)':
     dependencies:
       '@code-hike/lighter': 0.7.0
@@ -8342,6 +8355,16 @@ snapshots:
   client-only@0.0.1: {}
 
   clsx@2.1.1: {}
+
+  codehike@1.0.0:
+    dependencies:
+      '@code-hike/lighter': 1.0.0
+      diff: 5.2.0
+      estree-util-visit: 2.0.0
+      mdast-util-mdx-jsx: 3.1.2
+      unist-util-visit: 5.0.0
+    transitivePeerDependencies:
+      - supports-color
 
   collapse-white-space@2.1.0: {}
 

@@ -1,11 +1,24 @@
-import { defineConfig } from 'vite';
 import type { UserConfig } from 'vite';
+import { defineConfig } from 'vite';
 import path from 'node:path';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
 import { remarkCodeHike } from '@code-hike/mdx';
 import { TanStackRouterVite } from '@tanstack/router-vite-plugin';
+import type { CodeHikeConfig } from 'codehike/mdx';
+import * as v1 from 'codehike/mdx';
 
+const chConfig: CodeHikeConfig = {
+  syntaxHighlighting: { theme: 'github-dark' },
+  components: { code: 'CodeHikeWrapperComponent' },
+  ignoreCode: ({ meta }) => {
+    console.log(meta);
+    if (meta !== null) {
+      return !meta.startsWith('use-v1');
+    }
+    return true;
+  },
+};
 export default defineConfig(async () => {
   const mdx = await import('@mdx-js/rollup');
   return {
@@ -23,6 +36,7 @@ export default defineConfig(async () => {
         enforce: 'pre',
         ...mdx.default({
           remarkPlugins: [
+            [v1.remarkCodeHike, chConfig],
             [
               remarkCodeHike,
               {
@@ -32,6 +46,8 @@ export default defineConfig(async () => {
               },
             ],
           ],
+          recmaPlugins: [[v1.recmaCodeHike, chConfig]],
+          jsx: true,
         }),
       },
       react(),

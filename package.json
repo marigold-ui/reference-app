@@ -31,6 +31,7 @@
     "@tanstack/react-query-devtools": "5.72.0",
     "@tanstack/react-router": "1.115.2",
     "@vercel/analytics": "^1.5.0",
+    "codehike": "^1.0.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "tailwind-merge": "3.2.0"
