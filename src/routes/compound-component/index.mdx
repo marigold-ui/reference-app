@@ -1,6 +1,6 @@
-import { SectionMessage } from '@marigold/components';
+import {SectionMessage} from '@marigold/components';
 
-import { Content } from '@/components/Container';
+import {Content} from '@/components/Container';
 import Preview from '@/components/Preview';
 
 import SelectExample from './_components/SelectExample';
@@ -9,36 +9,22 @@ import TabsAnatomy from './_components/TabsAnatomy';
 import TabsActionExample from './_components/TabsActionExample';
 import TabsGotoExample from './_components/TabsGotoExample';
 
-import TabsBaiscContent from './_components/tabs-basic.mdx';
+import TabsBasicContent from './_components/tabs-basic.mdx';
 import TabsCompoundComponentContent from './_components/tabs-compound-component.mdx';
 import CompareImplementation from './_components/compare-implementation.mdx';
 
 <Content>
 
-    ```js
-    console.log("this is codehike v0")
-        function lorem(ipsum, dolor = 1) {
-        // !mark
-        return dolor
-    }
-
-    function ipsum(lorem, dolor = 1) {
-        // !mark(1:2) gold
-        const sit = lorem == null ? 0 : lorem.sit
-        dolor = sit - amet(dolor)
-        // !mark[/sit/] pink
-        return sit ? consectetur(lorem) : []
-
-    }
-    ```
-
     ```js use-v1
     console.log("this is codehike v1")
     function lorem(ipsum, dolor = 1) {
-        // !mark
+        // !focus(1:5)
         return dolor
-
-}
+        xx
+        xx
+        xx
+        xx
+    }
 
     function ipsum(lorem, dolor = 1) {
         // !mark(1:2) gold
@@ -59,7 +45,7 @@ Remember the `<select>` element in HTML with its `<option>` children? Compound c
 are more powerful and flexible. In this tutorial, we'll explore how to use this pattern to build customizable
 and versatility components.
 
-```html
+```html use-v1
 <select>
   <option value="backlog">Backlog</option>
   <option value="in-progress">In Progress</option>
@@ -82,7 +68,7 @@ An example of this internal state management can be seen with [Marigold's Select
 component. The disabled state (`disabledKeys`) and the `onChange` handler are both managed within the parent component (`<Select>`),
 instead of handling this on every children individually.
 
-```tsx
+```tsx use-v1
 <Select label="Status" disabledKeys={['wont-do']}>
   <Select.Option id="backlog">Backlog</Select.Option>
   <Select.Option id="in-progress">In Progress</Select.Option>
@@ -152,7 +138,7 @@ before gradually enhancing it with more advanced features and best practices.
 
 </Content>
 
-<TabsBaiscContent />
+<TabsBasicContent />
 
 <Content>
 
@@ -239,7 +225,7 @@ which involves adding more props and changing the internal logic. This feature w
 as something like a "tabs action". Adding fratures like this can quickly lead to messy and hard-to-maintain code.
 
 {/* prettier-ignore */}
-```tsx
+```tsx use-v1
 <Tabs tabs={[/* ... */]} action={<button onClick={/* ... */}>Buy</button>}/>
 ```
 
