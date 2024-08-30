@@ -10,7 +10,7 @@ import * as v1 from 'codehike/mdx';
 
 const chConfig: CodeHikeConfig = {
   syntaxHighlighting: { theme: 'github-dark' },
-  components: { code: 'CodeHikeWrapperComponent' },
+  components: { code: 'CodeHikeWrapper' },
   ignoreCode: ({ meta }) => {
     console.log(meta);
     if (meta !== null) {
