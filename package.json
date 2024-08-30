@@ -35,7 +35,8 @@
     "codehike": "^1.0.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "tailwind-merge": "3.2.0"
+    "tailwind-merge": "3.2.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.24.0",

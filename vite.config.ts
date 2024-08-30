@@ -12,7 +12,6 @@ const chConfig: CodeHikeConfig = {
   syntaxHighlighting: { theme: 'material-ocean' },
   components: { code: 'CodeHikeWrapper' },
   ignoreCode: ({ meta }) => {
-    console.log(meta);
     if (meta !== null) {
       return !meta.startsWith('use-v1');
     }
