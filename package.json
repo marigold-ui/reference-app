@@ -10,6 +10,7 @@
     "lint:fix": "pnpm lint --fix",
     "preview": "vite preview",
     "format": "prettier --write \"**/*\"",
+    "format:fix": "prettier --write \"**/*\" --fix",
     "typecheck": "tsc --noEmit",
     "test": "vitest run --config vite.config.ts",
     "test:watch": "vitest watch --config vite.config.ts",
