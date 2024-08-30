@@ -4,8 +4,19 @@ import { focus } from '@/utils/codehike/focus';
 import { tokenTransitions } from '@/utils/codehike/scrollycoding/token-transition';
 
 function CodeHikeWrapper({ codeblock }: { codeblock: HighlightedCode }) {
-  console.log(JSON.stringify(codeblock));
-  return <Pre code={codeblock} handlers={[mark, focus, tokenTransitions]} />;
+  // we don't want use-v1 as filename - can be removed when done with migrating
+  if (codeblock.meta === 'use-v1') {
+    return <Pre code={codeblock} handlers={[mark, focus, tokenTransitions]} />;
+  }
+
+  return (
+    <div className="rounded bg-zinc-950 px-4">
+      <div className="py-2 text-center text-sm text-zinc-400">
+        {codeblock.meta}
+      </div>
+      <Pre code={codeblock} handlers={[mark, focus, tokenTransitions]} />
+    </div>
+  );
 }
 
 export default CodeHikeWrapper;
