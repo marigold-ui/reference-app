@@ -1,6 +1,6 @@
-import { SectionMessage } from '@marigold/components';
+import {SectionMessage} from '@marigold/components';
 
-import { Content } from '@/components/Container';
+import {Content} from '@/components/Container';
 import Preview from '@/components/Preview';
 
 import SelectExample from './_components/SelectExample';
@@ -15,7 +15,41 @@ import CompareImplementation from './_components/compare-implementation.mdx';
 
 <Content>
 
-In our application, we often encounter components that rely on each other, sharing state and logic. This
+    ```js
+    console.log("this is codehike v0")
+        function lorem(ipsum, dolor = 1) {
+        // !mark
+        return dolor
+    }
+
+    function ipsum(lorem, dolor = 1) {
+        // !mark(1:2) gold
+        const sit = lorem == null ? 0 : lorem.sit
+        dolor = sit - amet(dolor)
+        // !mark[/sit/] pink
+        return sit ? consectetur(lorem) : []
+
+    }
+    ```
+
+    ```js use-v1
+    console.log("this is codehike v1")
+    function lorem(ipsum, dolor = 1) {
+        // !mark
+        return dolor
+}
+
+    function ipsum(lorem, dolor = 1) {
+        // !mark(1:2) gold
+        const sit = lorem == null ? 0 : lorem.sit
+        dolor = sit - amet(dolor)
+        // !mark[/sit/] pink
+        return sit ? consectetur(lorem) : []
+    }
+    ```
+
+    In our application, we often encounter components that rely on each other, sharing state and logic. This
+
 reliance can lead to challenges in managing state, ensuring consistent behavior, and maintaining clean,
 organized code. To address these challenges and facilitate a well-structured, reusable, and
 customizable API design, React uses a pattern called compound components.
