@@ -46,7 +46,6 @@ export default defineConfig(async () => {
             ],
           ],
           recmaPlugins: [[v1.recmaCodeHike, chConfig]],
-          jsx: true,
         }),
       },
       react(),
