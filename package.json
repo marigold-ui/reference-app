@@ -19,9 +19,9 @@
   "dependencies": {
     "@code-hike/mdx": "0.9.0",
     "@marigold/components": "8.0.2",
-    "@marigold/icons": "1.2.56",
+    "@marigold/icons": "1.2.57",
     "@marigold/system": "^8.0.2",
-    "@marigold/theme-core": "26.2.0",
+    "@marigold/theme-core": "26.2.1",
     "@marigold/theme-docs": "^2.0.4",
     "@mdx-js/rollup": "3.0.1",
     "@tailwindcss/typography": "^0.5.13",
