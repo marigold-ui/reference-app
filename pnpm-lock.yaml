@@ -51,8 +51,8 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       tailwind-merge:
-        specifier: 2.5.2
-        version: 2.5.2
+        specifier: 2.5.3
+        version: 2.5.3
     devDependencies:
       '@marigold/eslint-config':
         specifier: 0.4.16
@@ -4966,6 +4966,9 @@ packages:
 
   tailwind-merge@2.5.2:
     resolution: {integrity: sha512-kjEBm+pvD+6eAwzJL2Bi+02/9LFLal1Gs61+QB7HvTfQQ0aXwC5LGT8PEt1gS0CWKktKe6ysPTAy3cBC5MeiIg==}
+
+  tailwind-merge@2.5.3:
+    resolution: {integrity: sha512-d9ZolCAIzom1nf/5p4LdD5zvjmgSxY0BGgdSvmXIoMYAiPdAW/dSpP7joCDYFY7r/HkEa2qmPtkgsu0xjQeQtw==}
 
   tailwindcss-react-aria-components@1.1.5:
     resolution: {integrity: sha512-0qNr/RlKe5MtDMGMsCFbCoQzpURzEg1raQgnssvOyOWtIIpqleu0lwj8KVRbiZGh8DvX9fNxT+GnfYdiNLJ+Bw==}
@@ -12141,6 +12144,8 @@ snapshots:
       '@babel/runtime': 7.24.8
 
   tailwind-merge@2.5.2: {}
+
+  tailwind-merge@2.5.3: {}
 
   tailwindcss-react-aria-components@1.1.5(tailwindcss@3.4.13):
     dependencies:
