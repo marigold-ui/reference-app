@@ -15,21 +15,21 @@ export function Scrollycoding(props: unknown) {
   const { steps } = parseProps(props, Schema);
   return (
     <SelectionProvider className="flex gap-4">
-      <div className="prose mb-[90vh] ml-2 mt-6 flex-1">
+      <div className="flex-1 mt-32 mb-[90vh] ml-2 prose prose-invert">
         {steps.map((step, i) => (
           <Selectable
             key={i}
             index={i}
             selectOn={['click', 'scroll']}
-            className="bg-card rounded border-l-4 px-5 py-2 data-[selected=true]:border-blue-400"
+            className="border-l-4 border-zinc-700 data-[selected=true]:border-blue-400 px-5 py-2 mb-24 rounded bg-zinc-900"
           >
             <h2 className="mt-4 text-xl">{step.title}</h2>
             <div>{step.children}</div>
           </Selectable>
         ))}
       </div>
-      <div className="bg-card w-[40vw] max-w-xl">
-        <div className="sticky top-16 overflow-auto">
+      <div className="w-[40vw] max-w-xl bg-zinc-900">
+        <div className="top-16 sticky overflow-auto">
           <Selection
             from={steps.map(step => {
               return <CodeHikeWrapper codeblock={step.code} />;
