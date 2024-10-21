@@ -41,7 +41,8 @@ const UrlSearchFilterComponent = () => {
 
   const handleSearchChange = (value: string) => {
     navigate({
-      search: { name: value },
+      to: '.',
+      search: prev => ({ ...prev, name: value }),
     });
   };
 

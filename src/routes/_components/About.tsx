@@ -11,8 +11,8 @@ export const About = () => (
           The main purpose of this site is to provide an overview of common
           patterns and practices in ReactJS through simple examples. We address
           specific issues and challenges, such as managing state and handling
-          forms, and demonstrate these in conjunction with the{' '}
-          <Link href="https://www.marigold-ui.io/">Marigold Design System</Link>{' '}
+          forms, and demonstrate these in conjunction with the
+          <Link href="https://www.marigold-ui.io/">Marigold Design System</Link>
           where applicable.
         </p>
       </div>
@@ -31,13 +31,13 @@ export const About = () => (
       <div>
         <h2>Feedback</h2>
         <p>
-          If you have any suggestions for patterns that we should add, or if
-          you some your own code could become a valuable addition here, we'd
-          love to hear from you!
+          If you have any suggestions for patterns that we should add, or if you
+          some your own code could become a valuable addition here, we'd love to
+          hear from you!
         </p>
         <p>
           Your feedback, ideas, and suggestions for improvement are always
-          welcome. Feel free to reach out to us through any of{' '}
+          welcome. Feel free to reach out to us through any of
           <Link href="https://www.marigold-ui.io/introduction/get-in-touch">
             <u>our communication channels</u>
           </Link>

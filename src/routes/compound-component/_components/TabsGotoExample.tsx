@@ -22,9 +22,9 @@ const App = () => (
             unparalleled light show. It's going to be a wobbly good time!
           </p>
           <p>
-            Curious about the event details? Find out{' '}
+            Curious about the event details? Find out
             <Goto to="locations">when and where</Goto> DJ Wobblemeister will be
-            turning up the wobble! Make sure to check out our exclusive{' '}
+            turning up the wobble! Make sure to check out our exclusive
             <Goto to="merchandise">merchandise</Goto>. Only available during the
             tour!
           </p>
