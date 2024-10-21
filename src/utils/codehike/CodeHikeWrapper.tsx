@@ -6,7 +6,13 @@ import { tokenTransitions } from '@/utils/codehike/scrollycoding/token-transitio
 function CodeHikeWrapper({ codeblock }: { codeblock: HighlightedCode }) {
   // we don't want use-v1 as filename - can be removed when done with migrating
   if (codeblock.meta === 'use-v1') {
-    return <Pre code={codeblock} handlers={[mark, focus, tokenTransitions]} />;
+    return (
+      <Pre
+        code={codeblock}
+        handlers={[mark, focus, tokenTransitions]}
+        className="min-h-[40rem]"
+      />
+    );
   }
 
   return (
@@ -14,7 +20,11 @@ function CodeHikeWrapper({ codeblock }: { codeblock: HighlightedCode }) {
       <div className="py-2 text-center text-sm text-zinc-400">
         {codeblock.meta}
       </div>
-      <Pre code={codeblock} handlers={[mark, focus, tokenTransitions]} />
+      <Pre
+        code={codeblock}
+        handlers={[mark, focus, tokenTransitions]}
+        className="min-h-[40rem]"
+      />
     </div>
   );
 }
