@@ -41,6 +41,7 @@ const UrlSearchFilterComponent = () => {
 
   const handleSearchChange = (value: string) => {
     navigate({
+      // @ts-ignore
       search: { name: value },
     });
   };

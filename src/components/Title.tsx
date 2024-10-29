@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import { Breakout } from './Container';
 
 export interface TitleProps {
@@ -21,7 +21,7 @@ export const Title = ({ title, caption, image }: TitleProps) => (
       {
         '--bg-image': image ? `url(${image.url})` : undefined,
         '--bg-size': image ? `${image.size || 'auto'}` : undefined,
-      } as any
+      } as CSSProperties
     }
   >
     <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-neutral-700/50 via-neutral-700/10 via-20% to-transparent" />
