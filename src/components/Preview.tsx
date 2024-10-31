@@ -5,7 +5,7 @@ export interface PreviewProps {
   children?: ReactNode;
 }
 
-const CodeHikePreview: any = CH['Preview'];
+const CodeHikePreview = CH['Preview'];
 
 export const Preview = ({ children }: PreviewProps) => (
   // @ts-ignore

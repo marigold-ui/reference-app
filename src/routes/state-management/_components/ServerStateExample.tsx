@@ -47,6 +47,7 @@ function ServerStateExample() {
             value={filters.title}
             onChange={value =>
               navigate({
+                // @ts-ignore
                 search: prev => ({ ...prev, title: value }),
               })
             }
@@ -59,6 +60,7 @@ function ServerStateExample() {
             width={'1/5'}
             onChange={key => {
               navigate({
+                // @ts-ignore
                 search: prev => ({ ...prev, category: key }),
               });
             }}
