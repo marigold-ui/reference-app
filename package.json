@@ -39,7 +39,7 @@
     "@marigold/prettier-config": "0.3.1",
     "@tanstack/router-devtools": "1.77.6",
     "@tanstack/router-vite-plugin": "1.76.4",
-    "@testing-library/jest-dom": "6.6.2",
+    "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.0.1",
     "@types/jest": "29.5.14",
     "@types/node": "22.8.2",
