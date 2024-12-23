@@ -122,7 +122,7 @@ importers:
         version: 3.17.5(tailwindcss@3.4.16)
       globals:
         specifier: ^15.11.0
-        version: 15.12.0
+        version: 15.14.0
       jsdom:
         specifier: 25.0.1
         version: 25.0.1
@@ -4120,8 +4120,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@15.12.0:
-    resolution: {integrity: sha512-1+gLErljJFhbOVyaetcwJiJ4+eLe45S2E7P5UiZ9xGfeq3ATQf5DOv9G7MH3gGbKQLkzmNh2DxfZwLdw+j6oTQ==}
+  globals@15.14.0:
+    resolution: {integrity: sha512-OkToC372DtlQeje9/zHIo5CT8lRP/FUgEOKBEhU4e0abL7J7CD24fD9ohiLN5hagG/kWCYj4K5oaxxtj2Z0Dig==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -7162,8 +7162,8 @@ snapshots:
       '@typescript-eslint/parser': 7.14.1(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3)
       eslint: 9.15.0(jiti@1.21.6)
       eslint-config-prettier: 9.1.0(eslint@9.15.0(jiti@1.21.6))
-      eslint-config-react-app: 7.0.1(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.26.0))(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3)
-      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.26.0))(eslint@9.15.0(jiti@1.21.6))
+      eslint-config-react-app: 7.0.1(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3)
+      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@9.15.0(jiti@1.21.6))
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.14.1(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.15.0(jiti@1.21.6))
       eslint-plugin-jest: 28.6.0(@typescript-eslint/eslint-plugin@7.14.1(@typescript-eslint/parser@7.14.1(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@9.15.0(jiti@1.21.6))
@@ -10702,7 +10702,7 @@ snapshots:
     dependencies:
       eslint: 9.15.0(jiti@1.21.6)
 
-  eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.26.0))(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3):
+  eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3):
     dependencies:
       '@babel/core': 7.24.7
       '@babel/eslint-parser': 7.24.8(@babel/core@7.24.7)(eslint@9.15.0(jiti@1.21.6))
@@ -10712,7 +10712,7 @@ snapshots:
       babel-preset-react-app: 10.0.1
       confusing-browser-globals: 1.0.11
       eslint: 9.15.0(jiti@1.21.6)
-      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.26.0))(eslint@9.15.0(jiti@1.21.6))
+      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@9.15.0(jiti@1.21.6))
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.15.0(jiti@1.21.6))
       eslint-plugin-jest: 25.7.0(@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@9.15.0(jiti@1.21.6))
@@ -10757,7 +10757,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-flowtype@8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.26.0))(eslint@9.15.0(jiti@1.21.6)):
+  eslint-plugin-flowtype@8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@9.15.0(jiti@1.21.6)):
     dependencies:
       '@babel/plugin-syntax-flow': 7.24.7(@babel/core@7.24.7)
       '@babel/plugin-transform-react-jsx': 7.24.7(@babel/core@7.24.7)
@@ -11186,7 +11186,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@15.12.0: {}
+  globals@15.14.0: {}
 
   globalthis@1.0.4:
     dependencies:
