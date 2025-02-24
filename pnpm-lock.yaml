@@ -25,7 +25,7 @@ importers:
         version: 27.0.4(@types/react@18.3.18)(postcss@8.4.49)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.17)
       '@marigold/theme-docs':
         specifier: ^2.2.0
-        version: 2.2.6(@types/react@18.3.18)(postcss@8.4.49)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.17)
+        version: 2.4.0(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@mdx-js/rollup':
         specifier: 3.1.0
         version: 3.1.0(acorn@8.14.0)(rollup@4.24.2)
@@ -1380,8 +1380,8 @@ packages:
       react: 19.x
       react-dom: 19.x
 
-  '@marigold/components@10.2.1':
-    resolution: {integrity: sha512-CW8CaXs4fFz9WvD03i7lksYSnYfl1r94NNIkCzzG+TOhCrPmHqk0FUfuthRPpT5QxceOsQhXXEU+jElZAUgXpQ==}
+  '@marigold/components@11.1.1':
+    resolution: {integrity: sha512-8RaQujALfe3P/0zT0Knze1wucXeNHzckbNFfTB8xi3uluG05O5j6QhRYQjm+tYteadjSIAQN+f4AE4dLx1DRbw==}
     peerDependencies:
       react: 19.x
       react-dom: 19.x
@@ -1408,8 +1408,8 @@ packages:
       react: 19.x
       react-dom: 19.x
 
-  '@marigold/system@10.2.1':
-    resolution: {integrity: sha512-B/w1at5TDt2DdGjtMWaUCaOgE4S9ATd0CzXAE5P4o6hvkC9zbAqb7ECek5r3bAGcjHeKKOA2d7ZXf4/1Rran9w==}
+  '@marigold/system@11.1.1':
+    resolution: {integrity: sha512-RWwkPK3Sa1ajYQ3+4U7rISE5p7cI3z7yI4f6LlIDdDIwmeHG9u8xrrH51ZV+bslccPrU3/18tusBKgFgjuNqLg==}
     peerDependencies:
       react: 19.x
       react-dom: 19.x
@@ -1417,17 +1417,14 @@ packages:
   '@marigold/theme-core@27.0.4':
     resolution: {integrity: sha512-unwBS8XEzjWrYUM+L2xICQLMNktSojJBP13wwRegS4BxRn0a5w7RC4RnBbjeNznY90OQxp+XA7mUDEFXthLRkQ==}
 
-  '@marigold/theme-docs@2.2.6':
-    resolution: {integrity: sha512-MGtPeQB70jfeBgXW14chTZ4ZjoSpLwCbw3ZxPS+VMOSuhlFnnJw5hzVKtLG817aDOsa4bPVbtCoLiusO4c5fLw==}
+  '@marigold/theme-docs@2.4.0':
+    resolution: {integrity: sha512-09fpFV0RzVgVPYARyBlhoxNWKRw4knU3qLQLEp09WPzXySHI1eEprAh4crxH/jlBNznyJ7iM47ilp5sKYs5ZpQ==}
+
+  '@marigold/theme-plugins@1.0.1':
+    resolution: {integrity: sha512-o0Rhec2wDSBRfXcqfnDGdlyp6Xx5YErBFLAnN5khXMW9XR4EVTVV50Qw8h4QFhYWSbgLjZKlaw5/E2rylrx8dQ==}
 
   '@marigold/theme-preset@1.3.27':
     resolution: {integrity: sha512-98+Z7BOBtayx8TNk2vRljPKPjuGcNZJ7sRZUr/s1oxMf3C1I5nXGU3smBzs2HaHYFT6gh6oeS6AfOn74rwU/iw==}
-    peerDependencies:
-      postcss: 8.4.x || 8.5.x
-      tailwindcss: 3.4.x
-
-  '@marigold/theme-preset@1.3.29':
-    resolution: {integrity: sha512-sDIF0TLlmSYUi6CXTXvnymE7nVN0XDLxgXoieyrF7dPkbey3qDv7q9pxtkwZJ6pUG78ox0iqZFpBNrKfIUbdkA==}
     peerDependencies:
       postcss: 8.4.x || 8.5.x
       tailwindcss: 3.4.x
@@ -6663,10 +6660,10 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@marigold/components@10.2.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@marigold/components@11.1.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@internationalized/date': 3.7.0
-      '@marigold/system': 10.2.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@marigold/system': 11.1.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@marigold/types': 1.2.1(@types/react@18.3.18)
       '@react-aria/accordion': 3.0.0-alpha.37(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/button': 3.11.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6702,8 +6699,8 @@ snapshots:
       '@typescript-eslint/parser': 7.14.1(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3)
       eslint: 9.18.0(jiti@1.21.6)
       eslint-config-prettier: 9.1.0(eslint@9.18.0(jiti@1.21.6))
-      eslint-config-react-app: 7.0.1(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3)
-      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@9.18.0(jiti@1.21.6))
+      eslint-config-react-app: 7.0.1(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.26.0))(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3)
+      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.26.0))(eslint@9.18.0(jiti@1.21.6))
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.14.1(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3))(eslint@9.18.0(jiti@1.21.6))
       eslint-plugin-jest: 28.6.0(@typescript-eslint/eslint-plugin@7.14.1(@typescript-eslint/parser@7.14.1(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3))(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3))(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@9.18.0(jiti@1.21.6))
@@ -6745,7 +6742,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@marigold/system@10.2.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@marigold/system@11.1.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@marigold/types': 1.2.1(@types/react@18.3.18)
       '@react-aria/i18n': 3.12.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6770,33 +6767,21 @@ snapshots:
       - react-dom
       - tailwindcss
 
-  '@marigold/theme-docs@2.2.6(@types/react@18.3.18)(postcss@8.4.49)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.17)':
+  '@marigold/theme-docs@2.4.0(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@marigold/components': 10.2.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@marigold/system': 10.2.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@marigold/theme-preset': 1.3.29(@types/react@18.3.18)(postcss@8.4.49)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.17)
+      '@marigold/components': 11.1.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@marigold/system': 11.1.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@marigold/theme-plugins': 1.0.1
     transitivePeerDependencies:
       - '@types/react'
-      - postcss
       - react
       - react-dom
-      - tailwindcss
+
+  '@marigold/theme-plugins@1.0.1': {}
 
   '@marigold/theme-preset@1.3.27(@types/react@18.3.18)(postcss@8.4.49)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.17)':
     dependencies:
       '@marigold/system': 10.1.3(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      deepmerge: 4.3.1
-      postcss: 8.4.49
-      tailwindcss: 3.4.17
-      tailwindcss-react-aria-components: 1.2.0(tailwindcss@3.4.17)
-    transitivePeerDependencies:
-      - '@types/react'
-      - react
-      - react-dom
-
-  '@marigold/theme-preset@1.3.29(@types/react@18.3.18)(postcss@8.4.49)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.17)':
-    dependencies:
-      '@marigold/system': 10.2.1(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       deepmerge: 4.3.1
       postcss: 8.4.49
       tailwindcss: 3.4.17
@@ -9407,7 +9392,7 @@ snapshots:
     dependencies:
       eslint: 9.18.0(jiti@1.21.6)
 
-  eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3):
+  eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.26.0))(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3):
     dependencies:
       '@babel/core': 7.24.7
       '@babel/eslint-parser': 7.24.8(@babel/core@7.24.7)(eslint@9.18.0(jiti@1.21.6))
@@ -9417,7 +9402,7 @@ snapshots:
       babel-preset-react-app: 10.0.1
       confusing-browser-globals: 1.0.11
       eslint: 9.18.0(jiti@1.21.6)
-      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@9.18.0(jiti@1.21.6))
+      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.26.0))(eslint@9.18.0(jiti@1.21.6))
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3))(eslint@9.18.0(jiti@1.21.6))
       eslint-plugin-jest: 25.7.0(@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3))(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3))(eslint@9.18.0(jiti@1.21.6))(typescript@5.7.3)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@9.18.0(jiti@1.21.6))
@@ -9462,7 +9447,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-flowtype@8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@9.18.0(jiti@1.21.6)):
+  eslint-plugin-flowtype@8.0.3(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.26.0))(eslint@9.18.0(jiti@1.21.6)):
     dependencies:
       '@babel/plugin-syntax-flow': 7.24.7(@babel/core@7.24.7)
       '@babel/plugin-transform-react-jsx': 7.24.7(@babel/core@7.24.7)
