@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 
-import { Card, Stack, Tiles } from '@marigold/components';
+import { Card, Stack, Tiles, Button } from '@marigold/components';
 import { Link } from '@tanstack/react-router';
 
 export interface TeaserCardProps {
@@ -12,8 +12,9 @@ export interface TeaserCardProps {
 
 export const TeaserCard = ({ href, icon, title, caption }: TeaserCardProps) => (
   <Link className="flex no-underline" to={href}>
-    <Card variant="hovering" p={6}>
+    <Card p={6}>
       <Stack space={2}>
+        <Button variant="primary">adassadasdasdasd</Button>
         <div className="grid size-12 place-items-center rounded-full bg-bg-muted p-2">
           {icon}
         </div>
