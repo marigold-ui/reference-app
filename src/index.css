@@ -1,13 +1,25 @@
-:root {
-  --page-padding: 0.75rem;
-  --page-padding-md: 2rem;
-  --page-padding-xl: 2.5rem;
-  --page-header-height: 56px;
-}
+@import 'tailwindcss';
+@import '../node_modules/@marigold/theme-docs/dist/theme.css';
+@plugin '@tailwindcss/typography';
+@source '../src/**/*.tsx';
+@source '../node_modules/@marigold/components';
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+
+@layer base {
+  :root {
+    --page-padding: 0.75rem;
+    --page-padding-md: 2rem;
+    --page-padding-xl: 2.5rem;
+    --page-header-height: 56px;
+  }
+}
 
 /************************/
 /*   CUSTOM CODE HIKE   */
@@ -24,15 +36,15 @@
 .ch-codeblock,
 .ch-preview,
 .ch-scrollycoding {
-  margin: theme('spacing.8') 0;
+  margin: --spacing(8) 0;
 }
 
 .ch-code-wrapper {
-  padding: 0 theme('spacing.1');
+  padding: 0 --spacing(1);
 }
 
 .ch-scrollycoding-step-content {
-  padding: theme('spacing.6');
+  padding: --spacing(6);
 }
 
 .ch-scrollycoding-step-content[data-selected='true'] {
@@ -64,4 +76,45 @@
 
 .ch-code-multiline-mark > .ch-code-button {
   display: none !important;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  padding-top: 8rem; /* Tailwind spacing 32 */
+  margin-bottom: 2.5rem; /* Tailwind spacing 10 */
+}
+h2 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 6rem; /* Tailwind spacing 24 */
+  margin-bottom: 1.5rem; /* Tailwind spacing 6 */
+}
+@utility content {
+  padding: var(--page-padding);
+}
+@utility content-md {
+  padding: var(--page-padding-md);
+}
+@utility content-xl {
+  padding: var(--page-padding-xl);
+}
+@utility grid-cols-content {
+  grid-template-columns:
+    minmax(var(--page-padding), 1fr)
+    minmax(0, 1300px)
+    minmax(var(--page-padding), 1fr);
+}
+@utility grid-cols-content-md {
+  grid-template-columns:
+    minmax(var(--page-padding-md), 1fr)
+    minmax(0, 1300px)
+    minmax(var(--page-padding-md), 1fr);
+}
+@utility grid-cols-content-xl {
+  grid-template-columns:
+    minmax(var(--page-padding-xl), 1fr)
+    minmax(0, 1300px)
+    minmax(var(--page-padding-xl), 1fr);
 }
