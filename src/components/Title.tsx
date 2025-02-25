@@ -19,6 +19,8 @@ export const Title = ({ title, caption, image }: TitleProps) => (
     ].join(' ')}
     style={
       {
+        backgroundImage:
+          'linear-gradient(to bottom, var(--tw-gradient-stops, rgba(100, 51, 2, 0.25) 20%, rgba(248, 250, 252, 50) 70%)), var(--bg-image)',
         '--bg-image': image ? `url(${image.url})` : undefined,
         '--bg-size': image ? `${image.size || 'auto'}` : undefined,
       } as CSSProperties

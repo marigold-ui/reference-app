@@ -19,6 +19,13 @@
     --page-padding-xl: 2.5rem;
     --page-header-height: 56px;
   }
+  h1 {
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    padding-top: 8rem; /* Tailwind spacing 32 */
+    margin-bottom: 2.5rem; /* Tailwind spacing 10 */
+  }
 }
 
 /************************/
