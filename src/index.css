@@ -19,13 +19,6 @@
     --page-padding-xl: 2.5rem;
     --page-header-height: 56px;
   }
-  h1 {
-    font-size: 80px;
-    font-weight: 900;
-    letter-spacing: -1.5px;
-    padding-top: 8rem; /* Tailwind spacing 32 */
-    margin-bottom: 2.5rem; /* Tailwind spacing 10 */
-  }
 }
 
 /************************/
@@ -86,16 +79,13 @@
 }
 
 h1 {
-  font-size: 80px;
   font-weight: 900;
-  letter-spacing: -1.5px;
-  padding-top: 8rem; /* Tailwind spacing 32 */
   margin-bottom: 2.5rem; /* Tailwind spacing 10 */
 }
 h2 {
   font-size: 32px;
   font-weight: 900;
-  margin-top: 6rem; /* Tailwind spacing 24 */
+  /*margin-top: 6rem; /* Tailwind spacing 24 */
   margin-bottom: 1.5rem; /* Tailwind spacing 6 */
 }
 @utility content {
