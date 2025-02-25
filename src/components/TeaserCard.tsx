@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 
-import { Card, Stack, Tiles, Button } from '@marigold/components';
+import { Card, Stack, Tiles } from '@marigold/components';
 import { Link } from '@tanstack/react-router';
 
 export interface TeaserCardProps {
