@@ -4,9 +4,13 @@ export const Hero = () => (
   <Breakout
     className={[
       'relative min-h-[calc(100dvh-var(--page-header-height))]',
-      'bg-[linear-gradient(to_bottom,_var(--tw-gradient-stops)),url(/topography.svg)] bg-repeat',
+      ' bg-repeat',
       'from-primary-800/25 via-secondary-50 via-70% to-secondary-50',
     ].join(' ')}
+    style={{
+      backgroundImage:
+        "linear-gradient(to bottom, var(--tw-gradient-stops, rgba(100, 51, 2, 0.25) 20%, rgba(248, 250, 252, 50) 70%)), url('/topography.svg')",
+    }}
   >
     <div className="absolute inset-x-0 top-0 h-8 bg-linear-to-b from-neutral-700/50 via-neutral-700/30 via-20% to-transparent" />
 
