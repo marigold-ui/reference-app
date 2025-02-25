@@ -30,11 +30,9 @@ const queryClient = new QueryClient();
 export const App = () => (
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <div data-theme="docs">
-        <MarigoldProvider theme={theme}>
-          <RouterProvider router={router} />
-        </MarigoldProvider>
-      </div>
+      <MarigoldProvider theme={theme}>
+        <RouterProvider router={router} />
+      </MarigoldProvider>
       <Analytics />
     </QueryClientProvider>
   </StrictMode>
