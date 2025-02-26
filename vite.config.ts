@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import type { UserConfig } from 'vite';
 import path from 'node:path';
-
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
 import { remarkCodeHike } from '@code-hike/mdx';
 import { TanStackRouterVite } from '@tanstack/router-vite-plugin';
@@ -18,6 +18,7 @@ export default defineConfig(async () => {
       },
     },
     plugins: [
+      tailwindcss(),
       {
         enforce: 'pre',
         ...mdx.default({

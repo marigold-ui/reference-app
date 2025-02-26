@@ -6,7 +6,7 @@ export interface DemoLinkProps extends ComponentProps<typeof Link> {
 }
 
 const className = [
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap no-underline rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap no-underline rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:bg-secondary-200/50',
   'h-10 px-4 py-2',
   'bg-secondary-200 text-text-primary hover:bg-secondary-200/80',
 ].join(' ');
