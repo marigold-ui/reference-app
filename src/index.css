@@ -1,8 +1,8 @@
 @import 'tailwindcss';
-@import '../node_modules/@marigold/theme-docs/dist/theme.css';
-@plugin '@tailwindcss/typography';
-@source '../src/**/*.tsx';
+@import '@marigold/theme-docs/theme.css';
 @source '../node_modules/@marigold/components';
+@plugin '@tailwindcss/typography';
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -85,8 +85,8 @@ h1 {
 h2 {
   font-size: 32px;
   font-weight: 900;
-  /*margin-top: 6rem; /* Tailwind spacing 24 */
-  margin-bottom: 1.5rem; /* Tailwind spacing 6 */
+  margin-top: 6rem; /* Tailwind spacing 24 */
+  margin-bottom: --spacing(6); /* Tailwind spacing 6 */
 }
 @utility content {
   padding: var(--page-padding);
