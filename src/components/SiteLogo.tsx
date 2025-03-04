@@ -3,7 +3,7 @@ import { Link } from '@tanstack/react-router';
 
 export const SiteLogo = () => (
   <Link
-    className="flex items-center gap-1.5 xl:w-[--page-sub-nav-absolute-width]"
+    className="flex items-center gap-1.5 xl:w-(--page-sub-nav-absolute-width)"
     to="/"
   >
     <Logo className="size-6" />
