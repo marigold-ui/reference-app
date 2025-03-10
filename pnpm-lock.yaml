@@ -68,7 +68,7 @@ importers:
         version: 1.0.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)
       '@marigold/prettier-config':
         specifier: 0.3.1
-        version: 0.3.1(prettier@3.5.2)
+        version: 0.3.1(prettier@3.5.3)
       '@tailwindcss/postcss':
         specifier: 4.0.7
         version: 4.0.7
@@ -136,8 +136,8 @@ importers:
         specifier: 8.5.3
         version: 8.5.3
       prettier:
-        specifier: 3.5.2
-        version: 3.5.2
+        specifier: 3.5.3
+        version: 3.5.3
       react-test-renderer:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
@@ -4279,8 +4279,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  prettier@3.5.2:
-    resolution: {integrity: sha512-lc6npv5PH7hVqozBR7lkBNOGXV9vMwROAPlumdBkX0wTbbzPu/U1hk5yL8p2pt4Xoc+2mkT8t/sow2YrV/M5qg==}
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6296,9 +6296,9 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@marigold/prettier-config@0.3.1(prettier@3.5.2)':
+  '@marigold/prettier-config@0.3.1(prettier@3.5.3)':
     dependencies:
-      prettier: 3.5.2
+      prettier: 3.5.3
 
   '@marigold/system@11.1.1(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
@@ -7695,7 +7695,7 @@ snapshots:
   '@tanstack/router-generator@1.111.3(@tanstack/react-router@1.111.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0))':
     dependencies:
       '@tanstack/virtual-file-routes': 1.99.0
-      prettier: 3.5.2
+      prettier: 3.5.3
       tsx: 4.19.3
       zod: 3.24.2
     optionalDependencies:
@@ -10367,7 +10367,7 @@ snapshots:
 
   prettier@3.4.2: {}
 
-  prettier@3.5.2: {}
+  prettier@3.5.3: {}
 
   pretty-format@27.5.1:
     dependencies:
