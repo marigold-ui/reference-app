@@ -25,7 +25,7 @@ importers:
         version: 28.2.0(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@marigold/theme-docs':
         specifier: ^2.4.0
-        version: 2.4.3(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 2.4.4(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@marigold/theme-plugins':
         specifier: ^1.0.1
         version: 1.0.1
@@ -1284,8 +1284,8 @@ packages:
       react: 19.x
       react-dom: 19.x
 
-  '@marigold/components@11.2.2':
-    resolution: {integrity: sha512-ZRw66Zh8Vto9e7/YTDChI1PCzv3w7Q6iA7aWaSe09wkROQUBv9PJH9Zk+cKp03pOA2BUswRcfHvOCx+mD2Z5vg==}
+  '@marigold/components@11.2.3':
+    resolution: {integrity: sha512-4vABIGR0aMqGE/DrQPxMbyrsQYnO8CZKbGn9iU9xE2a7iuZEAoeJIzOhPK2pfE6I4FhdQWjnkHiZyR9qhRFM1g==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -1312,8 +1312,8 @@ packages:
       react: 19.x
       react-dom: 19.x
 
-  '@marigold/system@11.2.2':
-    resolution: {integrity: sha512-W5g59nW6pUfloOhj4HDM3Bv7RtZUOss9fb6RcXSglAofgV/b25ulGX8m4n4Icgf6Fq6/YbFNXi6gzqDdz62Hrg==}
+  '@marigold/system@11.2.3':
+    resolution: {integrity: sha512-SHsOWONrjbcM5yKJFDhhNlmwNYAHDc4cIs+WUyNfPDgAayFv2SkXfVkVv3GexewOMgVaY1qj/DyoZ+z/aBAbpw==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -1321,8 +1321,8 @@ packages:
   '@marigold/theme-core@28.2.0':
     resolution: {integrity: sha512-5NjCiaTnOYtLNaKtm/pyxEa8QVG+Mdt+yMJh4y3Zn1nv97BW85xNgsI+LwZ8/1TVQKTUK7O8nGK6HFxJFWh3rg==}
 
-  '@marigold/theme-docs@2.4.3':
-    resolution: {integrity: sha512-lUovilOSmxPqiH5UPMGNplErsERDouPz4v+Ry5APG5PJScvAObBSTPJHIC3HBUgKqbsou7SlqzlvrQJ6oToGAA==}
+  '@marigold/theme-docs@2.4.4':
+    resolution: {integrity: sha512-RDOs/VnxusYCQ4tlE4gdqyePQvOP+E4+2bGMqFD7wNgrXMBTAnw8G4LC+peDM3RXQrMGeE8aCv+MyHhBfn1qHA==}
 
   '@marigold/theme-plugins@1.0.1':
     resolution: {integrity: sha512-o0Rhec2wDSBRfXcqfnDGdlyp6Xx5YErBFLAnN5khXMW9XR4EVTVV50Qw8h4QFhYWSbgLjZKlaw5/E2rylrx8dQ==}
@@ -6933,10 +6933,10 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@marigold/components@11.2.2(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@marigold/components@11.2.3(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@internationalized/date': 3.7.0
-      '@marigold/system': 11.2.2(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@marigold/system': 11.2.3(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@marigold/types': 1.3.0(@types/react@19.0.12)
       '@react-aria/button': 3.12.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@react-aria/calendar': 3.7.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -7014,7 +7014,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@marigold/system@11.2.2(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@marigold/system@11.2.3(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@marigold/types': 1.3.0(@types/react@19.0.12)
       '@react-aria/i18n': 3.12.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -7037,10 +7037,10 @@ snapshots:
       - react
       - react-dom
 
-  '@marigold/theme-docs@2.4.3(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@marigold/theme-docs@2.4.4(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@marigold/components': 11.2.2(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@marigold/system': 11.2.2(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@marigold/components': 11.2.3(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@marigold/system': 11.2.3(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@marigold/theme-plugins': 1.0.1
     transitivePeerDependencies:
       - '@types/react'
@@ -9205,7 +9205,7 @@ snapshots:
   '@react-types/searchfield@3.5.11(react@19.0.0)':
     dependencies:
       '@react-types/shared': 3.27.0(react@19.0.0)
-      '@react-types/textfield': 3.11.0(react@19.0.0)
+      '@react-types/textfield': 3.12.0(react@19.0.0)
       react: 19.0.0
 
   '@react-types/searchfield@3.6.0(react@19.0.0)':
