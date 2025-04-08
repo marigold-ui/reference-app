@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @import '@marigold/theme-docs/theme.css';
-@source '../node_modules/@marigold/components';
+@source '../node_modules/@marigold';
 @plugin '@tailwindcss/typography';
 
 /*
