@@ -22,7 +22,7 @@ export const focus: AnnotationHandler = {
       className="px-2 opacity-50 data-[focus]:opacity-100"
     />
   ),
-  AnnotatedLine: ({ annotation, ...props }) => (
+  AnnotatedLine: ({ ...props }) => (
     <InnerLine merge={props} data-focus={true} className="bg-zinc-700/30" />
   ),
 };

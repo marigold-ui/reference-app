@@ -17,6 +17,7 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react/no-unescaped-entities': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
+      'react/prop-types': 'off',
     },
   },
 ];

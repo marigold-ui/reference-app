@@ -32,6 +32,7 @@ export class SmoothPre extends React.Component<CustomPreProps> {
   ) {
     const transitions = calculateTransitions(this.ref.current!, snapshot);
     transitions.forEach(({ element, keyframes, options }) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const { translateX, translateY, ...kf } = keyframes as any;
       if (translateX && translateY) {
         kf.translate = [

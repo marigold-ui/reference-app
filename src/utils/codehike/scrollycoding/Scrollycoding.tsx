@@ -32,6 +32,7 @@ export function Scrollycoding(props: unknown) {
         <div className="sticky top-16 overflow-auto">
           <Selection
             from={steps.map(step => {
+              // eslint-disable-next-line react/jsx-key
               return <CodeHikeWrapper codeblock={step.code} />;
             })}
           />
