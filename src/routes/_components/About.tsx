@@ -11,13 +11,13 @@ export const About = () => (
           The main purpose of this site is to provide an overview of common
           patterns and practices in ReactJS through simple examples. We address
           specific issues and challenges, such as managing state and handling
-          forms, and demonstrate these in conjunction with the{' '}
+          forms, and demonstrate these in conjunction with the
           <Link
             //@ts-ignore
             to="https://www.marigold-ui.io/"
           >
             Marigold Design System
-          </Link>{' '}
+          </Link>
           where applicable.
         </p>
       </div>
@@ -42,7 +42,7 @@ export const About = () => (
         </p>
         <p>
           Your feedback, ideas, and suggestions for improvement are always
-          welcome. Feel free to reach out to us through any of{' '}
+          welcome. Feel free to reach out to us through any of
           <Link
             //@ts-ignore
             to="https://www.marigold-ui.io/introduction/get-in-touch"
