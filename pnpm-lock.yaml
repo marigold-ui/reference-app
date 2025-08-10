@@ -28,7 +28,7 @@ importers:
         version: 2.4.6(@types/react@19.1.9)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@marigold/theme-plugins':
         specifier: ^1.0.1
-        version: 1.0.1
+        version: 1.0.2
       '@mdx-js/rollup':
         specifier: 3.1.0
         version: 3.1.0(acorn@8.15.0)(rollup@4.39.0)
@@ -1205,6 +1205,9 @@ packages:
 
   '@marigold/theme-plugins@1.0.1':
     resolution: {integrity: sha512-o0Rhec2wDSBRfXcqfnDGdlyp6Xx5YErBFLAnN5khXMW9XR4EVTVV50Qw8h4QFhYWSbgLjZKlaw5/E2rylrx8dQ==}
+
+  '@marigold/theme-plugins@1.0.2':
+    resolution: {integrity: sha512-/WTGG5Feg3Pj0dmgW/LnXXrj/8IljnnEeKMPjd+SHPLBD8nfm9K0Wxla1nMdR6WUpNeg7mQ+VR287DG8wyY5gg==}
 
   '@marigold/types@1.3.0':
     resolution: {integrity: sha512-J4nH22UCKY+b7jdLmtikjLEkE/Xdp00HfuauFA3r7l6IZ2H3Z+240FVPMpAdjIXk+7BUz6EY4YWT2DF35PVVFw==}
@@ -6354,6 +6357,8 @@ snapshots:
       - react-dom
 
   '@marigold/theme-plugins@1.0.1': {}
+
+  '@marigold/theme-plugins@1.0.2': {}
 
   '@marigold/types@1.3.0(@types/react@19.1.9)':
     dependencies:
