@@ -42,7 +42,7 @@
     "@tailwindcss/postcss": "4.1.13",
     "@tanstack/router-devtools": "1.115.2",
     "@tanstack/router-vite-plugin": "1.115.2",
-    "@testing-library/jest-dom": "6.8.0",
+    "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.0",
     "@types/jest": "29.5.14",
     "@types/node": "22.14.0",
