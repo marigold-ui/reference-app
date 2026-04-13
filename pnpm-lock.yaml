@@ -133,8 +133,8 @@ importers:
         specifier: 26.1.0
         version: 26.1.0
       postcss:
-        specifier: 8.5.8
-        version: 8.5.8
+        specifier: 8.5.9
+        version: 8.5.9
       prettier:
         specifier: 3.8.1
         version: 3.8.1
@@ -4394,8 +4394,8 @@ packages:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
     engines: {node: '>=4'}
 
-  postcss@8.5.8:
-    resolution: {integrity: sha512-OW/rX8O/jXnm82Ey1k44pObPtdblfiuWnrd8X7GJ7emImCOstunGbXUpp7HdBrFQX6rJzn3sPT397Wp5aCwCHg==}
+  postcss@8.5.9:
+    resolution: {integrity: sha512-7a70Nsot+EMX9fFU3064K/kdHWZqGVY+BADLyXc8Dfv+mTLLVl6JzJpPaCZ2kQL9gIJvKXSLMHhqdRRjwQeFtw==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -6503,8 +6503,8 @@ snapshots:
       '@typescript-eslint/parser': 8.19.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
       eslint: 9.39.4(jiti@2.6.1)
       eslint-config-prettier: 9.1.0(eslint@9.39.4(jiti@2.6.1))
-      eslint-config-react-app: 7.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
-      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(eslint@9.39.4(jiti@2.6.1))
+      eslint-config-react-app: 7.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.26.7))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.26.7))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
+      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.26.7))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.26.7))(eslint@9.39.4(jiti@2.6.1))
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.19.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1))
       eslint-plugin-jest: 28.11.0(@typescript-eslint/eslint-plugin@8.19.1(@typescript-eslint/parser@8.19.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.39.4(jiti@2.6.1))
@@ -7998,7 +7998,7 @@ snapshots:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.2.2
       '@tailwindcss/oxide': 4.2.2
-      postcss: 8.5.8
+      postcss: 8.5.9
       tailwindcss: 4.2.2
 
   '@tailwindcss/typography@0.5.19(tailwindcss@4.2.2)':
@@ -9226,7 +9226,7 @@ snapshots:
     dependencies:
       eslint: 9.39.4(jiti@2.6.1)
 
-  eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3):
+  eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.26.7))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.26.7))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3):
     dependencies:
       '@babel/core': 7.26.7
       '@babel/eslint-parser': 7.27.0(@babel/core@7.26.7)(eslint@9.39.4(jiti@2.6.1))
@@ -9236,7 +9236,7 @@ snapshots:
       babel-preset-react-app: 10.1.0
       confusing-browser-globals: 1.0.11
       eslint: 9.39.4(jiti@2.6.1)
-      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(eslint@9.39.4(jiti@2.6.1))
+      eslint-plugin-flowtype: 8.0.3(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.26.7))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.26.7))(eslint@9.39.4(jiti@2.6.1))
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@5.62.0(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1))
       eslint-plugin-jest: 25.7.0(@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.39.4(jiti@2.6.1))
@@ -9281,7 +9281,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-flowtype@8.0.3(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(eslint@9.39.4(jiti@2.6.1)):
+  eslint-plugin-flowtype@8.0.3(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.26.7))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.26.7))(eslint@9.39.4(jiti@2.6.1)):
     dependencies:
       '@babel/plugin-syntax-flow': 7.26.0(@babel/core@7.26.7)
       '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.7)
@@ -9454,7 +9454,7 @@ snapshots:
   eslint-plugin-tailwindcss@3.18.2(tailwindcss@4.2.2):
     dependencies:
       fast-glob: 3.3.3
-      postcss: 8.5.8
+      postcss: 8.5.9
       tailwindcss: 4.2.2
 
   eslint-plugin-testing-library@5.11.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3):
@@ -10729,7 +10729,7 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss@8.5.8:
+  postcss@8.5.9:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
@@ -11559,7 +11559,7 @@ snapshots:
       esbuild: 0.25.2
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
-      postcss: 8.5.8
+      postcss: 8.5.9
       rollup: 4.39.0
       tinyglobby: 0.2.15
     optionalDependencies:
