@@ -1,4 +1,4 @@
 {
-  "installCommand": "npm install -g pnpm@11.1.2 && pnpm install --frozen-lockfile",
+  "installCommand": "corepack enable && corepack prepare pnpm@11.1.2 --activate && pnpm install --frozen-lockfile",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
