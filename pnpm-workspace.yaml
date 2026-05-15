@@ -1,0 +1,14 @@
+# Supply-chain controls (pnpm 10+):
+#   onlyBuiltDependencies — allowlist of package NAMES whose install scripts
+#     pnpm is permitted to run.
+#   allowBuilds — explicit boolean approval per package required by pnpm 11+.
+#     Switching a value to `false` (or removing the entry) blocks the build
+#     script even if the package is in onlyBuiltDependencies.
+onlyBuiltDependencies:
+  - '@swc/core'
+  - esbuild
+  - lightningcss
+  - sharp
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
