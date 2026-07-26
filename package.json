@@ -31,8 +31,8 @@
     "@tanstack/react-query-devtools": "5.96.1",
     "@tanstack/react-router": "1.167.5",
     "@vercel/analytics": "^1.5.0",
-    "react": "19.2.7",
-    "react-dom": "19.2.7",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "tailwind-merge": "3.6.0"
   },
   "devDependencies": {
@@ -62,7 +62,7 @@
     "jsdom": "26.1.0",
     "postcss": "8.5.22",
     "prettier": "3.8.4",
-    "react-test-renderer": "19.2.7",
+    "react-test-renderer": "19.2.8",
     "tailwindcss": "4.3.3",
     "typescript": "5.9.3",
     "typescript-eslint": "^8.29.1",
