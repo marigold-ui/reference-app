@@ -60,7 +60,7 @@
     "eslint-plugin-tailwindcss": "3.18.3",
     "globals": "^16.0.0",
     "jsdom": "26.1.0",
-    "postcss": "8.5.22",
+    "postcss": "8.5.25",
     "prettier": "3.8.4",
     "react-test-renderer": "19.2.8",
     "tailwindcss": "4.3.3",
