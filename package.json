@@ -61,7 +61,7 @@
     "globals": "^16.0.0",
     "jsdom": "26.1.0",
     "postcss": "8.5.26",
-    "prettier": "3.8.4",
+    "prettier": "3.9.6",
     "react-test-renderer": "19.2.8",
     "tailwindcss": "4.3.3",
     "typescript": "5.9.3",
