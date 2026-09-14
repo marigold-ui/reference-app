@@ -48,7 +48,7 @@
     "@types/node": "22.20.2",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
-    "@types/react-test-renderer": "19.1.0",
+    "@types/react-test-renderer": "19.3.0",
     "@typescript-eslint/eslint-plugin": "8.64.0",
     "@typescript-eslint/parser": "8.64.0",
     "@vitejs/plugin-react-swc": "3.11.0",
