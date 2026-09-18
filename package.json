@@ -15,7 +15,7 @@
     "test:watch": "vitest watch --config vite.config.ts",
     "test:ci": "vitest run --config vite.config.ts --coverage"
   },
-  "packageManager": "pnpm@11.1.2",
+  "packageManager": "pnpm@11.27.0",
   "engines": {
     "node": ">=22.13"
   },

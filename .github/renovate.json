@@ -10,7 +10,7 @@
   "timezone": "Europe/Berlin",
   "schedule": ["before 4am on Monday"],
   "prConcurrentLimit": 5,
-  "prHourlyLimit": 2,
+  "prHourlyLimit": 0,
   "rangeStrategy": "bump",
   "lockFileMaintenance": {
     "enabled": true,
@@ -26,7 +26,7 @@
   "osvVulnerabilityAlerts": true,
   "packageRules": [
     {
-      "description": "Wait 7 days before suggesting any npm update (matches .npmrc minimum-release-age)",
+      "description": "Wait 7 days before suggesting any npm update (matches minimumReleaseAge in pnpm-workspace.yaml)",
       "matchDatasources": ["npm"],
       "minimumReleaseAge": "7 days"
     },
