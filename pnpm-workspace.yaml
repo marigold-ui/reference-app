@@ -1,0 +1,21 @@
+# Supply-chain controls (pnpm 11+):
+#   minimumReleaseAge — 10080 minutes (7 days). pnpm refuses to resolve a
+#     version published more recently than that. It gates resolution only, so
+#     `--frozen-lockfile` installs in CI are unaffected. A security fix that has
+#     to land sooner is exempted per package via minimumReleaseAgeExclude, which
+#     is what `pnpm audit --fix` writes. Not readable from .npmrc, which is why
+#     it lives here.
+#   allowBuilds — the only build allowlist pnpm 11 reads: one boolean per
+#     package whose install scripts pnpm may run. A missing entry, or `false`,
+#     blocks the script. Only packages that actually ship an install script
+#     belong here. `onlyBuiltDependencies` was replaced by this in pnpm 11 and
+#     is silently ignored since, so it is not kept alongside.
+#
+# `packages: ['.']` is required by older pnpm (e.g. pnpm 9 on Vercel) once a
+# pnpm-workspace.yaml exists. pnpm 10+ does not require it but accepts it.
+packages:
+  - '.'
+minimumReleaseAge: 10080
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
