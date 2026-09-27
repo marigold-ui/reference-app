@@ -127,7 +127,7 @@ importers:
         specifier: 3.18.3
         version: 3.18.3(tailwindcss@4.3.3)
       globals:
-        specifier: ^16.0.0
+        specifier: ^16.5.0
         version: 16.5.0
       jsdom:
         specifier: 26.1.0
