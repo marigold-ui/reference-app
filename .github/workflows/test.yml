@@ -14,10 +14,10 @@ jobs:
       CI: true
     steps:
       # Setup
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4.4.0 # Uses version from package.json#packageManager
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v4.4.0 # Uses version from package.json#packageManager
       - name: Setup Node (using .node-version)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version-file: '.node-version'
           cache: 'pnpm'
@@ -28,7 +28,7 @@ jobs:
       - name: Run Test Coverage
         run: pnpm test:ci
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.6.0
+        uses: codecov/codecov-action@b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238 # v4.6.0
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: marigold-ui/reference-app
