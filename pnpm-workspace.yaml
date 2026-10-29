@@ -20,5 +20,5 @@ allowBuilds:
   '@swc/core': true
   esbuild: true
 minimumReleaseAgeExclude:
-  # Renovate security update: vite@6.4.4
-  - vite@6.4.4
+  # Renovate security update: vite@6.4.4 || 6.4.5
+  - vite@6.4.4 || 6.4.5
